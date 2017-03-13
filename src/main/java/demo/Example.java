@@ -10,5 +10,5 @@ public class Example {
 		
 		SpringApplication.run(Example.class, args);       
 	}
-
+//CREATE INDEX CONCURRENTLY
 }
