@@ -23,6 +23,12 @@ public class GreetingController extends WebMvcConfigurerAdapter{
 		return "form";
 	}
 	
+	@GetMapping("/index")
+	public String showIndex(Greeting greeting){
+		return "index";
+	}
+	
+	
 	@PostMapping("/")
 	public String checkGreeting(@Valid Greeting greeting, BindingResult bindingResult){
 		
