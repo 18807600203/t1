@@ -1,7 +1,5 @@
 package demo;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,7 +11,7 @@ import io.ebean.config.ServerConfig;
 
 
 /**
- * Spring factory for creating the EbeanServer singleton.
+ * Spring factory for creating the EbeanServer singleton.测试文件
  */
 @Component
 public class EbeanFactoryBean implements FactoryBean<EbeanServer> {
@@ -36,7 +34,7 @@ public class EbeanFactoryBean implements FactoryBean<EbeanServer> {
 //    config.setExternalTransactionManager(new SpringAwareJdbcTransactionManager());
 
     config.loadFromProperties();
-    
+   
     // set as default and register so that Model can be
     // used if desired for save() and update() etc
     config.setDefaultServer(true);
