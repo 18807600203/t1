@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import io.ebean.EbeanServer;
-
 @Controller
 public class GreetingController extends WebMvcConfigurerAdapter{
 
