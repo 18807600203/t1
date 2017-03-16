@@ -1,10 +1,12 @@
-package batteryinfo;
+package bi;
 
 import java.util.List;
 
 import org.beetl.sql.core.annotatoin.Sql;
 import org.beetl.sql.core.annotatoin.SqlStatement;
 import org.beetl.sql.core.mapper.BaseMapper;
+
+import batteryinfo.BatteryInfo;
 
 public interface BatteryInfoDao extends BaseMapper<BatteryInfo>{
 
