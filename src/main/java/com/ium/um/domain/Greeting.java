@@ -1,4 +1,4 @@
-package demo;
+package com.ium.um.domain;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
