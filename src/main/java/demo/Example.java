@@ -3,19 +3,6 @@ package demo;
 import java.io.IOException;
 
 import javax.sql.DataSource;
-
-import org.beetl.core.resource.ClasspathResourceLoader;
-import org.beetl.core.resource.WebAppResourceLoader;
-import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
-import org.beetl.ext.spring.BeetlSpringViewResolver;
-import org.beetl.sql.core.ClasspathLoader;
-import org.beetl.sql.core.Interceptor;
-import org.beetl.sql.core.UnderlinedNameConversion;
-import org.beetl.sql.core.db.MySqlStyle;
-import org.beetl.sql.ext.DebugInterceptor;
-import org.beetl.sql.ext.spring4.BeetlSqlDataSource;
-import org.beetl.sql.ext.spring4.BeetlSqlScannerConfigurer;
-import org.beetl.sql.ext.spring4.SqlManagerFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,7 +16,7 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternUtils;
 
 
-@SpringBootApplication
+//@SpringBootApplication
 public class Example {
 	
 	
