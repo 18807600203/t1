@@ -1,18 +1,17 @@
 package com.ium.um.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jmx.export.annotation.ManagedAttribute;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -45,15 +44,29 @@ public class MyController extends WebMvcConfigurerAdapter{
 	
 	@GetMapping("/getAll")
 	@ResponseBody
-    public BatteryInfo getAll() {
+    public List<BatteryInfo> getAll() {
 		
-		BatteryInfo user = biMapper.findById(1L);
-        if(user==null){
+		List<BatteryInfo> bis = biMapper.getAll();
+		
+        if(bis.isEmpty()){
         	
            return null;
         }
-        return user;
+        return bis;
     }
+	
+	@GetMapping("/insert")
+	public String getAll(Model model){
+		
+		List<BatteryInfo> bis = biMapper.getAll();
+		
+        if(bis.isEmpty()){
+        	
+           return null;
+        }
+		model.addAttribute("batteryinfo", bis);
+		return "insert";		
+	}
 	
 
 	//demo
@@ -67,8 +80,8 @@ public class MyController extends WebMvcConfigurerAdapter{
 	@GetMapping("/index")
 	public String showIndex(Model model){
 		Greeting greeting = new Greeting();
-		greeting.setName("test");
-		greeting.setAge(29);
+		greeting.setName("test_hotLoad");
+		greeting.setAge(57);
 		model.addAttribute("myData", greeting);
 		return "index";
 	}
