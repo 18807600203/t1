@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ium.um.domain.BatteryInfo;
 import com.ium.um.domain.Greeting;
 import com.ium.um.mapper.BatteryInfoMapper;
@@ -22,6 +25,8 @@ import com.ium.um.mapper.BatteryInfoMapper;
 @Controller
 public class MyController extends WebMvcConfigurerAdapter{
 	
+	@Autowired
+    private BatteryInfoMapper biMapper;
 	
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
@@ -29,10 +34,6 @@ public class MyController extends WebMvcConfigurerAdapter{
 		registry.addViewController("/results").setViewName("results");
 	}
 
-
-	@Autowired
-    private BatteryInfoMapper biMapper;
-	
 	
 	@PostMapping("/insert")
 	public boolean insertInfo(@ModelAttribute("batteryinfo")BatteryInfo bi ){
