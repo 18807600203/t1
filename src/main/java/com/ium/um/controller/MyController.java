@@ -5,13 +5,19 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -42,8 +48,7 @@ public class MyController extends WebMvcConfigurerAdapter{
 		return b;
 	}
 	
-	
-	@GetMapping("/getAll")
+	@RequestMapping("/getAll")
 	@ResponseBody
     public List<BatteryInfo> getAll() {
 		
@@ -77,17 +82,6 @@ public class MyController extends WebMvcConfigurerAdapter{
 		return "form";
 	}
 
-
-	@GetMapping("/index")
-	public String showIndex(Model model){
-		Greeting greeting = new Greeting();
-		greeting.setName("test_hotLoad");
-		greeting.setAge(57);
-		model.addAttribute("myData", greeting);
-		return "index";
-	}
-	
-	
 	@PostMapping("/")
 	public String checkGreeting(@Valid Greeting greeting, BindingResult bindingResult){
 		
@@ -95,8 +89,19 @@ public class MyController extends WebMvcConfigurerAdapter{
 			return "form";
 		}
 		
-		return "redirect:/results";
-		
-		
+		return "redirect:/results";	
 	}
+	
+	@RequestMapping("/greeting")
+    public String greeting(@RequestParam(value="id", required=false, defaultValue="2") String id, Model model) {
+        
+        BatteryInfo bis = biMapper.findById( Long.valueOf(id));
+		
+        if(bis == null){
+        	
+           return null;
+        }
+        model.addAttribute("id", bis);
+        return "greeting";
+    }
 }
