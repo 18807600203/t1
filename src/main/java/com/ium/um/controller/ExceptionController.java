@@ -23,7 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class ExceptionController implements ErrorController{
 
 	private static ExceptionController exceptionController;
-	private final static String ERROR_PATH = "/error/error.html";
+	private final static String ERROR_PATH = "/error";
 	
 	@Autowired
 	private ErrorAttributes errorAttributes;
@@ -95,7 +95,7 @@ public class ExceptionController implements ErrorController{
 	public ModelAndView errorHtml( HttpServletRequest request){
 		
 		//System.out.println(getErrorAttributes(request, false));
-		return new ModelAndView("error", getErrorAttributes(request, false));
+		return new ModelAndView("error/error", getErrorAttributes(request, false));
 	}
 	
 	/**

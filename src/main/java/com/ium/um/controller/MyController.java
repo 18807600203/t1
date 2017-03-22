@@ -93,15 +93,20 @@ public class MyController extends WebMvcConfigurerAdapter{
 	}
 	
 	@RequestMapping("/greeting") //value="id", required=false, defaultValue="2"
-    public String greeting(@RequestParam(value="id", required = true) Integer id, Model model) {
+    public String greeting() {
         
-        BatteryInfo bis = biMapper.findById(id.longValue());
-		
+        return "greeting";
+    }
+	
+	@RequestMapping("/findById")
+	@ResponseBody
+    public BatteryInfo findById(@RequestParam(value="id", required = true) Integer id) {
+        
+        BatteryInfo bis = biMapper.findById(id.longValue());	
         if(bis == null){
         	
            return null;
         }
-        model.addAttribute("id", bis);
-        return "greeting";
+        return bis;
     }
 }

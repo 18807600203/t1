@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" ng-app="app">
 <head>	
-    <script th:src="@{/js/angular.min.js}"></script>
+    <script th:src="@{/js/angular.js}"></script>
     <script th:src="@{/js/angular-touch.js}"></script>
     <script th:src="@{/js/angular-animate.min.js}"></script>
     <script th:src="@{/js/angular-sanitize.min.js}"></script>  
@@ -14,12 +14,12 @@
     <link th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body> 
 	<div ng-controller="MainCtrl" >
 
-	   	<br>
-		<input type="text" ng-model="id" placeholder="Enter a id here">
-	   	<button type="button" class = "btn btn-primary" na-click= "find()">查询</button>
+	   	<br> 
+		<input type="text" ng-model="id" placeholder="Enter a id here2">
+	   	<button type="button" class = "btn btn-primary" ng-click="serchById()">查询</button>
        	<br>
        	<div  id="grid1" ui-grid="gridOptions" ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination class="grid"></div>
    </div>
@@ -30,6 +30,7 @@
 
     app.controller('MainCtrl', function($scope, $http, i18nService) {
             i18nService.setCurrentLang("zh-cn"); //国际化
+            
             $scope.gridOptions = {
                 showGridFooter: false,
                 showColumnFooter: false,
@@ -39,9 +40,9 @@
                 // flatEntityAccess: true,
                 //fastWatch: true,
                 //pagination
+                data : 'myData',
                 paginationPageSizes: [25, 50, 75],
                 paginationPageSize: 25,
-                //data: 'mydata',
                 columnDefs: [{
                     name: 'id',
                     width: 80,
@@ -93,24 +94,21 @@
                 }, ],
             };
 
-            $scope.find = function(){
-
-            	$scope.mydata = [];
-            	$http.get('/getAll')
-                .success(function(data) {
-                    $scope.gridOptions.data = data;
-                    $scope.mydata = data;
-                });
+            $scope.serchById = function(){
+                $scope.myData = [];
+            	$scope.id = 'test';
+                alert('1234');
                 $http({
-					  method: 'GET',
-					  url: '/getAll'
-					}).then(function successCallback(response) {
-					    $scope.gridOptions.data = response;
-					    // when the response is available
-					  }, function errorCallback(response) {
-					    // called asynchronously if an error occurs
-					    // or server returns response with an error status.
-  				});
+                  method: 'GET',
+                  url: '/findById',
+                  params :{ 'id': 1 }
+                }).then(function successCallback(response) {
+                   // console.log(response.data);
+                   $scope.myData.push(response.data) ;
+                }, function errorCallback(response) {
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                });
             }   
         })
         .filter('status', function() {
