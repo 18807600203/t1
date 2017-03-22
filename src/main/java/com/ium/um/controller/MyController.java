@@ -79,7 +79,7 @@ public class MyController extends WebMvcConfigurerAdapter{
 	@GetMapping("/")
 	public String showForm(Greeting greeting){
 		
-		return "form";
+		return "/1/form";
 	}
 
 	@PostMapping("/")
@@ -92,10 +92,10 @@ public class MyController extends WebMvcConfigurerAdapter{
 		return "redirect:/results";	
 	}
 	
-	@RequestMapping("/greeting")
-    public String greeting(@RequestParam(value="id", required=false, defaultValue="2") String id, Model model) {
+	@RequestMapping("/greeting") //value="id", required=false, defaultValue="2"
+    public String greeting(@RequestParam(value="id", required = true) Integer id, Model model) {
         
-        BatteryInfo bis = biMapper.findById( Long.valueOf(id));
+        BatteryInfo bis = biMapper.findById(id.longValue());
 		
         if(bis == null){
         	
