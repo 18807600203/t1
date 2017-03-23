@@ -40,41 +40,6 @@ public class MyController extends WebMvcConfigurerAdapter{
 		registry.addViewController("/results").setViewName("results");
 	}
 
-	
-	@PostMapping("/insert")
-	public boolean insertInfo(@ModelAttribute("batteryinfo")BatteryInfo bi ){
-		
-		boolean b = biMapper.insert(bi.getChassis(), bi.getChannel(), bi.getModule());
-		return b;
-	}
-	
-	@RequestMapping("/getAll")
-	@ResponseBody
-    public List<BatteryInfo> getAll() {
-		
-		List<BatteryInfo> bis = biMapper.getAll();
-		
-        if(bis.isEmpty()){
-        	
-           return null;
-        }
-        return bis;
-    }
-	
-	@GetMapping("/insert")
-	public String getAll(Model model){
-		
-		List<BatteryInfo> bis = biMapper.getAll();
-		
-        if(bis.isEmpty()){
-        	
-           return null;
-        }
-		model.addAttribute("batteryinfo", bis);
-		return "insert";		
-	}
-	
-
 	//demo
 	@GetMapping("/")
 	public String showForm(Greeting greeting){
@@ -86,27 +51,10 @@ public class MyController extends WebMvcConfigurerAdapter{
 	public String checkGreeting(@Valid Greeting greeting, BindingResult bindingResult){
 		
 		if(bindingResult.hasErrors()){
-			return "form";
+			return "/1/form";
 		}
 		
 		return "redirect:/results";	
 	}
 	
-	@RequestMapping("/greeting") //value="id", required=false, defaultValue="2"
-    public String greeting() {
-        
-        return "greeting";
-    }
-	
-	@RequestMapping("/findById")
-	@ResponseBody
-    public BatteryInfo findById(@RequestParam(value="id", required = true) Integer id) {
-        
-        BatteryInfo bis = biMapper.findById(id.longValue());	
-        if(bis == null){
-        	
-           return null;
-        }
-        return bis;
-    }
 }
