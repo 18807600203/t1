@@ -6,7 +6,7 @@ app.controller('MainCtrl', function($scope, $http, i18nService, $resource) {
 		var batinfo = $resource('/serch/greeting/:id', { id: '@id'});
 
 		$scope.gridOptions = {
-
+			
 			showGridFooter: false,
 			showColumnFooter: false,
 			enableFiltering: true,
@@ -18,7 +18,7 @@ app.controller('MainCtrl', function($scope, $http, i18nService, $resource) {
 			paginationPageSizes: [25, 50, 75],
 			paginationPageSize: 25,
 		};
-
+		//$scope.gridOptions.data = 'gridData';
 		$scope.gridOptions.columnDefs = [
 		{
 			name: 'id',
@@ -71,22 +71,19 @@ app.controller('MainCtrl', function($scope, $http, i18nService, $resource) {
 		}];
 
 		$scope.serchById = function(){
-
-			var serchid = $scope.id;
-			if(angular.isNumber(serchid)){
-				batinfo.get(
-					{id: serchid }, 
-					function(bi){
-						bi.$save;
-					
-					},
-					function(error){
-						
-					}
-				);
-			}else{
-				
-			}	
+			var gridData = [];
+			var serchid = $scope.id;		
+			batinfo.get(
+				{id: serchid }, 
+				function(bi){
+					bi.$save;
+					gridData.push(bi);
+				},
+				function(error){
+					alert('error');
+				}
+			);
+			$scope.gridOptions.data = gridData;
 		}
 })
 .filter('status', function() {

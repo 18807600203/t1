@@ -18,9 +18,13 @@
 <body>
 	<div ng-controller="MainCtrl" >
 	   	<br> 
-		<input type="tel" ng-model="id" placeholder="Enter a id here">
-	   	<button type="button" class = "btn btn-primary" ng-click="serchById()">查询</button>
-        <label ng-model="check"></label>
+        <input type="text" ng-model="id" placeholder="Enter a id here"
+            onkeypress = 'return /^\d$/.test(String.fromCharCode(event.keyCode||event.keycode||event.which))'
+            oninput= 'this.value = this.value.replace(/\D+/g, "")'
+            onpropertychange='if(!/\D+/.test(this.value)){return;};this.value=this.value.replace(/\D+/g, "")'
+            onblur = 'this.value = this.value.replace(/\D+/g, "")'/>
+	    <button type="button" class="btn btn-primary" ng-click="serchById()" ng-disabled = "id == 0">查询</button>
+        <label ng-if="id == 0">请输入大于0的整数</label>
        	<br>
        	<div  id="grid1" ui-grid="gridOptions" ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination class="grid"></div>
    </div>

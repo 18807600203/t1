@@ -11,3 +11,9 @@ body{
 label{
     color: red;
 }
+.ui-grid-row:last-child > div > div > div {
+border-bottom: 1px solid gray !important;
+}
+.ui-grid-row > div > div > div:last-child {
+border-right: 1px solid gray;
+}
