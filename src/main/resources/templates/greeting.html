@@ -17,8 +17,8 @@
 
 <body>
 	<div ng-controller="MainCtrl" >
-	   	<br> 
-        <input type="text" ng-model="id" placeholder="Enter a id here"
+	   	<br>
+        <input type="text" maxlength="20" ng-model="id" placeholder="Enter a id here"
             onkeypress = 'return /^\d$/.test(String.fromCharCode(event.keyCode||event.keycode||event.which))'
             oninput= 'this.value = this.value.replace(/\D+/g, "")'
             onpropertychange='if(!/\D+/.test(this.value)){return;};this.value=this.value.replace(/\D+/g, "")'

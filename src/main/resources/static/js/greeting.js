@@ -76,11 +76,14 @@ app.controller('MainCtrl', function($scope, $http, i18nService, $resource) {
 			batinfo.get(
 				{id: serchid }, 
 				function(bi){
-					bi.$save;
-					gridData.push(bi);
+					//bi.$save();
+					console.log(bi)
+					if(! angular.isUndefined(bi.id)){
+						gridData.push(bi);
+					}					
 				},
-				function(error){
-					alert('error');
+				function(httpResponse){
+					alert(httpResponse.status);
 				}
 			);
 			$scope.gridOptions.data = gridData;

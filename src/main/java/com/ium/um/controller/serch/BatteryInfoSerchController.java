@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -40,11 +41,11 @@ public class BatteryInfoSerchController {
         return "greeting";
     }
 	
-	@RequestMapping("/greeting/{id}")
+	@RequestMapping(value = "/greeting/{id}", method = RequestMethod.GET)
 	@ResponseBody
-    public BatteryInfo findById(@PathVariable Integer id) {
+    public BatteryInfo findById(@PathVariable String id) {
         
-        BatteryInfo bis = biMapper.findById(id.longValue());	
+        BatteryInfo bis = biMapper.findById(Long.valueOf(id));	
         if(bis == null){
         	
            return null;
