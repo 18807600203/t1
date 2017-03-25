@@ -17,3 +17,8 @@ border-bottom: 1px solid gray !important;
 .ui-grid-row > div > div > div:last-child {
 border-right: 1px solid gray;
 }
+table{
+    width : 500px;
+    margin: 0 auto;
+}
+

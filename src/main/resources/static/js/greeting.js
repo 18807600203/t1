@@ -3,8 +3,12 @@ var app = angular.module('app', ['ngResource', 'ngTouch', 'ui.grid', 'ui.grid.re
 app.controller('MainCtrl', function($scope, $http, i18nService, $resource) {
 
 		i18nService.setCurrentLang("zh-cn"); //国际化
-		var batinfo = $resource('/serch/greeting/:id', { id: '@id'});
+		var batinfo = $resource('/serch/greeting/:no', { no: '@no'});
 
+		
+
+		$scope.options = ['编号','位号'];
+		$scope.itemseleted = $scope.options[0];
 		$scope.gridOptions = {
 			
 			showGridFooter: false,
@@ -72,12 +76,11 @@ app.controller('MainCtrl', function($scope, $http, i18nService, $resource) {
 
 		$scope.serchById = function(){
 			var gridData = [];
-			var serchid = $scope.id;		
+			var serchstr = $scope.no;		
 			batinfo.get(
-				{id: serchid }, 
+				{no:  serchstr}, 
 				function(bi){
-					//bi.$save();
-					console.log(bi)
+					//console.log(bi)
 					if(! angular.isUndefined(bi.id)){
 						gridData.push(bi);
 					}					

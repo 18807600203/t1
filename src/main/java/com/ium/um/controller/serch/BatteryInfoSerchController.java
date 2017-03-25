@@ -41,15 +41,23 @@ public class BatteryInfoSerchController {
         return "greeting";
     }
 	
-	@RequestMapping(value = "/greeting/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/greeting/{no}", method = RequestMethod.GET)
 	@ResponseBody
-    public BatteryInfo findById(@PathVariable String id) {
+    public BatteryInfo findById(@PathVariable String no) {
         
-        BatteryInfo bis = biMapper.findById(Long.valueOf(id));	
+        BatteryInfo bis = biMapper.findByNo(no);
         if(bis == null){
         	
            return null;
         }
         return bis;
     }
+	
+	@RequestMapping(value = "/greeting/{item}/{value}/{islimit}")
+	@ResponseBody
+	public List<Object> findDetail(@PathVariable String item,  @PathVariable String value, @PathVariable boolean islimit){
+		
+		List<Object> bis = biMapper.findBatteryDetail(item, value, islimit);
+		return bis;
+	}
 }
