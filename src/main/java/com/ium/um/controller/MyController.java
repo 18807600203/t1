@@ -31,9 +31,6 @@ import com.ium.um.mapper.BatteryInfoMapper;
 @Controller
 public class MyController extends WebMvcConfigurerAdapter{
 	
-	@Autowired
-    private BatteryInfoMapper biMapper;
-	
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		
@@ -56,5 +53,11 @@ public class MyController extends WebMvcConfigurerAdapter{
 		
 		return "redirect:/results";	
 	}
+	
+	@GetMapping("/greeting") //value="id", required=false, defaultValue="2"
+    public String greeting() {
+        
+        return "greeting";
+    }
 	
 }

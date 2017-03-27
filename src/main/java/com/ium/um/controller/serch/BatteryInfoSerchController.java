@@ -11,22 +11,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.ium.um.domain.BatteryDetail;
 import com.ium.um.domain.BatteryInfo;
 import com.ium.um.mapper.BatteryInfoMapper;
+import com.ium.um.service.impl.BatteryInfoServiceImpl;
 
 @Controller
 @RequestMapping("/serch")
 public class BatteryInfoSerchController {
 
 	@Autowired
-    private BatteryInfoMapper biMapper;
-	
-	
+    private BatteryInfoServiceImpl biServiceImpl;
+		
 	@GetMapping("/getAll")
 	@ResponseBody
     public List<BatteryInfo> getAll() {
 		
-		List<BatteryInfo> bis = biMapper.getAll();
+		List<BatteryInfo> bis = biServiceImpl.getAll();
 		
         if(bis.isEmpty()){
         	
@@ -35,17 +36,11 @@ public class BatteryInfoSerchController {
         return bis;
     }
 	
-	@GetMapping("/greeting") //value="id", required=false, defaultValue="2"
-    public String greeting() {
-        
-        return "greeting";
-    }
-	
 	@RequestMapping(value = "/greeting/{no}", method = RequestMethod.GET)
 	@ResponseBody
     public BatteryInfo findById(@PathVariable String no) {
         
-        BatteryInfo bis = biMapper.findByNo(no);
+        BatteryInfo bis = biServiceImpl.findByNo(no);
         if(bis == null){
         	
            return null;
@@ -53,11 +48,4 @@ public class BatteryInfoSerchController {
         return bis;
     }
 	
-	@RequestMapping(value = "/greeting/{item}/{value}/{islimit}")
-	@ResponseBody
-	public List<Object> findDetail(@PathVariable String item,  @PathVariable String value, @PathVariable boolean islimit){
-		
-		List<Object> bis = biMapper.findBatteryDetail(item, value, islimit);
-		return bis;
-	}
 }
