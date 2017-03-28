@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="index">
+<head>  
+    <script th:src="@{/js/angular.js}"></script>
+    <script th:src="@{/js/angular-resource.js}"></script>
+    <script th:src="@{/js/angular-touch.js}"></script>
+    <script th:src="@{/js/angular-animate.min.js}"></script>
+    <script th:src="@{/js/angular-sanitize.min.js}"></script>
+    <!-- <script th:src="@{/js/ui-bootstrap-tpls-2.5.0.min.js}"></script> -->  
+    <link th:href="@{/css/bootstrap.min.css}"  rel="stylesheet" type="text/css">
+    <script th:src="@{/js/index.js}"></script>
+    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+</head>
+<body ng-controller="indexCtrl">
+
+    <table border="1">
+        <tr>
+            <td colspan="20" id = "A"><strong>A门</strong></td>
+        </tr>
+        <tr my-td ng-repeat="n in [] | range:8"></tr>
+        <tr>
+            <td colspan="20" id = "B"><strong>B门</strong></td>
+        </tr>
+        <tr my-td ng-repeat="n in [] | range:8"></tr>
+        <tr>
+            <td colspan="20" id = "C"><strong>C门</strong></td>
+        </tr>
+        <tr my-td ng-repeat="n in [] | range:8"></tr>
+        <tr>
+            <td colspan="20" id = "D"><strong>D门</strong></td>
+        </tr>
+        <tr my-td ng-repeat="n in [] | range:8"></tr>
+    </table>
+    <my-hello></my-hello>
+    <input type="text" ng-model="test">
+                
+</body>
+</html>

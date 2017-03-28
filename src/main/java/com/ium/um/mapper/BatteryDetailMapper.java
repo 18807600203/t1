@@ -11,6 +11,6 @@ import com.ium.um.domain.BatteryDetail;
 @Mapper
 public interface BatteryDetailMapper {
 
-	@Select("select * from  p_find_battery_detail(#{itemStr}, #{valueStr}, #{isLimit})")
-	List<BatteryDetail> find(@Param("itemStr") String itemStr, @Param("valueStr") String valueStr, @Param("isLimit") boolean isLimit);
+	@Select("select * from  p_find_battery_detail(#{arg0}, #{arg1}, #{arg2})")
+	List<BatteryDetail> find(@Param("arg0") String itemStr, @Param("arg1") String valueStr, @Param("arg2") boolean isLimit);
 }
