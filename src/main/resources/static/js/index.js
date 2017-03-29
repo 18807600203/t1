@@ -3,6 +3,7 @@ var app = angular.module('index',['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
 app.run(function($templateCache) { //表格看模板缓存
   $templateCache.put('template.html', 
     '<tr>'+
+        '<td>{{$index}}</td>'+
         '<td ng-repeat="n in [] | range:20">' +
             '<div class="progress progress-bar-vertical" uib-popover="the row is : 123" popover-trigger="&#39;mouseenter&#39;">'+
                 '<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">30%'+
