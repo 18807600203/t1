@@ -14,9 +14,7 @@ app.run(function($templateCache) { //表格看模板缓存
         '<tr>'+
             '<td ng-repeat="n in [] | range:20">' +
                 '<div class="progress progress-bar-vertical"'+
-                    'uib-popover-html= "&#39;<strong>{{doors[$parent.$parent.$index]}}</strong><br><strong>行号:</strong>{{$parent.$index + 1}}<br><strong>列号:</strong>{{$index + 1}}<br>&#39;"'+
-                    // 'uib-popover="the row is : {{$parent.$index + 1}}the col is : {{$index + 1}}"'+
-                        'popover-trigger="&#39;mouseenter&#39;">'+
+                    'uib-tooltip-html= "&#39;<strong>{{doors[$parent.$parent.$index]}}</strong><br><strong>行号:</strong>{{$parent.$index + 1}}<br><strong>列号:</strong>{{$index + 1}}<br>&#39;">'+
                     '<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">30%'+
                         '<span class="sr-only">30% Complete</span>'+
                     '</div>'+

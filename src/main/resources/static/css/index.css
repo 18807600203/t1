@@ -11,9 +11,19 @@
   font-size: 30px;
   font-weight: bold;
 }
+#div1{
+  width: 100px;
+  height: 50px; 
+  position: absolute;
+  left:10px;
+  top: 100px;
+  border : 1px solid #000;
+}
 table{
     margin: 0 auto;
     border: 1px solid #000;
+    left : 100px;
+    width : 80%;
 }
 table td{  
     border: 1px solid #000;
