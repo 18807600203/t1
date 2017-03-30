@@ -59,10 +59,4 @@ public class MyController extends WebMvcConfigurerAdapter{
         
         return "greeting";
     }
-	
-	@GetMapping("/index")
-	public String index(){
-		
-		return "index";
-	}
 }
