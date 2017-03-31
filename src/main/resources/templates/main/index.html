@@ -1,32 +1,67 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" ng-app="index">
-<head>  
-    <script th:src="@{/js/angular.js}"></script>
-    <script th:src="@{/js/angular-resource.js}"></script>
-    <script th:src="@{/js/angular-touch.js}"></script>
-    <script th:src="@{/js/angular-animate.min.js}"></script>
-    <script th:src="@{/js/angular-sanitize.min.js}"></script>
-    <script th:src="@{/js/ui-bootstrap-tpls-2.5.0.min.js}"></script>  
-    <link th:href="@{/css/bootstrap.min.css}"  rel="stylesheet" type="text/css">
-    <script th:src="@{/js/index.js}"></script>
-    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+<html xmlns:th="http://www.thymeleaf.org" ng-app="index" lang="zh-CN">
+<head> 
+    <link th:href="@{/css/core/bootstrap.min.css}"  rel="stylesheet" type="text/css">
+    <link th:href="@{/css/custom/index.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/custom/indexlayout.css}" rel="stylesheet" type="text/css">
+
+    <script th:src="@{/js/core/angular.js}"></script>
+    <script th:src="@{/js/core/angular-resource.js}"></script>
+    <script th:src="@{/js/core/angular-touch.js}"></script>
+    <script th:src="@{/js/core/angular-animate.min.js}"></script>
+    <script th:src="@{/js/core/angular-sanitize.min.js}"></script>
+    <script th:src="@{/js/core/ui-bootstrap-tpls-2.5.0.min.js}"></script>  
+    <script th:src="@{/js/custom/index.js}"></script>   
 </head>
+
 <body ng-controller="indexCtrl">
-
-    <!-- 左侧tabs-->
-    <div id = "div1">
-        <uib-tabset active="activePill" vertical="true" type="pills">
-            <uib-tab index="0" heading="Vertical 1"></uib-tab>
-            <uib-tab index="1" heading="Vertical 2"></uib-tab>
-        </uib-tabset>
-    </div>
-   
-    <!-- 3个循环输出界面-->
-    <div my-table ng-repeat="n in [] | range:4"></div>
-
-    <!-- 测试功能 -->
-    <my-hello></my-hello>
-    <button uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="btn btn-default">Mouseenter</button>
-    <input type="text" ng-model="test">           
+    <div id="container">
+        <div id="header">
+            <h1>UMonitor</h1>
+        </div>
+       
+            <div class="navbar navbar-custom navbar-static-top">
+             
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">BootBundle</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown "><a href="#" id="drop1" data-toggle="dropdown" class="dropdown-toggle" role="button">About <b class="caret"></b></a>
+                        <ul role="menu" class="dropdown-menu" aria-labelledby="drop1">
+                            <li role="presentation"><a href="#" role="menuitem">Overview</a></li>
+                            <li role="presentation"><a href="#" role="menuitem">Team Bios</a></li>
+                            <li role="presentation"><a href="#" role="menuitem">Customers</a></li>
+                            <li role="presentation"><a href="#" role="menuitem">Careers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+             
+            </div>
+       
+        <div id="mainContent">
+            <div id="sidebar">
+                <uib-tabset active="activePill" vertical="true" type="pills">
+                    <uib-tab index="0" heading="Vertical 1"></uib-tab>
+                    <uib-tab index="1" heading="Vertical 2"></uib-tab>
+                </uib-tabset>
+            </div>
+            <div id="content">
+                <div my-table ng-repeat="n in [] | range:4"></div>   
+            </div>
+        </div>      
+        <div id="footer">
+            <my-hello></my-hello>
+            <input type="text" ng-model="test"> 
+        </div>
+    </div> 
 </body>
 </html>

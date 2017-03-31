@@ -35,12 +35,16 @@
 		<flyway.version>4.1.2</flyway.version>
 		<postgresql.version>42.0.0</postgresql.version>
 		<hikaricp.version>2.6.1</hikaricp.version>
-		<thymeleaf.version>3.0.3.RELEASE</thymeleaf.version>
+		<thymeleaf.version>3.0.5.RELEASE</thymeleaf.version>
 		<thymeleaf-layout-dialect.version>2.2.1</thymeleaf-layout-dialect.version>
 		<thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
 	</properties>
 
 	<dependencies>
+		<dependency>  
+            <groupId>org.springframework.boot</groupId>  
+            <artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

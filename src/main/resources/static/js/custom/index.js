@@ -53,9 +53,23 @@ app.filter('range', function() { //循环输出
   };
 });
 
-app.controller('indexCtrl', function($scope,$sce){
+app.controller('indexCtrl', function($scope,$http){
     $scope.test = '1234';
     $scope.doors = ['A门', 'B门', 'C门', 'D门'];
+    $scope.items = [
+    'The first choice!',
+    'And another choice for you.',
+    'but wait! A third!'];
+
+    $http({
+        method: 'GET',
+        url: '/index/left'
+    }).then(function successCallback(response) {
+            console.log(response.data);
+        }, function errorCallback(response) {
+            // 请求失败执行代码
+    });
+
 });
 
 
