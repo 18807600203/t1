@@ -5,48 +5,14 @@
     <link th:href="@{/css/custom/index.css}" rel="stylesheet" type="text/css">
     <link th:href="@{/css/custom/indexlayout.css}" rel="stylesheet" type="text/css">
 
-    <script th:src="@{/js/core/angular.js}"></script>
-    <script th:src="@{/js/core/angular-resource.js}"></script>
-    <script th:src="@{/js/core/angular-touch.js}"></script>
-    <script th:src="@{/js/core/angular-animate.min.js}"></script>
-    <script th:src="@{/js/core/angular-sanitize.min.js}"></script>
-    <script th:src="@{/js/core/ui-bootstrap-tpls-2.5.0.min.js}"></script>  
-    <script th:src="@{/js/custom/index.js}"></script>   
+    <script th:src="@{http://cdn.bootcss.com/vue/2.2.6/vue.js}"></script>
 </head>
 
-<body ng-controller="indexCtrl">
+<!-- <body ng-controller="indexCtrl">
     <div id="container">
         <div id="header">
             <h1>UMonitor</h1>
-        </div>
-       
-            <div class="navbar navbar-custom navbar-static-top">
-             
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="#">BootBundle</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li class="dropdown "><a href="#" id="drop1" data-toggle="dropdown" class="dropdown-toggle" role="button">About <b class="caret"></b></a>
-                        <ul role="menu" class="dropdown-menu" aria-labelledby="drop1">
-                            <li role="presentation"><a href="#" role="menuitem">Overview</a></li>
-                            <li role="presentation"><a href="#" role="menuitem">Team Bios</a></li>
-                            <li role="presentation"><a href="#" role="menuitem">Customers</a></li>
-                            <li role="presentation"><a href="#" role="menuitem">Careers</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#contact">Contact</a></li>
-                  </ul>
-                </div><!--/.nav-collapse -->
-             
-            </div>
-       
+        </div>     
         <div id="mainContent">
             <div id="sidebar">
                 <uib-tabset active="activePill" vertical="true" type="pills">
@@ -63,5 +29,11 @@
             <input type="text" ng-model="test"> 
         </div>
     </div> 
+</body> -->
+<body>
+    <div id = "index">
+        <my-table v-for="(door,index) in doors" :key="index" :door="door" :tableindex="index" ></my-table>
+    </div>    
 </body>
+<script th:src="@{/js/custom/index.js}"></script>   
 </html>
