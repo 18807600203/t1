@@ -1,5 +1,4 @@
 var app = angular.module('app', ['ngResource', 'ngTouch', 'ui.grid', 'ui.grid.resizeColumns', 'ui.grid.moveColumns', 'ui.grid.pagination']);
-
 app.controller('MainCtrl', function($scope, $http, i18nService, $resource) {
 
 		i18nService.setCurrentLang("zh-cn"); //国际化

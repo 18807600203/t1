@@ -4,11 +4,12 @@
     <link th:href="@{/css/core/bootstrap.min.css}"  rel="stylesheet" type="text/css">
     <link th:href="@{/css/custom/index.css}" rel="stylesheet" type="text/css">
     <link th:href="@{/css/custom/indexlayout.css}" rel="stylesheet" type="text/css">
-
+    <link th:href="@{http://cdn.bootcss.com/iview/2.0.0-rc.9/styles/iview.css}" rel="stylesheet" type="text/css">
     <script th:src="@{http://cdn.bootcss.com/vue/2.2.6/vue.js}"></script>
+    <script th:src="@{http://cdn.bootcss.com/iview/2.0.0-rc.9/iview.min.js}"></script>
 </head>
 
-<!-- <body ng-controller="indexCtrl">
+<body>
     <div id="container">
         <div id="header">
             <h1>UMonitor</h1>
@@ -21,19 +22,15 @@
                 </uib-tabset>
             </div>
             <div id="content">
-                <div my-table ng-repeat="n in [] | range:4"></div>   
+                <my-table class="layout-content-main" 
+                        v-for="(door,index) in doors" :key="index" :door="door" :tableindex="index"></my-table> 
             </div>
         </div>      
         <div id="footer">
-            <my-hello></my-hello>
-            <input type="text" ng-model="test"> 
+            <input type="text"> 
         </div>
-    </div> 
-</body> -->
-<body>
-    <div id = "index">
-        <my-table v-for="(door,index) in doors" :key="index" :door="door" :tableindex="index" ></my-table>
-    </div>    
+    </div>
 </body>
-<script th:src="@{/js/custom/index.js}"></script>   
+<script th:src="@{/js/custom/index.js}" ></script>   
 </html>
+                    
