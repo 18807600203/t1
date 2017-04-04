@@ -1,6 +1,6 @@
 body {
-    font-family:Verdana; 
-    font-size:14px; 
+    font-family:Verdana;
+    font-size:14px;
     margin:0;
 }
 #container {
@@ -10,22 +10,20 @@ body {
 #header {
     height:100px; 
     background:#DCDCDC; 
-    /*margin-bottom:5px;*/
 }
 #menu { 
     height:30px; 
     background:#3d454c;
-    /*margin-bottom:5px;*/
+    color: white;
 }
 #mainContent { 
     overflow:auto;
     zoom:1; 
-    /*margin-bottom:5px;*/
 }
 #sidebar { 
     float:left; 
     width:180px;
-    /*background:#cf9; */
+   /* background:#cf9;*/
     height: 100%;
 }
 #content { 
@@ -33,7 +31,6 @@ body {
     margin-left:202px; 
     height:auto !important; 
     height:100px; 
-    /*background:#ffa;*/
 }
 #footer { 
     height:60px; 
