@@ -17,10 +17,16 @@ public class IndexController {
     private AppConfig appConfig;
 	
 	@GetMapping
-	public String index(Model model){
+	public String index(){
 		
-		String chassisnum = appConfig.getChassisnum();
-		model.addAttribute("chassis", chassisnum);
 		return "/main/index";
+	}
+	
+	@GetMapping("/left")
+	@ResponseBody
+	public Integer getChassisNum(){
+		
+		String num = appConfig.getChassisnum();
+		return Integer.valueOf(num);
 	}
 }

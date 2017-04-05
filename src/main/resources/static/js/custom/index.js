@@ -3,18 +3,19 @@ Vue.component('my-table', {
         <div>\
             <div :class = "[tableindex % 2 == 0 ? \'doorA\' : \'doorB\']" v-once><strong>{{door}}</strong></div>\
             <table>\
-                <my-tr v-for="index in 8" :key="index" :rowindex="index" :door="door"></my-tr>\
+                <my-tr v-for="index in 8" :key="index" :rowindex="index" :door="door" :curchassisno="curchassisno"></my-tr>\
             </table>\
         </div>\
         ',
-    props:['door','tableindex'],
-})
+    props:['door','tableindex','curchassisno'],
+});
 Vue.component('my-tr', {
     template: '\
     <tr>\
-        <td v-for="index in 20" :key="index" :door="door" :rowindex="rowindex">\
+        <td v-for="index in 20" :key="index" :door="door" :rowindex="rowindex" :curchassisno="curchassisno">\
             <Tooltip  placement="top" :delay="300">\
                 <div slot="content" v-once>\
+                    <p>{{curchassisno}}</p>\
                     <p>{{door}}</p>\
                     <p><i>行号:{{rowindex}}</i></p>\
                     <p><i>列号:{{index}}</i></p>\
@@ -28,19 +29,41 @@ Vue.component('my-tr', {
         </td>\
     </tr>\
     ',
-    props:['door','rowindex'],
-})
+    props:['door','rowindex','curchassisno'],
+});
 
 new Vue({
     el: '#container',
-    data:{
-         doors:['A门', 'B门', 'C门', 'D门'],
+    data: {
+        doors:['A门', 'B门', 'C门', 'D门'],
+        num: '',
+        curchassisno : '0',
+     
     },
     methods: {
-        todo: function (index) {
-            alert(index);
-        }
+        showChassis (key) {
+           // /**/ this.$Message.info(key);
+            this.curchassisno = key;
+
+        },
+        getNum (){
+            var resource = this.$resource('/index/left');
+            vm = this;
+            resource.get()
+            .then((response) => {
+               this.num = response.data;
+            })
+            // .catch(function(response) {
+            //     console.log(response)
+            // }) /*调试*/
+        }      
+    },
+    created(){
+        this.getNum();
+        
     }
 });
+
+
 
 
