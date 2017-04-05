@@ -19,7 +19,9 @@
         </div>
         <div id="menu">
             This is the Menu
-            <input v-model="curchassisno" style="color: red">    
+                <router-link to="/chassis/1">/chassis/1</router-link>
+                <router-link to="/chassis/2">/chassis/2</router-link>
+                
         </div>
         <div id="mainContent">
             <div id="sidebar">
@@ -32,8 +34,9 @@
                 </i-Menu>
             </div>
             <div id="content">
-                <my-table class="layout-content-main" v-for="(door,index) in doors" :key="index" :door="door" :tableindex="index" :curchassisno="curchassisno"></my-table>
-                
+                <!-- <my-table class="layout-content-main" v-for="(door,index) in doors" :key="index" :door="door" :tableindex="index" :curchassisno="curchassisno"></my-table> -->
+ 
+                <router-view name="view"></router-view>
             </div>
         </div>
         <div id="footer">
@@ -42,7 +45,15 @@
         </div>
         <Back-top></Back-top>
     </div>
-</div>
+<!--     <div id="app">
+  <h1>Hello App!</h1>
+  <p>
+       <router-link to="/user/foo">/user/foo</router-link>
+            <router-link to="/user/bar">/user/bar</router-link>
+    
+  </p>
+  <router-view></router-view>
+</div> -->
 </body>
 <script th:src="@{/js/custom/index.js}"></script>
 

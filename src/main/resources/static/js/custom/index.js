@@ -3,19 +3,19 @@ Vue.component('my-table', {
         <div>\
             <div :class = "[tableindex % 2 == 0 ? \'doorA\' : \'doorB\']" v-once><strong>{{door}}</strong></div>\
             <table>\
-                <my-tr v-for="index in 8" :key="index" :rowindex="index" :door="door" :curchassisno="curchassisno"></my-tr>\
+                <my-tr v-for="index in 8" :key="index" :rowindex="index" :door="door"></my-tr>\
             </table>\
         </div>\
         ',
-    props:['door','tableindex','curchassisno'],
+    props:['door','tableindex'],
 });
 Vue.component('my-tr', {
     template: '\
     <tr>\
-        <td v-for="index in 20" :key="index" :door="door" :rowindex="rowindex" :curchassisno="curchassisno">\
+        <td v-for="index in 20" :key="index" :door="door" :rowindex="rowindex">\
             <Tooltip  placement="top" :delay="300">\
                 <div slot="content" v-once>\
-                    <p>{{curchassisno}}</p>\
+                    <p>{{$route.params.id}}</p>\
                     <p>{{door}}</p>\
                     <p><i>行号:{{rowindex}}</i></p>\
                     <p><i>列号:{{index}}</i></p>\
@@ -29,21 +29,36 @@ Vue.component('my-tr', {
         </td>\
     </tr>\
     ',
-    props:['door','rowindex','curchassisno'],
+    props:['door','rowindex'],
+});
+
+const Chassis = {
+  //template: `<div>User {{ $route.params.id }}</div>`
+  template : '<div>{{$route.params.id}}<my-table class="layout-content-main" v-for="(door,index) in [\'A门\', \'B门\', \'C门\', \'D门\']" :key="index" :door="door" :tableindex="index" :id="$route.params.id"></my-table></div>',
+  // props:['curchassisno'],
+};
+
+const routes = [
+  { path: '/chassis/:id', components: {view : Chassis} }
+];
+
+const router = new VueRouter({
+  routes // （缩写）相当于 routes: routes
 });
 
 new Vue({
+    router,
     el: '#container',
     data: {
-        doors:['A门', 'B门', 'C门', 'D门'],
+        //doors:['A门', 'B门', 'C门', 'D门'],
         num: '',
-        curchassisno : '0',
+        //curchassisno : '0',
      
     },
     methods: {
         showChassis (key) {
            // /**/ this.$Message.info(key);
-            this.curchassisno = key;
+           /* this.curchassisno = key;*/
 
         },
         getNum (){
@@ -63,7 +78,4 @@ new Vue({
         
     }
 });
-
-
-
 
