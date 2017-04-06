@@ -56,7 +56,8 @@ new Vue({
     data: {
         num: '',
         //curchassisno : '0', 
-        lasttime:new Date(),  
+        lasttime : new Date(), 
+        isfristload : true, 
     },
     methods: {
         showChassis (key) {
@@ -66,13 +67,18 @@ new Vue({
            //      this.$Message.info("测试");
            //  }, 2000);
            var curtime = new Date();
-           if((curtime - this.lasttime) / 1000 > 10){ //间隔10s才能提交切换
-
-                this.lasttime = new Date();
+           if(this.isfristload){
                 this.$router.push({ path: '/chassis/' + key })
-            }else{
-                this.$Message.error('两次切换的时间需间隔10秒');
-            }
+                this.isfristload = false;
+           }else{
+                if((curtime - this.lasttime) / 1000 > 10){ //间隔10s才能提交切换
+                    this.lasttime = new Date();
+                    this.$router.push({ path: '/chassis/' + key })
+                }else{
+                    this.$Message.error('两次切换的时间需间隔10秒');
+                }
+           }
+           
         },
         getNum (){
             var resource = this.$resource('/index/left');

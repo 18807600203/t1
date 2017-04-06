@@ -17,8 +17,10 @@ public class IndexController {
     private AppConfig appConfig;
 	
 	@GetMapping
-	public String index(){
+	public String index(Model model){
 		
+		String num = appConfig.getChassisnum();
+		model.addAttribute("chassis", num);
 		return "/main/index";
 	}
 	
@@ -26,7 +28,8 @@ public class IndexController {
 	@ResponseBody
 	public Integer getChassisNum(){
 		
-		String num = appConfig.getChassisnum();
+		
+		String num = appConfig.getChassisnum();		
 		return Integer.valueOf(num);
 	}
 }

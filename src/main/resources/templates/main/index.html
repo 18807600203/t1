@@ -41,6 +41,21 @@
         <Back-top></Back-top>
     </div>
 </body>
+ <script th:inline="javascript">
+
+    // var num2 = [[${chassis}]];
+    // el: '#sidebar',
+    // data:{
+    //     num3 : num2,
+    // }
+     var num2 = [[${chassis}]];
+     new Vue({
+        el:'sider'
+     })
+     
+
+   
+</script> 
 <script th:src="@{/js/custom/index.js}"></script>
 
 </html>
