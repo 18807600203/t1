@@ -1,7 +1,7 @@
 Vue.component('my-table', {
     template: '\
         <div>\
-            <div :class = "[tableindex % 2 == 0 ? \'doorA\' : \'doorB\']" v-once><strong>{{door}}</strong></div>\
+            <div :class = "[tableindex % 2 == 0 ? \'doorA\' : \'doorB\']"><strong>{{door}}</strong></div>\
             <table>\
                 <my-tr v-for="index in 8" :key="index" :rowindex="index" :door="door"></my-tr>\
             </table>\
@@ -14,8 +14,8 @@ Vue.component('my-tr', {
     <tr>\
         <td v-for="index in 20" :key="index" :door="door" :rowindex="rowindex">\
             <Tooltip  placement="top" :delay="300">\
-                <div slot="content" v-once>\
-                    <p>{{$route.params.id}}</p>\
+                <div slot="content">\
+                    <p>机框_{{$route.params.id}}</p>\
                     <p>{{door}}</p>\
                     <p><i>行号:{{rowindex}}</i></p>\
                     <p><i>列号:{{index}}</i></p>\
@@ -33,9 +33,12 @@ Vue.component('my-tr', {
 });
 
 const Chassis = {
-  //template: `<div>User {{ $route.params.id }}</div>`
-  template : '<div>{{$route.params.id}}<my-table class="layout-content-main" v-for="(door,index) in [\'A门\', \'B门\', \'C门\', \'D门\']" :key="index" :door="door" :tableindex="index" :id="$route.params.id"></my-table></div>',
-  // props:['curchassisno'],
+  template : '<div>{{$route.params.id}}<my-table class="layout-content-main" v-for="(door,index) in doors" :key="index" :door="door" :tableindex="index"></my-table></div>',
+  data (){
+    return {
+        doors:['A门', 'B门', 'C门', 'D门'],
+    }
+  },
 };
 
 const routes = [
@@ -43,23 +46,33 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  routes // （缩写）相当于 routes: routes
+    mode: 'history',
+    routes // （缩写）相当于 routes: routes
 });
 
 new Vue({
     router,
     el: '#container',
     data: {
-        //doors:['A门', 'B门', 'C门', 'D门'],
         num: '',
-        //curchassisno : '0',
-     
+        //curchassisno : '0', 
+        lasttime:new Date(),  
     },
     methods: {
         showChassis (key) {
            // /**/ this.$Message.info(key);
-           /* this.curchassisno = key;*/
+            
+           // setTimeout(() => {
+           //      this.$Message.info("测试");
+           //  }, 2000);
+           var curtime = new Date();
+           if((curtime - this.lasttime) / 1000 > 10){ //间隔10s才能提交切换
 
+                this.lasttime = new Date();
+                this.$router.push({ path: '/chassis/' + key })
+            }else{
+                this.$Message.error('两次切换的时间需间隔10秒');
+            }
         },
         getNum (){
             var resource = this.$resource('/index/left');
@@ -71,11 +84,10 @@ new Vue({
             // .catch(function(response) {
             //     console.log(response)
             // }) /*调试*/
-        }      
+        } ,  
     },
     created(){
-        this.getNum();
-        
+        this.getNum();        
     }
 });
 

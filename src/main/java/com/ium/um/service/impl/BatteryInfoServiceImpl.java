@@ -41,4 +41,5 @@ public class BatteryInfoServiceImpl implements IBatteryInfoService{
 		return false;
 	}
 
+
 }

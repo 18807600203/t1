@@ -12,4 +12,5 @@ public interface IBatteryInfoService {
 	List<BatteryInfo> getAll();
 	
 	boolean insert(String chassis, String channel, String module);
+	
 }
