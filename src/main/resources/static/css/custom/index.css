@@ -14,7 +14,7 @@
 }
 
 .progress-bar-vertical {
-    width: 50px;
+    width: 75px;
     min-height: 100px;
     display: flex;
     align-items: flex-end;
@@ -41,6 +41,7 @@ table {
 
 table td {
     border: 1px solid #000;
+    text-align: center;
 }
 
 body {

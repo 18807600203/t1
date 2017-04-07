@@ -32,7 +32,11 @@ Vue.component('my-tr', {
 	props:['door','rowindex','colindex'],
 });
 
-
+Vue.component('my-p', {
+    template: '\
+        
+    ',
+})
 
 const Chassis = { //定义组件
   template : '<div>{{$route.params.id}}<my-table class="layout-content-main" v-for="(door,index) in doors" :key="index" :door="door" :tableindex="index"></my-table></div>',
