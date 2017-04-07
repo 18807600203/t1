@@ -19,7 +19,9 @@ public class IndexController {
 	@GetMapping
 	public String index(Model model){
 		
-		String num = appConfig.getChassisnum();
+		String numStr = appConfig.getChassisnum();
+		Integer num = Integer.valueOf(numStr);
+		
 		model.addAttribute("chassis", num);
 		return "/main/index";
 	}

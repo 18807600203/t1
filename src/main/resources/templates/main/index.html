@@ -24,7 +24,7 @@
             <div id="sidebar">
                 <i-Menu theme="dark" mode="vertical" style="width: 180px" @on-select="showChassis">
                     <Menu-group title="机框管理">
-                        <Menu-item v-for="index in num" :key="index" :name="index" disable="true">
+                        <Menu-item v-for="index in num" :key="index" :name="index">
                             机框_{{index}}
                         </Menu-item>
                     </Menu-group>
@@ -36,26 +36,18 @@
         </div>
         <div id="footer">
             This is the footer
-            <input type="text">       
+            <input type="text">
         </div>
         <Back-top></Back-top>
     </div>
 </body>
- <script th:inline="javascript">
-
-    // var num2 = [[${chassis}]];
-    // el: '#sidebar',
-    // data:{
-    //     num3 : num2,
-    // }
-     var num2 = [[${chassis}]];
-     new Vue({
-        el:'sider'
-     })
-     
-
-   
-</script> 
+<script th:inline="javascript">
+    var v = new Vue({
+        data:{
+            vnum : [[${chassis}]]
+        },      
+    });
+</script>
 <script th:src="@{/js/custom/index.js}"></script>
 
 </html>
