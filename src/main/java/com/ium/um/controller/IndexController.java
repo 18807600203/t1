@@ -26,12 +26,4 @@ public class IndexController {
 		return "/main/index";
 	}
 	
-	@GetMapping("/left")
-	@ResponseBody
-	public Integer getChassisNum(){
-		
-		
-		String num = appConfig.getChassisnum();		
-		return Integer.valueOf(num);
-	}
 }

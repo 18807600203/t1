@@ -26,22 +26,59 @@ Vue.component('my-progress', {
 			<div slot="content">\
 				<p>机框_{{$route.params.id}}</p>\
 				<p>{{door}}</p>\
-				<p><i>行号:{{rowindex}}</i></p>\
-				<p><i>列号:{{colindex}}</i></p>\
+				<p>行号:{{rowindex}}__列号:{{colindex}}</p>\
+				<p>{{show}}</p>\
 			</div>\
 			<div class="progress progress-bar-vertical" data-toggle="tooltip" data-placement="top">\
-				<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">30%\
-					<span class="sr-only">30% Complete</span>\
+				<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" :style="height">60%\
 				</div>\
 			</div>\
 		</Tooltip>\
     	',
     props:['door','rowindex','colindex'],
-    
+    data : function(){  	
+    	return {
+    		height : '30%'
+    	}
+    },
+    computed:{
+
+    	show : function(){
+
+    		var chassis = this.$route.params.id;
+    		var channel = this.getChannel;
+    		return chassis + '_' + channel + '_'+ this.colindex
+    	},
+
+    	getChannel : function(){
+
+    		var ch = '';
+    		var door = this.door;
+    		var row = this.rowindex;
+    		if ( door == 'A门'){ 
+    			ch = '0'+ row
+    		}
+    		else if ( door == 'B门'){
+    			if(row == 1){
+    				ch = '0' + (row + 8)
+    			}else{
+    				ch = row + 8
+    			}
+    		}
+    		else if ( door == 'C门'){
+    			ch = row + 16
+    		}
+    		else if ( door == 'D门' ){
+    			ch = row + 24
+    		}
+    		return ch
+    		// return this.door + '_'+this.rowindex
+    	}
+    }
 })
 
 const Chassis = { //定义组件
-  template : '<div>{{$route.params.id}}<my-table class="layout-content-main" v-for="(door,index) in doors" :key="index" :door="door" :tableindex="index"></my-table></div>',
+  template : '<div><my-table class="layout-content-main" v-for="(door,index) in doors" :key="index" :door="door" :tableindex="index"></my-table></div>',
   data (){
 	return {
 		doors:['A门', 'B门', 'C门', 'D门'],
@@ -60,7 +97,7 @@ const router = new VueRouter({ //设置路由
 
 var vm = new Vue({
 	router, //使用路由
-	el: '#container',
+	el: '#app',
 	data: {
 		num : v.$data.vnum, //机框数量,利用另外一个vue实例,将java 模板上的值回传
 		lasttime : new Date(), //记录左侧菜单点击的时间点,防止恶意点击
@@ -69,7 +106,7 @@ var vm = new Vue({
 	},
 
 	methods: {
-		showChassis (key) { //菜单项点击事件
+		showChassis : function(key) { //菜单项点击事件
 		   var curtime = new Date();
 		   if(this.isfristload){ //第一次加载不用等10s的间隔时间
 				this.$router.push({ path: '/chassis/' + key });

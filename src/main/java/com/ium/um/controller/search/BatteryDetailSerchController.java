@@ -1,4 +1,4 @@
-package com.ium.um.controller.serch;
+package com.ium.um.controller.search;
 
 import java.util.List;
 
