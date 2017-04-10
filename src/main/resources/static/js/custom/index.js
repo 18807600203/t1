@@ -74,13 +74,23 @@ Vue.component('my-progress', {
     		}
     		return ch
     		// return this.door + '_'+this.rowindex
-    	}
+    	},
+
+        changes : {
+            get : function(){
+                return this.pgvalue;
+            },
+            set : function(v){
+                this.pgvalue =  v; /________
+
+            }
+        }
     },
-    mounted(){
+    create(){
     	
 		this.intervalid1 = setInterval(function(){
 
-			this.pgvalue = ((Math.random() * 100).toFixed(2))+'%';
+			// this.changes = ((Math.random() * 100).toFixed(2))+'%'
 			console.log( this.pgvalue);
 		}, 5000);
     },
