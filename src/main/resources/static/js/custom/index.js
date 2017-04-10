@@ -30,7 +30,7 @@ Vue.component('my-progress', {
 				<p>{{show}}</p>\
 			</div>\
 			<div class="progress progress-bar-vertical" data-toggle="tooltip" data-placement="top">\
-				<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" :style="height">60%\
+				<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" :style="{height: pgvalue}">{{pgvalue}}\
 				</div>\
 			</div>\
 		</Tooltip>\
@@ -38,7 +38,8 @@ Vue.component('my-progress', {
     props:['door','rowindex','colindex'],
     data : function(){  	
     	return {
-    		height : '30%'
+    		pgvalue : '70%',
+    		intervalid1:'',
     	}
     },
     computed:{
@@ -74,7 +75,19 @@ Vue.component('my-progress', {
     		return ch
     		// return this.door + '_'+this.rowindex
     	}
-    }
+    },
+    mounted(){
+    	
+		this.intervalid1 = setInterval(function(){
+
+			this.pgvalue = ((Math.random() * 100).toFixed(2))+'%';
+			console.log( this.pgvalue);
+		}, 5000);
+    },
+    beforeDestroy () {
+      clearInterval(this.intervalid1)
+    },
+
 })
 
 const Chassis = { //定义组件
