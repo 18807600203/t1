@@ -39,6 +39,7 @@ Vue.component('my-progress', {
     data : function(){  	
     	return {
     		pgvalue : '70%',
+    		minheight : '2em',
     		intervalid1:'',
     	}
     },
@@ -81,23 +82,27 @@ Vue.component('my-progress', {
                 return this.pgvalue;
             },
             set : function(v){
-                this.pgvalue =  v; /________
-
+                this.pgvalue =  v;
             }
         }
     },
-    create(){
-    	
-		this.intervalid1 = setInterval(function(){
+    mounted : function(){
 
-			// this.changes = ((Math.random() * 100).toFixed(2))+'%'
-			console.log( this.pgvalue);
-		}, 5000);
+    	this.todo()	
     },
     beforeDestroy () {
+
       clearInterval(this.intervalid1)
     },
+    methods : {
 
+    	todo : function(){
+    		const self = this;
+    		this.intervalid1 = setInterval(function(){
+		        self.changes = ((Math.random() * 100).toFixed(2))+'%';
+		    }, 5000);
+    	}
+    },
 })
 
 const Chassis = { //定义组件
