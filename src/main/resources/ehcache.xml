@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+         updateCheck="false" >
+<!-- 
+	maxEntriesLocalHeap= 指定允许在内存中存放元素的最大数量，0表示不限制。
+ 	maxEntriesLocalDisk= 指定允许在硬盘上存放元素的最大数量，0表示不限制。
+ 	eternal= 对象是否永久有效，一但设置了，timeout将不起作用
+ 	diskSpoolBufferSizeMB= 这个参数设置DiskStore（磁盘缓存）的缓存区大小
+ 	timeToIdleSeconds= 设置对象在失效前的允许闲置时间（单位：秒）
+	timeToLiveSeconds=	设置对象在失效前允许存活时间（单位：秒）
+	memoryStoreEvictionPolicy= 当达到maxElementsInMemory限制时，Ehcache将会根据指定的策略去清理内存。默认策略是LRU（最近最少使用）。你可以设置为FIFO（先进先出）或是LFU（较少使用）。
+ 	transactionalMode= 
+ 	strategy= localTempSwap 	当堆内存或者非堆内存里面的元素已经满了的时候，将其中的元素临时的存放在磁盘上，一旦重启就会消失。
+	缓存名sampleCache1 ，内存中最多可缓存1000 个Element ，其中的element 会在闲置5 分钟或是存活10 分钟之后失效,有get之后重新计时。 
+	超过10000element 时，element 将会输出到磁盘中，输出路径是tmp 。
+	 timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+-->
+	
+	<!-- 缓存接收的UI数据 -->
+    <cache name="UI_Cache"
+           maxElementsInMemory="9600"
+           eternal="false"
+           overflowToDisk="false"
+           timeToLiveSeconds = "415"
+           memoryStoreEvictionPolicy="FIFO">
+    </cache>
+
+	<!-- 缓存ID表 -->
+    <cache name="ID_Cache"
+           maxElementsInMemory="9600"
+           eternal="true"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU">
+	</cache>
+     
+    <!-- 缓存本地机框配置表 -->
+    <cache name="LocalSf_Cache"
+           maxElementsInMemory="20"
+           eternal="true"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU">
+    </cache>
+    
+    <!-- 缓存数据库中机框配置表 -->
+    <cache name="RemoteSf_Cache"
+           maxElementsInMemory="20"
+           eternal="true"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU">
+    </cache>
+    
+    <!-- 缓存从数据库取出的电池NO表 -->
+    <cache name="NOFromDB_Cache"
+           maxElementsInMemory="9600"
+           eternal="true"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU">
+    </cache>
+    
+    <!-- 缓存图标 -->
+    <cache name="ICO_Cache"
+           maxElementsInMemory="5"
+           eternal="true"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="FIFO">
+    </cache>
+    
+    <!-- 缓存数据库的Formation表信息    用于图表显示-->
+    <cache name="FormationInfoFromDB_Cache"
+           maxElementsInMemory="30"
+           eternal="false"
+           overflowToDisk="false"
+           timeToLiveSeconds = "300"
+           memoryStoreEvictionPolicy="FIFO">
+    </cache>
+   
+</ehcache>

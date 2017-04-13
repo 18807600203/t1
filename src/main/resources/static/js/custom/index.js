@@ -27,10 +27,10 @@ Vue.component('my-progress', {
 				<p>机框_{{$route.params.id}}</p>\
 				<p>{{door}}</p>\
 				<p>行号:{{rowindex}}__列号:{{colindex}}</p>\
-				<p>{{show}}</p>\
 			</div>\
 			<div class="progress progress-bar-vertical" data-toggle="tooltip" data-placement="top">\
-				<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" :style="{height: pgvalue}">{{pgvalue}}\
+				<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" \
+					:style="{height: pgvalue}" style="min-height: 1.5em">{{pgvalue}}\
 				</div>\
 			</div>\
 		</Tooltip>\
@@ -39,7 +39,6 @@ Vue.component('my-progress', {
     data : function(){  	
     	return {
     		pgvalue : '70%',
-    		minheight : '2em',
     		intervalid1:'',
     	}
     },

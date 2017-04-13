@@ -34,6 +34,6 @@ public class IndexControllerTest {
         
 		String a = appConfig.getChassisnum();
 		System.out.println(a);
-		assertTrue(a.equals("2"));
+		assertTrue(a.equals("15"));
     }
 }
