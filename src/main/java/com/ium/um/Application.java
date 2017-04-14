@@ -7,11 +7,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cache.annotation.EnableCaching;
 
 import com.ium.um.service.impl.BatteryInfoServiceImpl;
 
 
 @SpringBootApplication
+@EnableCaching
 //implements CommandLineRunner
 public class Application implements CommandLineRunner{
 

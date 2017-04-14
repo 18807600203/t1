@@ -1,41 +1,32 @@
 package com.ium.um;
 
-import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.cache.ehcache.EhCacheCacheManager;
-import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
+import java.util.concurrent.TimeUnit;
 
-import net.sf.ehcache.hibernate.management.api.EhcacheHibernateMBean;
+import javax.cache.CacheManager;
+import javax.cache.configuration.MutableConfiguration;
+import javax.cache.expiry.Duration;
+import javax.cache.expiry.TouchedExpiryPolicy;
 
-@Configuration
-@EnableCaching
-public class CacheConfiguration {
+import org.ehcache.spi.loaderwriter.CacheLoaderWriter;
+import org.springframework.boot.autoconfigure.cache.JCacheManagerCustomizer;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.mvc.condition.ProducesRequestCondition;
 
-	/**
-     *  ehcache主要的管理器
-     * @param bean
-     * @return
-     */
-	@Bean
-	public EhCacheCacheManager ehCacheCacheManager( EhCacheManagerFactoryBean bean){
+
+@Component
+public class CacheConfiguration implements JCacheManagerCustomizer{
+	private static final String NAME_CACHE = "people";
+
+	@Override
+	public void customize(CacheManager  cacheManager) {
+		cacheManager.createCache(NAME_CACHE,
+				new MutableConfiguration<>()
+						.setExpiryPolicyFactory(TouchedExpiryPolicy.factoryOf(new Duration(TimeUnit.SECONDS, 10)))
+						.setStoreByValue(true).setStatisticsEnabled(true));
 		
-		return new EhCacheCacheManager(bean.getObject());
 	}
+
+
 	
-	 /**
-     * 据shared与否的设置,
-     * Spring分别通过CacheManager.create()
-     * 或new CacheManager()方式来创建一个ehcache基地.
-     * 也说是说通过这个来设置cache的基地是这里的Spring独用,还是跟别的(如hibernate的Ehcache共享)
-     */
-	@Bean
-	public EhCacheManagerFactoryBean ehCacheManagerFactoryBean(){
-		
-		 EhCacheManagerFactoryBean cacheManagerFactoryBean = new EhCacheManagerFactoryBean();
-         cacheManagerFactoryBean.setConfigLocation (new ClassPathResource("ehcache.xml"));
-         cacheManagerFactoryBean.setShared(true);
-         return cacheManagerFactoryBean;
-	}
+
 }

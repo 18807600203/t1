@@ -37,8 +37,8 @@ public class BatteryInfoServiceImpl implements IBatteryInfoService{
 
 	@Override
 	public boolean insert(String chassis, String channel, String module) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return biMapper.insert(chassis, channel, module);
 	}
 
 

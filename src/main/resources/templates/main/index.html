@@ -46,7 +46,7 @@
                     查询
                 </Menu-item>
             </div>
-        </i-Menu>      
+        </i-Menu>
         <div class="layout-content">
             <Row>
                 <i-col span="2">
@@ -71,13 +71,13 @@
             <p>电话: 760-22189732  传真: 0760-22189087</p>
         </div>
         <Back-top></Back-top>
-    </div>   
+    </div>
 </body>
 <script th:inline="javascript">
         var v = new Vue({ //加载java后端传来的参数,必须放在第一个js加载的
             data:{
                 vnum : [[${chassis}]]
-            },      
+            },
         });
 </script>
 <script th:src="@{/js/custom/index.js}"></script>

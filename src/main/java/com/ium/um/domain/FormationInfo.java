@@ -9,7 +9,7 @@ public class FormationInfo implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	private String baseid;
-	private String dat_fm;
+	private FormationData dat_fm;
 	private String instime;
 	
 	public String getBaseid() {
@@ -20,11 +20,11 @@ public class FormationInfo implements Serializable{
 		this.baseid = baseid;
 	}
 	
-	public String getDat_fm() {
+	public FormationData getDat_fm() {
 		return dat_fm;
 	}
 	
-	public void setDat_fm(String dat_fm) {
+	public void setDat_fm(FormationData dat_fm) {
 		this.dat_fm = dat_fm;
 	}
 	

@@ -36,7 +36,7 @@ Vue.component('my-progress', {
 		</Tooltip>\
     	',
     props:['door','rowindex','colindex'],
-    data : function(){  	
+    data : function(){
     	return {
     		pgvalue : '70%',
     		intervalid1:'',
@@ -56,7 +56,7 @@ Vue.component('my-progress', {
     		var ch = '';
     		var door = this.door;
     		var row = this.rowindex;
-    		if ( door == 'A门'){ 
+    		if ( door == 'A门'){
     			ch = '0'+ row
     		}
     		else if ( door == 'B门'){
@@ -87,7 +87,7 @@ Vue.component('my-progress', {
     },
     mounted : function(){
 
-    	this.todo()	
+    	this.todo()
     },
     beforeDestroy () {
 
@@ -121,7 +121,6 @@ const router = new VueRouter({ //设置路由
 	mode: 'history',
 	routes // （缩写）相当于 routes: routes
 });
-
 var vm = new Vue({
 	router, //使用路由
 	el: '#app',
@@ -150,8 +149,8 @@ var vm = new Vue({
 					}else{
 						this.$Message.error('两次切换的时间需间隔10秒');
 					}
-				}           
-		   }        
+				}
+		   }
 		},
 		// getNum (){ //获得左侧sidebar的机框数量
 		// 	var resource = this.$resource('/index/left');
@@ -163,13 +162,10 @@ var vm = new Vue({
 		// 	// .catch(function(response) {
 		// 	//     console.log(response)
 		// 	// }) /*调试*/
-		// } ,  
+		// } ,
 	},
 	// created(){//实例化后的运行方法
 	// 	// this.getNum();
 	// 	this.num = v.$data.vnum; //
 	// }
 });
-
-
-
