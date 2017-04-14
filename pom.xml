@@ -116,14 +116,11 @@
 <!-- 		    <artifactId>ehcache</artifactId> -->
 <!-- 		</dependency> -->
 		<dependency>
-		    <groupId>org.ehcache</groupId>
-		    <artifactId>ehcache</artifactId>
-		    <version>3.3.1</version>
+		    <groupId>org.infinispan</groupId>
+		    <artifactId>infinispan-embedded</artifactId>
+		    <version>9.0.0.Final</version>
 		</dependency>
-		<dependency>
-          <groupId>javax.cache</groupId>
-          <artifactId>cache-api</artifactId>
-        </dependency>
+		
 
 	
 	</dependencies>
