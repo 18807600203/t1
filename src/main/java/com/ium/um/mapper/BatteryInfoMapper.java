@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.mapping.StatementType;
 
 import com.ium.um.domain.BatteryDetail;
@@ -14,17 +15,34 @@ import com.ium.um.domain.BatteryInfo;
 
 @Mapper
 public interface  BatteryInfoMapper {
-
-	@Select("select * from base where id = #{id}")
-	BatteryInfo findById(@Param("id")Long id);
 	
-	@Select("select * from base where no = #{no}")
-	BatteryInfo findByNo(@Param("no") String no);
+//	@Insert("insert into base(chassis, channel, module) values( #{chassis}, #(channel), #{module})")
+//	boolean insert(@Param("chassis")String chassis, @Param("channel")String channel, @Param("module")String module);
 		
-	@Select("select * from base order by id asc")
-	List<BatteryInfo> getAll();
+	/**
+	 * 批量插入电池信息
+	 * @param biList 电池BatteryInfo实例的List
+	 * @return 成功插入条数
+	 */
+	@Insert({
+        "<script>",
+        "insert into base (chassis, channel, module)",
+        "values ",
+        "<foreach  collection='biList' item='bi' separator=','>",
+        "( #{bi.chassis,jdbcType=VARCHAR}, #{bi.channel,jdbcType=VARCHAR}, #{bi.module,jdbcType=VARCHAR})",
+        "</foreach>",
+        "</script>"
+	})
+	int insertBatch(@Param("biList") List<BatteryInfo> biList);
 	
-	@Insert("insert into base(chassis, channel, module) values( #{chassis}, #(channel), #{module})")
-	boolean insert(@Param("chassis")String chassis, @Param("channel")String channel, @Param("module")String module);
-	
+	@Update({
+		"<script>",
+        "update base set (chassis, channel, module)",
+        "values ",
+        "<foreach  collection='biList' item='bi' separator=','>",
+        "( #{bi.chassis,jdbcType=VARCHAR}, #{bi.channel,jdbcType=VARCHAR}, #{bi.module,jdbcType=VARCHAR})",
+        "</foreach>",
+        "</script>"
+	})
+	int updateBatch(@Param("biList") List<BatteryInfo> biList);
 }

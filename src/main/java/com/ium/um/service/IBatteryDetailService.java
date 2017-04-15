@@ -6,5 +6,12 @@ import com.ium.um.domain.BatteryDetail;
 
 public interface IBatteryDetailService {
 
+	/**
+	 * 查询电池的相关信息
+	 * @param itemStr
+	 * @param valueStr
+	 * @param isLimit
+	 * @return
+	 */
 	List<BatteryDetail> find(String itemStr, String valueStr, boolean isLimit);
 }

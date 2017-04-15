@@ -9,6 +9,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.mapping.StatementType;
 
 import com.ium.um.domain.BatteryDetail;
+import com.ium.um.domain.FormationData;
 import com.ium.um.domain.FormationInfo;
 
 @Mapper
@@ -33,7 +34,13 @@ public interface FormationInfoMapper {
 			+"limit #{arg1} offset #{arg2}")
 	List<FormationInfo> findByIDLimit(@Param("arg0")String baseid, @Param("arg1")int limitNum, @Param("arg2")int offsetNum);
 	
-
+	/**
+	 * 添加电池化成信息(执行存储过程)
+	 * @param baseid 电池ID
+	 * @param jsonStr FormationData的json
+	 * @param instime 插入的时间点
+	 * @return FormationData实例,用作缓存
+	 */
 	@Select("select * from  p_insert_formation(#{arg0}, #{arg1}, #{arg2})")
-	Object add(@Param("arg0") Long baseid, @Param("arg1") String jsonStr, @Param("arg2") String instime);
+	FormationData add(@Param("arg0") Long baseid, @Param("arg1") String jsonStr, @Param("arg2") String instime);
 }

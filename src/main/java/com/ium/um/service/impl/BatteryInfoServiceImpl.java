@@ -16,30 +16,13 @@ public class BatteryInfoServiceImpl implements IBatteryInfoService{
 
 	@Autowired
 	BatteryInfoMapper biMapper;
-	
-	@Override
-	public BatteryInfo findById(Long id) {
-		
-		return biMapper.findById(id);
-	}
 
 	@Override
-	public BatteryInfo findByNo(String no) {
+	public int insertBatch(List<BatteryInfo> biList) {
 		
-		return biMapper.findByNo(no);
+		return biMapper.insertBatch(biList);
 	}
 
-	@Override
-	public List<BatteryInfo> getAll() {
-		
-		return biMapper.getAll();
-	}
-
-	@Override
-	public boolean insert(String chassis, String channel, String module) {
-		
-		return biMapper.insert(chassis, channel, module);
-	}
 
 
 }

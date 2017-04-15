@@ -2,12 +2,17 @@ package com.ium.um.service.impl;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cache.Cache;
+import org.springframework.cache.CacheManager;
 import org.springframework.cache.ehcache.EhCacheCacheManager;
+import org.springframework.cache.support.SimpleValueWrapper;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ium.um.Application;
@@ -21,14 +26,18 @@ public class FormationInfoServiceImplTest {
 
 	@Autowired
 	FormationInfoServiceImpl fiImpl;
-
-	@Autowired
-    private Cache<String, String> cityCache;
+	@Autowired 
+	CacheManager cache;
+	
 	
 	@Test
 	public void test() {
-		fiImpl.findByID("640");
-
+		
+		List<FormationInfo> l2 = fiImpl.findByID("601");
+		Cache UI_Cache = cache.getCache("UI_Cache");
+		List<FormationInfo> l = (List<FormationInfo>) UI_Cache.get("601").get();
+		assertThat(l).isEqualTo(l2);
+				
 	}
 	
 	@Test
@@ -42,7 +51,11 @@ public class FormationInfoServiceImplTest {
 		fd.setU("4200");
 		fd.setI("500");
 		
-		fiImpl.add(7040L, fd, "2017-04-16");
+		fiImpl.add(7040L, fd, "2017-04-21");
+		Cache UI_Cache = cache.getCache("UI_Cache");
+		FormationData fd2 = (FormationData) UI_Cache.get("1_01_1").get();
+		assertThat(fd2).isEqualTo(fd);
+		
 	}
 
 }

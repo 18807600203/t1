@@ -17,7 +17,7 @@ import com.ium.um.service.IFormationInfoService;
 
 @Service
 @Transactional
-@CacheConfig(cacheNames = "city")
+//@CacheConfig(cacheNames = "UI_Cache")
 public class FormationInfoServiceImpl implements IFormationInfoService{
 	
 	@Autowired
@@ -36,11 +36,12 @@ public class FormationInfoServiceImpl implements IFormationInfoService{
 	}
 
 	@Override
-	
-	public Object add(long baseid, FormationData fd, String instime) {
+	@CachePut(value = "UI_Cache", key = "#fd.getPosition()")
+	public FormationData add(long baseid, FormationData fd, String instime) {
 		
 		String jsonStr = JSON.toJSONString(fd);
-		return fiMapper.add(baseid, jsonStr, instime);
+		fiMapper.add(baseid, jsonStr, instime);
+		return fd;
 	}
 
 }

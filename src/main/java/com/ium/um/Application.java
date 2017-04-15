@@ -13,12 +13,9 @@ import com.ium.um.service.impl.BatteryInfoServiceImpl;
 
 
 @SpringBootApplication
-@EnableCaching
+
 //implements CommandLineRunner
 public class Application implements CommandLineRunner{
-
-	@Autowired
-    private BatteryInfoServiceImpl biServiceImpl;
 	
 	public static void main(String[] args) {
 		
