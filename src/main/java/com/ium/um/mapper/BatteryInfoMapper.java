@@ -26,22 +26,29 @@ public interface  BatteryInfoMapper {
 	 */
 	@Insert({
         "<script>",
-        "insert into base (chassis, channel, module)",
-        "values ",
-        "<foreach  collection='biList' item='bi' separator=','>",
-        "( #{bi.chassis,jdbcType=VARCHAR}, #{bi.channel,jdbcType=VARCHAR}, #{bi.module,jdbcType=VARCHAR})",
-        "</foreach>",
+	        "insert into base (chassis, channel, module)",
+	        "values ",
+	        "<foreach  collection='biList' item='bi' separator=','>",
+	        	"( #{bi.chassis,jdbcType=VARCHAR}, #{bi.channel,jdbcType=VARCHAR}, #{bi.module,jdbcType=VARCHAR})",
+	        "</foreach>",
         "</script>"
 	})
 	int insertBatch(@Param("biList") List<BatteryInfo> biList);
 	
+	
 	@Update({
 		"<script>",
-        "update base set (chassis, channel, module)",
-        "values ",
-        "<foreach  collection='biList' item='bi' separator=','>",
-        "( #{bi.chassis,jdbcType=VARCHAR}, #{bi.channel,jdbcType=VARCHAR}, #{bi.module,jdbcType=VARCHAR})",
-        "</foreach>",
+	        "update base ",
+	        "<trim prefix='no = case' suffix='end,'>",
+		        "<foreach collection='biList' item='bi' index='index'>",
+			        "<if test='bi.no!=null'>",
+			        	"when id=#{bi.id} then #{bi.no}",
+		        "</foreach>",
+	        "</trim>",
+	        " where ",
+	        "<foreach collection='biList' separator='or' item='bi' index='index' >",
+	        	"id=#{bi.id}",
+	        "</foreach>",
         "</script>"
 	})
 	int updateBatch(@Param("biList") List<BatteryInfo> biList);

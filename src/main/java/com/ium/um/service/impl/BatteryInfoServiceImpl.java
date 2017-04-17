@@ -23,6 +23,12 @@ public class BatteryInfoServiceImpl implements IBatteryInfoService{
 		return biMapper.insertBatch(biList);
 	}
 
+	@Override
+	public int updateBatch(List<BatteryInfo> biList) {
+		
+		return biMapper.updateBatch(biList);
+	}
+
 
 
 }

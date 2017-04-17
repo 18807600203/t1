@@ -28,7 +28,7 @@ public class BatteryInfoServiceImplTest {
 	}
 
 	@Test
-	public void test() {
+	public void insertBatchtest() {
 
 		List<BatteryInfo> biList = new ArrayList<>();
 		BatteryInfo bi1 = new BatteryInfo();
@@ -47,5 +47,25 @@ public class BatteryInfoServiceImplTest {
 		int a = biImpl.insertBatch(biList);
 		assertThat(a).isEqualTo(2);
 	}
+	
+	@Test
+	public void updateBatchtest() {
+
+		List<BatteryInfo> biList = new ArrayList<>();
+		BatteryInfo bi1 = new BatteryInfo();
+		bi1.setId(1L);
+		bi1.setNo("1");
+		
+		BatteryInfo bi2 = new BatteryInfo();
+		bi2.setId(2L);
+		bi2.setNo("2");
+		
+		biList.add(bi1);
+		biList.add(bi2);
+		
+		int a = biImpl.updateBatch(biList);
+		assertThat(a).isEqualTo(2);
+	}
+	
 
 }

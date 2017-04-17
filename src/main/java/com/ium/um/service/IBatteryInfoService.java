@@ -16,5 +16,12 @@ public interface IBatteryInfoService {
 	 * @return
 	 */
 	int insertBatch(@Param("biList") List<BatteryInfo> biList);
+	
+	/**
+	 * 批量修改电池的编号NO
+	 * @param biList
+	 * @return
+	 */
+	int updateBatch(@Param("biList") List<BatteryInfo> biList);
 }
 
