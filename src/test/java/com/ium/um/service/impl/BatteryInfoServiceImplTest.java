@@ -16,6 +16,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.ium.um.Application;
 import com.ium.um.domain.BatteryInfo;
 
+/**
+ * @author huang
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)  
 @SpringBootTest(classes=Application.class)// 指定spring-boot的启动类
 public class BatteryInfoServiceImplTest {
@@ -27,7 +31,7 @@ public class BatteryInfoServiceImplTest {
 	public void setUp() throws Exception {
 	}
 
-	@Test
+	//@Test
 	public void insertBatchtest() {
 
 		List<BatteryInfo> biList = new ArrayList<>();
@@ -48,8 +52,8 @@ public class BatteryInfoServiceImplTest {
 		assertThat(a).isEqualTo(2);
 	}
 	
-	@Test
-	public void updateBatchtest() {
+	//@Test
+	public void updateNoBatchtest() {
 
 		List<BatteryInfo> biList = new ArrayList<>();
 		BatteryInfo bi1 = new BatteryInfo();
@@ -63,9 +67,60 @@ public class BatteryInfoServiceImplTest {
 		biList.add(bi1);
 		biList.add(bi2);
 		
-		int a = biImpl.updateBatch(biList);
+		int a = biImpl.updateNoBatch(biList);
 		assertThat(a).isEqualTo(2);
 	}
 	
+	//@Test
+	public void updateNotest(){
+			
+		boolean b = biImpl.updateNo(3L, "test");
+		assertThat(b).isEqualTo(true);
+	}
 
+	//@Test
+	public void updateStatustest(){
+		
+		List<Long> idList = new ArrayList<>();
+		idList.add(1L);
+		idList.add(2L);
+		idList.add(3L);
+		int a = biImpl.updateStatusBatch(idList);
+	}
+	
+	//@Test
+	public void updateIsMastopByChassisNotest(){
+		
+		int a = biImpl.updateIsMastopByChassisNo("1");
+		System.out.println(a);
+	}
+	
+	//@Test
+	public void findByIdtest(){
+		
+		BatteryInfo bi = biImpl.findById(3L);
+		assertThat(bi.getNo()).isEqualTo("test3");
+	}
+	
+	//@Test
+	public void findBatteryInfoInProc(){
+		
+		List<BatteryInfo> biList = biImpl.findBatteryInfoInProc();
+		System.out.println(biList.size());
+	}
+	
+	//@Test
+	public void getMaxIdtest(){
+		
+		Long a = biImpl.getMaxId();
+		System.out.println(a);
+	}
+	
+	//@Test
+	public void getLastIdtest(){
+		
+		Long a = biImpl.getLastId("1");
+		System.out.println(a);
+	}
+			
 }

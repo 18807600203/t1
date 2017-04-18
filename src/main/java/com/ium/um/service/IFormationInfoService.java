@@ -1,9 +1,6 @@
 package com.ium.um.service;
 
 import java.util.List;
-
-import org.apache.ibatis.annotations.Mapper;
-
 import com.ium.um.domain.FormationData;
 import com.ium.um.domain.FormationInfo;
 

@@ -3,9 +3,7 @@ package com.ium.um.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,18 +21,27 @@ public class FormationInfoServiceImpl implements IFormationInfoService{
 	@Autowired
 	FormationInfoMapper fiMapper;
 	
+	/**
+	 * {@link com.ium.um.mapper.FormationInfoMapper#findByID(String)}
+	 */
 	@Override
 	public List<FormationInfo> findByID(String baseid) {
 		
 		return fiMapper.findByID(baseid);
 	}
 
+	/**
+	 * {@link com.ium.um.mapper.FormationInfoMapper#findByIDLimit(String, int, int)}
+	 */
 	@Override
 	public List<FormationInfo> findByIDLimit(String baseid, int limitNum, int offsetNum) {
 		
 		return fiMapper.findByIDLimit(baseid, limitNum, offsetNum);
 	}
 
+	/**
+	 * {@link com.ium.um.mapper.FormationInfoMapper#add(Long, String, String)}
+	 */
 	@Override
 	@CachePut(value = "UI_Cache", key = "#fd.getPosition()")
 	public FormationData add(long baseid, FormationData fd, String instime) {

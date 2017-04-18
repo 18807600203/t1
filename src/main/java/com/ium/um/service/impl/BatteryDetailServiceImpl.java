@@ -17,6 +17,9 @@ public class BatteryDetailServiceImpl implements IBatteryDetailService{
 	@Autowired
 	BatteryDetailMapper bdMapper;
 	
+	/**
+	 * {@link com.ium.um.mapper.BatteryDetailMapper#find(String, String, boolean)}
+	 */
 	@Override
 	public List<BatteryDetail> find(String itemStr, String vauleStr, boolean isLimit) {
 		
