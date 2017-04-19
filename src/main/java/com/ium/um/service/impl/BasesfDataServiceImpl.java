@@ -32,6 +32,7 @@ public class BasesfDataServiceImpl implements IBasesfDataService{
 	@Override
 	public BasesfData findById(Long id) {
 		
+		//TODO 如果查询的结果集中大于1行数据库的话, springbooi则报警
 		return bdMapper.findById(id);
 	}
 
