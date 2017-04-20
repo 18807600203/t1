@@ -35,9 +35,9 @@ public class ExceptionController implements ErrorController{
 		}
 	}
 	
-	public ExceptionController( ErrorAttributes errAttributess){
+	public ExceptionController( ErrorAttributes errAttributes){
 		
-		this.errorAttributes = errorAttributes;
+		this.errorAttributes = errAttributes;
 	}
 	
 	@Override
