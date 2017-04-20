@@ -2,9 +2,11 @@ package com.ium.um.domain;
 
 import java.io.Serializable;
 
+/**
+ * 电池基本配置文件信息
+ */
 public class BasesfData implements Serializable{
 
-	
 	/**
 	 * 
 	 */
