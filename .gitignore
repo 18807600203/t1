@@ -1,3 +1,4 @@
+.gitignore
 *.class
 
 # Package Files #
@@ -5,5 +6,16 @@
 *.war
 *.ear
 /target/
-/.idea/
-UMonitor.iml
+## File-based project format:
+*.iws
+*.iml
+*.ipr
+
+.idea/
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
