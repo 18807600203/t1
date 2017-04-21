@@ -2,12 +2,9 @@ package com.ium.um.service.impl;
 
 import java.util.List;
 
-import org.beetl.sql.core.SQLManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.ium.um.dao.BatteryInfoDao;
 import com.ium.um.domain.BatteryInfo;
 import com.ium.um.mapper.BatteryInfoMapper;
 import com.ium.um.service.BatteryInfoService;

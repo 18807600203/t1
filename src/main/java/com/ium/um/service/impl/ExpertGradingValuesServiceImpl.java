@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.ium.um.domain.ExpertGradingValues;
 import com.ium.um.mapper.ExpertGradingValuesMapper;
-import com.ium.um.service.IExpertGradingValuesService;
+import com.ium.um.service.ExpertGradingValuesService;
 
 @Service
 @Transactional
-public class ExpertGradingValuesServiceImpl implements IExpertGradingValuesService{
+public class ExpertGradingValuesServiceImpl implements ExpertGradingValuesService{
 
 	
 	@Autowired

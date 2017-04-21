@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ium.um.domain.BatteryDetail;
 
-public interface IBatteryDetailService {
+public interface BatteryDetailService {
 
 	/**
 	 * 查询电池的相关信息

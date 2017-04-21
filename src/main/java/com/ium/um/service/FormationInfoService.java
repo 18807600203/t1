@@ -4,7 +4,7 @@ import java.util.List;
 import com.ium.um.domain.FormationData;
 import com.ium.um.domain.FormationInfo;
 
-public interface IFormationInfoService {
+public interface FormationInfoService {
 
 	/**
 	 * 根据ID查询全部信息

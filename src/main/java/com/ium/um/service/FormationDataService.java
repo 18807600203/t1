@@ -3,7 +3,7 @@ package com.ium.um.service;
 import java.util.List;
 import com.ium.um.domain.FormationData;
 
-public interface IFormationDataService {
+public interface FormationDataService {
 	
 	/**
 	 * 以ID查找化成信息

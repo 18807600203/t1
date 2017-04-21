@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.ium.um.domain.FormationData;
 import com.ium.um.mapper.FormationDataMapper;
-import com.ium.um.service.IFormationDataService;
+import com.ium.um.service.FormationDataService;
 
 @Service
 @Transactional
-public class FormationDataServiceImpl implements IFormationDataService{
+public class FormationDataServiceImpl implements FormationDataService{
 
 	@Autowired
 	FormationDataMapper fdMapper;

@@ -2,12 +2,9 @@ package com.ium.um.domain;
 
 import java.io.Serializable;
 
-import org.beetl.sql.core.annotatoin.Table;
-
 /**
  * 电池信息实体
  */
-@Table(name = "base")
 public class BatteryInfo implements Serializable{
 	
 	/**

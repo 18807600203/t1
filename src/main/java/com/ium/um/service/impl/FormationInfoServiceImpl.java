@@ -11,12 +11,12 @@ import com.alibaba.fastjson.JSON;
 import com.ium.um.domain.FormationData;
 import com.ium.um.domain.FormationInfo;
 import com.ium.um.mapper.FormationInfoMapper;
-import com.ium.um.service.IFormationInfoService;
+import com.ium.um.service.FormationInfoService;
 
 @Service
 @Transactional
 //@CacheConfig(cacheNames = "UI_Cache")
-public class FormationInfoServiceImpl implements IFormationInfoService{
+public class FormationInfoServiceImpl implements FormationInfoService{
 	
 	@Autowired
 	FormationInfoMapper fiMapper;

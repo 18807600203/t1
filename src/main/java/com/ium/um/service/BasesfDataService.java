@@ -3,7 +3,7 @@ package com.ium.um.service;
 import java.util.List;
 import com.ium.um.domain.BasesfData;
 
-public interface IBasesfDataService {
+public interface BasesfDataService {
 
 	/**
 	 * 插入basesf表的配置文件关联信息

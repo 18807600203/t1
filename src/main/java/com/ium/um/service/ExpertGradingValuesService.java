@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ium.um.domain.ExpertGradingValues;
 
-public interface IExpertGradingValuesService {
+public interface ExpertGradingValuesService {
 
 	/**
 	 * 高级分选的入口

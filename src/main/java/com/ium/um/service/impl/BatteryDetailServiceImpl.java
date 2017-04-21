@@ -8,11 +8,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ium.um.domain.BatteryDetail;
 import com.ium.um.mapper.BatteryDetailMapper;
-import com.ium.um.service.IBatteryDetailService;
+import com.ium.um.service.BatteryDetailService;
 
 @Service
 @Transactional
-public class BatteryDetailServiceImpl implements IBatteryDetailService{
+public class BatteryDetailServiceImpl implements BatteryDetailService{
 
 	@Autowired
 	BatteryDetailMapper bdMapper;
