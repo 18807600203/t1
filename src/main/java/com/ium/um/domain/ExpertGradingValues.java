@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class ExpertGradingValues implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String rowid;//行号
 	private Long id;//电池ID
 	private String p;//电池位号

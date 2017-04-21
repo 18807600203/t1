@@ -3,7 +3,7 @@ package com.ium.um.service;
 import java.util.List;
 import com.ium.um.domain.BatteryInfo;
 
-public interface IBatteryInfoService {
+public interface BatteryInfoService {
 		
 	//boolean insert(String chassis, String channel, String module);
 	

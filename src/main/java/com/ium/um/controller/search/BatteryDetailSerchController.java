@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ium.um.domain.BatteryDetail;
-import com.ium.um.domain.BatteryInfo;
 import com.ium.um.service.impl.BatteryDetailServiceImpl;
 
 @Controller

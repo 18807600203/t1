@@ -5,10 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ium.um.domain.AppConfig;
-
+import com.ium.um.config.AppConfig;
 @Controller
 @RequestMapping("/index")
 public class IndexController {
@@ -19,7 +17,7 @@ public class IndexController {
 	@GetMapping
 	public String index(Model model){
 		
-		String numStr = appConfig.getChassisnum();
+		String numStr = appConfig.getChassisNum();
 		Integer num = Integer.valueOf(numStr);
 		
 		model.addAttribute("chassis", num);

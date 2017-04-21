@@ -4,15 +4,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
-import org.springframework.cache.ehcache.EhCacheCacheManager;
-import org.springframework.cache.support.SimpleValueWrapper;
+
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ium.um.Application;
@@ -30,6 +28,7 @@ public class FormationInfoServiceImplTest {
 	CacheManager cache;
 	
 	
+	@SuppressWarnings("unchecked")
 	@Test
 	public void test() {
 		
