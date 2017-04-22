@@ -12,7 +12,7 @@ public class GradingData implements Serializable{
 	private String baseid;
 	private String location;
 	private BigDecimal cvalue;
-	
+
 	public String getBaseid() {
 		return baseid;
 	}

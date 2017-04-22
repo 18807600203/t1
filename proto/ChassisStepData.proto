@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+option java_package = "com.ium.um.domain";
+option java_outer_classname = "ChassisStepData";
+
+message ChassisStepInfo { //机框工步信息
+	
+  int32 no = 1; //机框号
+  StepInfoData stepInfoData = 2; //工步详细信息
+}
+
+
+message StepInfoData { //具体工步详细信息
+
+	string filePath = 1; //工步文件路径
+	repeated TableValueInfo tableValueInfo = 2; //工步信息表格
+	SafeValueInfo safeValueInfo = 3; //安全参数
+	GradValueInfo gradValueInfo = 4; //分选条件
+	StepFromToInfo stepFromTo = 5; //工步起始序号
+	repeated bytes stepHexString = 6; //工步信息表格二进制
+}
+
+message TableValueInfo { //工步信息表格
+	
+	int32 no = 1;//工步号
+	string name = 2;//工步名称
+	int32 time = 3;//时间
+	int32 i = 4;//电流mV
+	int32 minU = 5;//下限电压
+	int32 maxU = 6;//上限电压
+	int32 detaV = 7;//电压增量
+	int32 finalI = 8;//终止电流
+	int32 finalC = 9;//终止容量
+}
+
+message SafeValueInfo { //安全参数
+
+	int32 loopCount = 1; //循环次数
+	int32 cThreshold = 2; //容量阈值
+}
+
+message GradValueInfo { //分选条件信息
+	
+	int32 ocvStep = 1; //开路电压分选工步号
+	int32 ocvLoop = 2; //开路电压分选循环号
+	int32 maxCStep = 3; //终止容量分选工步号
+	int32 maxCLoop = 4; //终止容量分选循环号
+	int32 finalIStep = 5; //终止电流分选工步号
+	int32 finalILoop = 6; //终止电流分选循环号
+}
+
+message StepFromToInfo { //工步起始序号
+
+	int32 from = 1;//开始工步
+	int32 to = 2; //结束工步
+}
+
