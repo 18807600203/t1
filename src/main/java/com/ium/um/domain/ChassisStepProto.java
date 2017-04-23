@@ -3,8 +3,8 @@
 
 package com.ium.um.domain;
 
-public final class ChassisStepData {
-  private ChassisStepData() {}
+public final class ChassisStepProto {
+  private ChassisStepProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -42,7 +42,7 @@ public final class ChassisStepData {
      *
      * <code>.StepInfoData stepInfoData = 2;</code>
      */
-    com.ium.um.domain.ChassisStepData.StepInfoData getStepInfoData();
+    com.ium.um.domain.ChassisStepProto.StepInfoData getStepInfoData();
     /**
      * <pre>
      *工步详细信息
@@ -50,7 +50,7 @@ public final class ChassisStepData {
      *
      * <code>.StepInfoData stepInfoData = 2;</code>
      */
-    com.ium.um.domain.ChassisStepData.StepInfoDataOrBuilder getStepInfoDataOrBuilder();
+    com.ium.um.domain.ChassisStepProto.StepInfoDataOrBuilder getStepInfoDataOrBuilder();
   }
   /**
    * <pre>
@@ -102,11 +102,11 @@ public final class ChassisStepData {
               break;
             }
             case 18: {
-              com.ium.um.domain.ChassisStepData.StepInfoData.Builder subBuilder = null;
+              com.ium.um.domain.ChassisStepProto.StepInfoData.Builder subBuilder = null;
               if (stepInfoData_ != null) {
                 subBuilder = stepInfoData_.toBuilder();
               }
-              stepInfoData_ = input.readMessage(com.ium.um.domain.ChassisStepData.StepInfoData.parser(), extensionRegistry);
+              stepInfoData_ = input.readMessage(com.ium.um.domain.ChassisStepProto.StepInfoData.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(stepInfoData_);
                 stepInfoData_ = subBuilder.buildPartial();
@@ -127,14 +127,14 @@ public final class ChassisStepData {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ium.um.domain.ChassisStepData.internal_static_ChassisStepInfo_descriptor;
+      return com.ium.um.domain.ChassisStepProto.internal_static_ChassisStepInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ium.um.domain.ChassisStepData.internal_static_ChassisStepInfo_fieldAccessorTable
+      return com.ium.um.domain.ChassisStepProto.internal_static_ChassisStepInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ium.um.domain.ChassisStepData.ChassisStepInfo.class, com.ium.um.domain.ChassisStepData.ChassisStepInfo.Builder.class);
+              com.ium.um.domain.ChassisStepProto.ChassisStepInfo.class, com.ium.um.domain.ChassisStepProto.ChassisStepInfo.Builder.class);
     }
 
     public static final int NO_FIELD_NUMBER = 1;
@@ -151,7 +151,7 @@ public final class ChassisStepData {
     }
 
     public static final int STEPINFODATA_FIELD_NUMBER = 2;
-    private com.ium.um.domain.ChassisStepData.StepInfoData stepInfoData_;
+    private com.ium.um.domain.ChassisStepProto.StepInfoData stepInfoData_;
     /**
      * <pre>
      *工步详细信息
@@ -169,8 +169,8 @@ public final class ChassisStepData {
      *
      * <code>.StepInfoData stepInfoData = 2;</code>
      */
-    public com.ium.um.domain.ChassisStepData.StepInfoData getStepInfoData() {
-      return stepInfoData_ == null ? com.ium.um.domain.ChassisStepData.StepInfoData.getDefaultInstance() : stepInfoData_;
+    public com.ium.um.domain.ChassisStepProto.StepInfoData getStepInfoData() {
+      return stepInfoData_ == null ? com.ium.um.domain.ChassisStepProto.StepInfoData.getDefaultInstance() : stepInfoData_;
     }
     /**
      * <pre>
@@ -179,7 +179,7 @@ public final class ChassisStepData {
      *
      * <code>.StepInfoData stepInfoData = 2;</code>
      */
-    public com.ium.um.domain.ChassisStepData.StepInfoDataOrBuilder getStepInfoDataOrBuilder() {
+    public com.ium.um.domain.ChassisStepProto.StepInfoDataOrBuilder getStepInfoDataOrBuilder() {
       return getStepInfoData();
     }
 
@@ -226,10 +226,10 @@ public final class ChassisStepData {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ium.um.domain.ChassisStepData.ChassisStepInfo)) {
+      if (!(obj instanceof com.ium.um.domain.ChassisStepProto.ChassisStepInfo)) {
         return super.equals(obj);
       }
-      com.ium.um.domain.ChassisStepData.ChassisStepInfo other = (com.ium.um.domain.ChassisStepData.ChassisStepInfo) obj;
+      com.ium.um.domain.ChassisStepProto.ChassisStepInfo other = (com.ium.um.domain.ChassisStepProto.ChassisStepInfo) obj;
 
       boolean result = true;
       result = result && (getNo()
@@ -260,58 +260,58 @@ public final class ChassisStepData {
       return hash;
     }
 
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo parseFrom(byte[] data)
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo parseFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo parseDelimitedFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo parseDelimitedFrom(
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -323,7 +323,7 @@ public final class ChassisStepData {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ium.um.domain.ChassisStepData.ChassisStepInfo prototype) {
+    public static Builder newBuilder(com.ium.um.domain.ChassisStepProto.ChassisStepInfo prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -347,20 +347,20 @@ public final class ChassisStepData {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:ChassisStepInfo)
-        com.ium.um.domain.ChassisStepData.ChassisStepInfoOrBuilder {
+        com.ium.um.domain.ChassisStepProto.ChassisStepInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ium.um.domain.ChassisStepData.internal_static_ChassisStepInfo_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_ChassisStepInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ium.um.domain.ChassisStepData.internal_static_ChassisStepInfo_fieldAccessorTable
+        return com.ium.um.domain.ChassisStepProto.internal_static_ChassisStepInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ium.um.domain.ChassisStepData.ChassisStepInfo.class, com.ium.um.domain.ChassisStepData.ChassisStepInfo.Builder.class);
+                com.ium.um.domain.ChassisStepProto.ChassisStepInfo.class, com.ium.um.domain.ChassisStepProto.ChassisStepInfo.Builder.class);
       }
 
-      // Construct using com.ium.um.domain.ChassisStepData.ChassisStepInfo.newBuilder()
+      // Construct using com.ium.um.domain.ChassisStepProto.ChassisStepInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -390,23 +390,23 @@ public final class ChassisStepData {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ium.um.domain.ChassisStepData.internal_static_ChassisStepInfo_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_ChassisStepInfo_descriptor;
       }
 
-      public com.ium.um.domain.ChassisStepData.ChassisStepInfo getDefaultInstanceForType() {
-        return com.ium.um.domain.ChassisStepData.ChassisStepInfo.getDefaultInstance();
+      public com.ium.um.domain.ChassisStepProto.ChassisStepInfo getDefaultInstanceForType() {
+        return com.ium.um.domain.ChassisStepProto.ChassisStepInfo.getDefaultInstance();
       }
 
-      public com.ium.um.domain.ChassisStepData.ChassisStepInfo build() {
-        com.ium.um.domain.ChassisStepData.ChassisStepInfo result = buildPartial();
+      public com.ium.um.domain.ChassisStepProto.ChassisStepInfo build() {
+        com.ium.um.domain.ChassisStepProto.ChassisStepInfo result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.ium.um.domain.ChassisStepData.ChassisStepInfo buildPartial() {
-        com.ium.um.domain.ChassisStepData.ChassisStepInfo result = new com.ium.um.domain.ChassisStepData.ChassisStepInfo(this);
+      public com.ium.um.domain.ChassisStepProto.ChassisStepInfo buildPartial() {
+        com.ium.um.domain.ChassisStepProto.ChassisStepInfo result = new com.ium.um.domain.ChassisStepProto.ChassisStepInfo(this);
         result.no_ = no_;
         if (stepInfoDataBuilder_ == null) {
           result.stepInfoData_ = stepInfoData_;
@@ -444,16 +444,16 @@ public final class ChassisStepData {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ium.um.domain.ChassisStepData.ChassisStepInfo) {
-          return mergeFrom((com.ium.um.domain.ChassisStepData.ChassisStepInfo)other);
+        if (other instanceof com.ium.um.domain.ChassisStepProto.ChassisStepInfo) {
+          return mergeFrom((com.ium.um.domain.ChassisStepProto.ChassisStepInfo)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ium.um.domain.ChassisStepData.ChassisStepInfo other) {
-        if (other == com.ium.um.domain.ChassisStepData.ChassisStepInfo.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.ium.um.domain.ChassisStepProto.ChassisStepInfo other) {
+        if (other == com.ium.um.domain.ChassisStepProto.ChassisStepInfo.getDefaultInstance()) return this;
         if (other.getNo() != 0) {
           setNo(other.getNo());
         }
@@ -472,11 +472,11 @@ public final class ChassisStepData {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ium.um.domain.ChassisStepData.ChassisStepInfo parsedMessage = null;
+        com.ium.um.domain.ChassisStepProto.ChassisStepInfo parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ium.um.domain.ChassisStepData.ChassisStepInfo) e.getUnfinishedMessage();
+          parsedMessage = (com.ium.um.domain.ChassisStepProto.ChassisStepInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -524,9 +524,9 @@ public final class ChassisStepData {
         return this;
       }
 
-      private com.ium.um.domain.ChassisStepData.StepInfoData stepInfoData_ = null;
+      private com.ium.um.domain.ChassisStepProto.StepInfoData stepInfoData_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ium.um.domain.ChassisStepData.StepInfoData, com.ium.um.domain.ChassisStepData.StepInfoData.Builder, com.ium.um.domain.ChassisStepData.StepInfoDataOrBuilder> stepInfoDataBuilder_;
+          com.ium.um.domain.ChassisStepProto.StepInfoData, com.ium.um.domain.ChassisStepProto.StepInfoData.Builder, com.ium.um.domain.ChassisStepProto.StepInfoDataOrBuilder> stepInfoDataBuilder_;
       /**
        * <pre>
        *工步详细信息
@@ -544,9 +544,9 @@ public final class ChassisStepData {
        *
        * <code>.StepInfoData stepInfoData = 2;</code>
        */
-      public com.ium.um.domain.ChassisStepData.StepInfoData getStepInfoData() {
+      public com.ium.um.domain.ChassisStepProto.StepInfoData getStepInfoData() {
         if (stepInfoDataBuilder_ == null) {
-          return stepInfoData_ == null ? com.ium.um.domain.ChassisStepData.StepInfoData.getDefaultInstance() : stepInfoData_;
+          return stepInfoData_ == null ? com.ium.um.domain.ChassisStepProto.StepInfoData.getDefaultInstance() : stepInfoData_;
         } else {
           return stepInfoDataBuilder_.getMessage();
         }
@@ -558,7 +558,7 @@ public final class ChassisStepData {
        *
        * <code>.StepInfoData stepInfoData = 2;</code>
        */
-      public Builder setStepInfoData(com.ium.um.domain.ChassisStepData.StepInfoData value) {
+      public Builder setStepInfoData(com.ium.um.domain.ChassisStepProto.StepInfoData value) {
         if (stepInfoDataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -579,7 +579,7 @@ public final class ChassisStepData {
        * <code>.StepInfoData stepInfoData = 2;</code>
        */
       public Builder setStepInfoData(
-          com.ium.um.domain.ChassisStepData.StepInfoData.Builder builderForValue) {
+          com.ium.um.domain.ChassisStepProto.StepInfoData.Builder builderForValue) {
         if (stepInfoDataBuilder_ == null) {
           stepInfoData_ = builderForValue.build();
           onChanged();
@@ -596,11 +596,11 @@ public final class ChassisStepData {
        *
        * <code>.StepInfoData stepInfoData = 2;</code>
        */
-      public Builder mergeStepInfoData(com.ium.um.domain.ChassisStepData.StepInfoData value) {
+      public Builder mergeStepInfoData(com.ium.um.domain.ChassisStepProto.StepInfoData value) {
         if (stepInfoDataBuilder_ == null) {
           if (stepInfoData_ != null) {
             stepInfoData_ =
-              com.ium.um.domain.ChassisStepData.StepInfoData.newBuilder(stepInfoData_).mergeFrom(value).buildPartial();
+              com.ium.um.domain.ChassisStepProto.StepInfoData.newBuilder(stepInfoData_).mergeFrom(value).buildPartial();
           } else {
             stepInfoData_ = value;
           }
@@ -636,7 +636,7 @@ public final class ChassisStepData {
        *
        * <code>.StepInfoData stepInfoData = 2;</code>
        */
-      public com.ium.um.domain.ChassisStepData.StepInfoData.Builder getStepInfoDataBuilder() {
+      public com.ium.um.domain.ChassisStepProto.StepInfoData.Builder getStepInfoDataBuilder() {
         
         onChanged();
         return getStepInfoDataFieldBuilder().getBuilder();
@@ -648,12 +648,12 @@ public final class ChassisStepData {
        *
        * <code>.StepInfoData stepInfoData = 2;</code>
        */
-      public com.ium.um.domain.ChassisStepData.StepInfoDataOrBuilder getStepInfoDataOrBuilder() {
+      public com.ium.um.domain.ChassisStepProto.StepInfoDataOrBuilder getStepInfoDataOrBuilder() {
         if (stepInfoDataBuilder_ != null) {
           return stepInfoDataBuilder_.getMessageOrBuilder();
         } else {
           return stepInfoData_ == null ?
-              com.ium.um.domain.ChassisStepData.StepInfoData.getDefaultInstance() : stepInfoData_;
+              com.ium.um.domain.ChassisStepProto.StepInfoData.getDefaultInstance() : stepInfoData_;
         }
       }
       /**
@@ -664,11 +664,11 @@ public final class ChassisStepData {
        * <code>.StepInfoData stepInfoData = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ium.um.domain.ChassisStepData.StepInfoData, com.ium.um.domain.ChassisStepData.StepInfoData.Builder, com.ium.um.domain.ChassisStepData.StepInfoDataOrBuilder> 
+          com.ium.um.domain.ChassisStepProto.StepInfoData, com.ium.um.domain.ChassisStepProto.StepInfoData.Builder, com.ium.um.domain.ChassisStepProto.StepInfoDataOrBuilder> 
           getStepInfoDataFieldBuilder() {
         if (stepInfoDataBuilder_ == null) {
           stepInfoDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ium.um.domain.ChassisStepData.StepInfoData, com.ium.um.domain.ChassisStepData.StepInfoData.Builder, com.ium.um.domain.ChassisStepData.StepInfoDataOrBuilder>(
+              com.ium.um.domain.ChassisStepProto.StepInfoData, com.ium.um.domain.ChassisStepProto.StepInfoData.Builder, com.ium.um.domain.ChassisStepProto.StepInfoDataOrBuilder>(
                   getStepInfoData(),
                   getParentForChildren(),
                   isClean());
@@ -691,12 +691,12 @@ public final class ChassisStepData {
     }
 
     // @@protoc_insertion_point(class_scope:ChassisStepInfo)
-    private static final com.ium.um.domain.ChassisStepData.ChassisStepInfo DEFAULT_INSTANCE;
+    private static final com.ium.um.domain.ChassisStepProto.ChassisStepInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepData.ChassisStepInfo();
+      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepProto.ChassisStepInfo();
     }
 
-    public static com.ium.um.domain.ChassisStepData.ChassisStepInfo getDefaultInstance() {
+    public static com.ium.um.domain.ChassisStepProto.ChassisStepInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -719,7 +719,7 @@ public final class ChassisStepData {
       return PARSER;
     }
 
-    public com.ium.um.domain.ChassisStepData.ChassisStepInfo getDefaultInstanceForType() {
+    public com.ium.um.domain.ChassisStepProto.ChassisStepInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -754,7 +754,7 @@ public final class ChassisStepData {
      *
      * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
      */
-    java.util.List<com.ium.um.domain.ChassisStepData.TableValueInfo> 
+    java.util.List<com.ium.um.domain.ChassisStepProto.TableValueInfo> 
         getTableValueInfoList();
     /**
      * <pre>
@@ -763,7 +763,7 @@ public final class ChassisStepData {
      *
      * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
      */
-    com.ium.um.domain.ChassisStepData.TableValueInfo getTableValueInfo(int index);
+    com.ium.um.domain.ChassisStepProto.TableValueInfo getTableValueInfo(int index);
     /**
      * <pre>
      *工步信息表格
@@ -779,7 +779,7 @@ public final class ChassisStepData {
      *
      * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
      */
-    java.util.List<? extends com.ium.um.domain.ChassisStepData.TableValueInfoOrBuilder> 
+    java.util.List<? extends com.ium.um.domain.ChassisStepProto.TableValueInfoOrBuilder> 
         getTableValueInfoOrBuilderList();
     /**
      * <pre>
@@ -788,7 +788,7 @@ public final class ChassisStepData {
      *
      * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
      */
-    com.ium.um.domain.ChassisStepData.TableValueInfoOrBuilder getTableValueInfoOrBuilder(
+    com.ium.um.domain.ChassisStepProto.TableValueInfoOrBuilder getTableValueInfoOrBuilder(
         int index);
 
     /**
@@ -806,7 +806,7 @@ public final class ChassisStepData {
      *
      * <code>.SafeValueInfo safeValueInfo = 3;</code>
      */
-    com.ium.um.domain.ChassisStepData.SafeValueInfo getSafeValueInfo();
+    com.ium.um.domain.ChassisStepProto.SafeValueInfo getSafeValueInfo();
     /**
      * <pre>
      *安全参数
@@ -814,7 +814,7 @@ public final class ChassisStepData {
      *
      * <code>.SafeValueInfo safeValueInfo = 3;</code>
      */
-    com.ium.um.domain.ChassisStepData.SafeValueInfoOrBuilder getSafeValueInfoOrBuilder();
+    com.ium.um.domain.ChassisStepProto.SafeValueInfoOrBuilder getSafeValueInfoOrBuilder();
 
     /**
      * <pre>
@@ -831,7 +831,7 @@ public final class ChassisStepData {
      *
      * <code>.GradValueInfo gradValueInfo = 4;</code>
      */
-    com.ium.um.domain.ChassisStepData.GradValueInfo getGradValueInfo();
+    com.ium.um.domain.ChassisStepProto.GradValueInfo getGradValueInfo();
     /**
      * <pre>
      *分选条件
@@ -839,7 +839,7 @@ public final class ChassisStepData {
      *
      * <code>.GradValueInfo gradValueInfo = 4;</code>
      */
-    com.ium.um.domain.ChassisStepData.GradValueInfoOrBuilder getGradValueInfoOrBuilder();
+    com.ium.um.domain.ChassisStepProto.GradValueInfoOrBuilder getGradValueInfoOrBuilder();
 
     /**
      * <pre>
@@ -856,7 +856,7 @@ public final class ChassisStepData {
      *
      * <code>.StepFromToInfo stepFromTo = 5;</code>
      */
-    com.ium.um.domain.ChassisStepData.StepFromToInfo getStepFromTo();
+    com.ium.um.domain.ChassisStepProto.StepFromToInfo getStepFromTo();
     /**
      * <pre>
      *工步起始序号
@@ -864,7 +864,7 @@ public final class ChassisStepData {
      *
      * <code>.StepFromToInfo stepFromTo = 5;</code>
      */
-    com.ium.um.domain.ChassisStepData.StepFromToInfoOrBuilder getStepFromToOrBuilder();
+    com.ium.um.domain.ChassisStepProto.StepFromToInfoOrBuilder getStepFromToOrBuilder();
 
     /**
      * <pre>
@@ -945,19 +945,19 @@ public final class ChassisStepData {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                tableValueInfo_ = new java.util.ArrayList<com.ium.um.domain.ChassisStepData.TableValueInfo>();
+                tableValueInfo_ = new java.util.ArrayList<com.ium.um.domain.ChassisStepProto.TableValueInfo>();
                 mutable_bitField0_ |= 0x00000002;
               }
               tableValueInfo_.add(
-                  input.readMessage(com.ium.um.domain.ChassisStepData.TableValueInfo.parser(), extensionRegistry));
+                  input.readMessage(com.ium.um.domain.ChassisStepProto.TableValueInfo.parser(), extensionRegistry));
               break;
             }
             case 26: {
-              com.ium.um.domain.ChassisStepData.SafeValueInfo.Builder subBuilder = null;
+              com.ium.um.domain.ChassisStepProto.SafeValueInfo.Builder subBuilder = null;
               if (safeValueInfo_ != null) {
                 subBuilder = safeValueInfo_.toBuilder();
               }
-              safeValueInfo_ = input.readMessage(com.ium.um.domain.ChassisStepData.SafeValueInfo.parser(), extensionRegistry);
+              safeValueInfo_ = input.readMessage(com.ium.um.domain.ChassisStepProto.SafeValueInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(safeValueInfo_);
                 safeValueInfo_ = subBuilder.buildPartial();
@@ -966,11 +966,11 @@ public final class ChassisStepData {
               break;
             }
             case 34: {
-              com.ium.um.domain.ChassisStepData.GradValueInfo.Builder subBuilder = null;
+              com.ium.um.domain.ChassisStepProto.GradValueInfo.Builder subBuilder = null;
               if (gradValueInfo_ != null) {
                 subBuilder = gradValueInfo_.toBuilder();
               }
-              gradValueInfo_ = input.readMessage(com.ium.um.domain.ChassisStepData.GradValueInfo.parser(), extensionRegistry);
+              gradValueInfo_ = input.readMessage(com.ium.um.domain.ChassisStepProto.GradValueInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(gradValueInfo_);
                 gradValueInfo_ = subBuilder.buildPartial();
@@ -979,11 +979,11 @@ public final class ChassisStepData {
               break;
             }
             case 42: {
-              com.ium.um.domain.ChassisStepData.StepFromToInfo.Builder subBuilder = null;
+              com.ium.um.domain.ChassisStepProto.StepFromToInfo.Builder subBuilder = null;
               if (stepFromTo_ != null) {
                 subBuilder = stepFromTo_.toBuilder();
               }
-              stepFromTo_ = input.readMessage(com.ium.um.domain.ChassisStepData.StepFromToInfo.parser(), extensionRegistry);
+              stepFromTo_ = input.readMessage(com.ium.um.domain.ChassisStepProto.StepFromToInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(stepFromTo_);
                 stepFromTo_ = subBuilder.buildPartial();
@@ -1018,14 +1018,14 @@ public final class ChassisStepData {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ium.um.domain.ChassisStepData.internal_static_StepInfoData_descriptor;
+      return com.ium.um.domain.ChassisStepProto.internal_static_StepInfoData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ium.um.domain.ChassisStepData.internal_static_StepInfoData_fieldAccessorTable
+      return com.ium.um.domain.ChassisStepProto.internal_static_StepInfoData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ium.um.domain.ChassisStepData.StepInfoData.class, com.ium.um.domain.ChassisStepData.StepInfoData.Builder.class);
+              com.ium.um.domain.ChassisStepProto.StepInfoData.class, com.ium.um.domain.ChassisStepProto.StepInfoData.Builder.class);
     }
 
     private int bitField0_;
@@ -1072,7 +1072,7 @@ public final class ChassisStepData {
     }
 
     public static final int TABLEVALUEINFO_FIELD_NUMBER = 2;
-    private java.util.List<com.ium.um.domain.ChassisStepData.TableValueInfo> tableValueInfo_;
+    private java.util.List<com.ium.um.domain.ChassisStepProto.TableValueInfo> tableValueInfo_;
     /**
      * <pre>
      *工步信息表格
@@ -1080,7 +1080,7 @@ public final class ChassisStepData {
      *
      * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
      */
-    public java.util.List<com.ium.um.domain.ChassisStepData.TableValueInfo> getTableValueInfoList() {
+    public java.util.List<com.ium.um.domain.ChassisStepProto.TableValueInfo> getTableValueInfoList() {
       return tableValueInfo_;
     }
     /**
@@ -1090,7 +1090,7 @@ public final class ChassisStepData {
      *
      * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
      */
-    public java.util.List<? extends com.ium.um.domain.ChassisStepData.TableValueInfoOrBuilder> 
+    public java.util.List<? extends com.ium.um.domain.ChassisStepProto.TableValueInfoOrBuilder> 
         getTableValueInfoOrBuilderList() {
       return tableValueInfo_;
     }
@@ -1111,7 +1111,7 @@ public final class ChassisStepData {
      *
      * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
      */
-    public com.ium.um.domain.ChassisStepData.TableValueInfo getTableValueInfo(int index) {
+    public com.ium.um.domain.ChassisStepProto.TableValueInfo getTableValueInfo(int index) {
       return tableValueInfo_.get(index);
     }
     /**
@@ -1121,13 +1121,13 @@ public final class ChassisStepData {
      *
      * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
      */
-    public com.ium.um.domain.ChassisStepData.TableValueInfoOrBuilder getTableValueInfoOrBuilder(
+    public com.ium.um.domain.ChassisStepProto.TableValueInfoOrBuilder getTableValueInfoOrBuilder(
         int index) {
       return tableValueInfo_.get(index);
     }
 
     public static final int SAFEVALUEINFO_FIELD_NUMBER = 3;
-    private com.ium.um.domain.ChassisStepData.SafeValueInfo safeValueInfo_;
+    private com.ium.um.domain.ChassisStepProto.SafeValueInfo safeValueInfo_;
     /**
      * <pre>
      *安全参数
@@ -1145,8 +1145,8 @@ public final class ChassisStepData {
      *
      * <code>.SafeValueInfo safeValueInfo = 3;</code>
      */
-    public com.ium.um.domain.ChassisStepData.SafeValueInfo getSafeValueInfo() {
-      return safeValueInfo_ == null ? com.ium.um.domain.ChassisStepData.SafeValueInfo.getDefaultInstance() : safeValueInfo_;
+    public com.ium.um.domain.ChassisStepProto.SafeValueInfo getSafeValueInfo() {
+      return safeValueInfo_ == null ? com.ium.um.domain.ChassisStepProto.SafeValueInfo.getDefaultInstance() : safeValueInfo_;
     }
     /**
      * <pre>
@@ -1155,12 +1155,12 @@ public final class ChassisStepData {
      *
      * <code>.SafeValueInfo safeValueInfo = 3;</code>
      */
-    public com.ium.um.domain.ChassisStepData.SafeValueInfoOrBuilder getSafeValueInfoOrBuilder() {
+    public com.ium.um.domain.ChassisStepProto.SafeValueInfoOrBuilder getSafeValueInfoOrBuilder() {
       return getSafeValueInfo();
     }
 
     public static final int GRADVALUEINFO_FIELD_NUMBER = 4;
-    private com.ium.um.domain.ChassisStepData.GradValueInfo gradValueInfo_;
+    private com.ium.um.domain.ChassisStepProto.GradValueInfo gradValueInfo_;
     /**
      * <pre>
      *分选条件
@@ -1178,8 +1178,8 @@ public final class ChassisStepData {
      *
      * <code>.GradValueInfo gradValueInfo = 4;</code>
      */
-    public com.ium.um.domain.ChassisStepData.GradValueInfo getGradValueInfo() {
-      return gradValueInfo_ == null ? com.ium.um.domain.ChassisStepData.GradValueInfo.getDefaultInstance() : gradValueInfo_;
+    public com.ium.um.domain.ChassisStepProto.GradValueInfo getGradValueInfo() {
+      return gradValueInfo_ == null ? com.ium.um.domain.ChassisStepProto.GradValueInfo.getDefaultInstance() : gradValueInfo_;
     }
     /**
      * <pre>
@@ -1188,12 +1188,12 @@ public final class ChassisStepData {
      *
      * <code>.GradValueInfo gradValueInfo = 4;</code>
      */
-    public com.ium.um.domain.ChassisStepData.GradValueInfoOrBuilder getGradValueInfoOrBuilder() {
+    public com.ium.um.domain.ChassisStepProto.GradValueInfoOrBuilder getGradValueInfoOrBuilder() {
       return getGradValueInfo();
     }
 
     public static final int STEPFROMTO_FIELD_NUMBER = 5;
-    private com.ium.um.domain.ChassisStepData.StepFromToInfo stepFromTo_;
+    private com.ium.um.domain.ChassisStepProto.StepFromToInfo stepFromTo_;
     /**
      * <pre>
      *工步起始序号
@@ -1211,8 +1211,8 @@ public final class ChassisStepData {
      *
      * <code>.StepFromToInfo stepFromTo = 5;</code>
      */
-    public com.ium.um.domain.ChassisStepData.StepFromToInfo getStepFromTo() {
-      return stepFromTo_ == null ? com.ium.um.domain.ChassisStepData.StepFromToInfo.getDefaultInstance() : stepFromTo_;
+    public com.ium.um.domain.ChassisStepProto.StepFromToInfo getStepFromTo() {
+      return stepFromTo_ == null ? com.ium.um.domain.ChassisStepProto.StepFromToInfo.getDefaultInstance() : stepFromTo_;
     }
     /**
      * <pre>
@@ -1221,7 +1221,7 @@ public final class ChassisStepData {
      *
      * <code>.StepFromToInfo stepFromTo = 5;</code>
      */
-    public com.ium.um.domain.ChassisStepData.StepFromToInfoOrBuilder getStepFromToOrBuilder() {
+    public com.ium.um.domain.ChassisStepProto.StepFromToInfoOrBuilder getStepFromToOrBuilder() {
       return getStepFromTo();
     }
 
@@ -1334,10 +1334,10 @@ public final class ChassisStepData {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ium.um.domain.ChassisStepData.StepInfoData)) {
+      if (!(obj instanceof com.ium.um.domain.ChassisStepProto.StepInfoData)) {
         return super.equals(obj);
       }
-      com.ium.um.domain.ChassisStepData.StepInfoData other = (com.ium.um.domain.ChassisStepData.StepInfoData) obj;
+      com.ium.um.domain.ChassisStepProto.StepInfoData other = (com.ium.um.domain.ChassisStepProto.StepInfoData) obj;
 
       boolean result = true;
       result = result && getFilePath()
@@ -1398,58 +1398,58 @@ public final class ChassisStepData {
       return hash;
     }
 
-    public static com.ium.um.domain.ChassisStepData.StepInfoData parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.StepInfoData parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.StepInfoData parseFrom(byte[] data)
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.StepInfoData parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.StepInfoData parseFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.StepInfoData parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.StepInfoData parseDelimitedFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.StepInfoData parseDelimitedFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.StepInfoData parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.StepInfoData parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1461,7 +1461,7 @@ public final class ChassisStepData {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ium.um.domain.ChassisStepData.StepInfoData prototype) {
+    public static Builder newBuilder(com.ium.um.domain.ChassisStepProto.StepInfoData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1485,20 +1485,20 @@ public final class ChassisStepData {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:StepInfoData)
-        com.ium.um.domain.ChassisStepData.StepInfoDataOrBuilder {
+        com.ium.um.domain.ChassisStepProto.StepInfoDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ium.um.domain.ChassisStepData.internal_static_StepInfoData_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_StepInfoData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ium.um.domain.ChassisStepData.internal_static_StepInfoData_fieldAccessorTable
+        return com.ium.um.domain.ChassisStepProto.internal_static_StepInfoData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ium.um.domain.ChassisStepData.StepInfoData.class, com.ium.um.domain.ChassisStepData.StepInfoData.Builder.class);
+                com.ium.um.domain.ChassisStepProto.StepInfoData.class, com.ium.um.domain.ChassisStepProto.StepInfoData.Builder.class);
       }
 
-      // Construct using com.ium.um.domain.ChassisStepData.StepInfoData.newBuilder()
+      // Construct using com.ium.um.domain.ChassisStepProto.StepInfoData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1549,23 +1549,23 @@ public final class ChassisStepData {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ium.um.domain.ChassisStepData.internal_static_StepInfoData_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_StepInfoData_descriptor;
       }
 
-      public com.ium.um.domain.ChassisStepData.StepInfoData getDefaultInstanceForType() {
-        return com.ium.um.domain.ChassisStepData.StepInfoData.getDefaultInstance();
+      public com.ium.um.domain.ChassisStepProto.StepInfoData getDefaultInstanceForType() {
+        return com.ium.um.domain.ChassisStepProto.StepInfoData.getDefaultInstance();
       }
 
-      public com.ium.um.domain.ChassisStepData.StepInfoData build() {
-        com.ium.um.domain.ChassisStepData.StepInfoData result = buildPartial();
+      public com.ium.um.domain.ChassisStepProto.StepInfoData build() {
+        com.ium.um.domain.ChassisStepProto.StepInfoData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.ium.um.domain.ChassisStepData.StepInfoData buildPartial() {
-        com.ium.um.domain.ChassisStepData.StepInfoData result = new com.ium.um.domain.ChassisStepData.StepInfoData(this);
+      public com.ium.um.domain.ChassisStepProto.StepInfoData buildPartial() {
+        com.ium.um.domain.ChassisStepProto.StepInfoData result = new com.ium.um.domain.ChassisStepProto.StepInfoData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.filePath_ = filePath_;
@@ -1630,16 +1630,16 @@ public final class ChassisStepData {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ium.um.domain.ChassisStepData.StepInfoData) {
-          return mergeFrom((com.ium.um.domain.ChassisStepData.StepInfoData)other);
+        if (other instanceof com.ium.um.domain.ChassisStepProto.StepInfoData) {
+          return mergeFrom((com.ium.um.domain.ChassisStepProto.StepInfoData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ium.um.domain.ChassisStepData.StepInfoData other) {
-        if (other == com.ium.um.domain.ChassisStepData.StepInfoData.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.ium.um.domain.ChassisStepProto.StepInfoData other) {
+        if (other == com.ium.um.domain.ChassisStepProto.StepInfoData.getDefaultInstance()) return this;
         if (!other.getFilePath().isEmpty()) {
           filePath_ = other.filePath_;
           onChanged();
@@ -1701,11 +1701,11 @@ public final class ChassisStepData {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ium.um.domain.ChassisStepData.StepInfoData parsedMessage = null;
+        com.ium.um.domain.ChassisStepProto.StepInfoData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ium.um.domain.ChassisStepData.StepInfoData) e.getUnfinishedMessage();
+          parsedMessage = (com.ium.um.domain.ChassisStepProto.StepInfoData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1805,17 +1805,17 @@ public final class ChassisStepData {
         return this;
       }
 
-      private java.util.List<com.ium.um.domain.ChassisStepData.TableValueInfo> tableValueInfo_ =
+      private java.util.List<com.ium.um.domain.ChassisStepProto.TableValueInfo> tableValueInfo_ =
         java.util.Collections.emptyList();
       private void ensureTableValueInfoIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          tableValueInfo_ = new java.util.ArrayList<com.ium.um.domain.ChassisStepData.TableValueInfo>(tableValueInfo_);
+          tableValueInfo_ = new java.util.ArrayList<com.ium.um.domain.ChassisStepProto.TableValueInfo>(tableValueInfo_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.ium.um.domain.ChassisStepData.TableValueInfo, com.ium.um.domain.ChassisStepData.TableValueInfo.Builder, com.ium.um.domain.ChassisStepData.TableValueInfoOrBuilder> tableValueInfoBuilder_;
+          com.ium.um.domain.ChassisStepProto.TableValueInfo, com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder, com.ium.um.domain.ChassisStepProto.TableValueInfoOrBuilder> tableValueInfoBuilder_;
 
       /**
        * <pre>
@@ -1824,7 +1824,7 @@ public final class ChassisStepData {
        *
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
-      public java.util.List<com.ium.um.domain.ChassisStepData.TableValueInfo> getTableValueInfoList() {
+      public java.util.List<com.ium.um.domain.ChassisStepProto.TableValueInfo> getTableValueInfoList() {
         if (tableValueInfoBuilder_ == null) {
           return java.util.Collections.unmodifiableList(tableValueInfo_);
         } else {
@@ -1852,7 +1852,7 @@ public final class ChassisStepData {
        *
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
-      public com.ium.um.domain.ChassisStepData.TableValueInfo getTableValueInfo(int index) {
+      public com.ium.um.domain.ChassisStepProto.TableValueInfo getTableValueInfo(int index) {
         if (tableValueInfoBuilder_ == null) {
           return tableValueInfo_.get(index);
         } else {
@@ -1867,7 +1867,7 @@ public final class ChassisStepData {
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
       public Builder setTableValueInfo(
-          int index, com.ium.um.domain.ChassisStepData.TableValueInfo value) {
+          int index, com.ium.um.domain.ChassisStepProto.TableValueInfo value) {
         if (tableValueInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1888,7 +1888,7 @@ public final class ChassisStepData {
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
       public Builder setTableValueInfo(
-          int index, com.ium.um.domain.ChassisStepData.TableValueInfo.Builder builderForValue) {
+          int index, com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder builderForValue) {
         if (tableValueInfoBuilder_ == null) {
           ensureTableValueInfoIsMutable();
           tableValueInfo_.set(index, builderForValue.build());
@@ -1905,7 +1905,7 @@ public final class ChassisStepData {
        *
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
-      public Builder addTableValueInfo(com.ium.um.domain.ChassisStepData.TableValueInfo value) {
+      public Builder addTableValueInfo(com.ium.um.domain.ChassisStepProto.TableValueInfo value) {
         if (tableValueInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1926,7 +1926,7 @@ public final class ChassisStepData {
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
       public Builder addTableValueInfo(
-          int index, com.ium.um.domain.ChassisStepData.TableValueInfo value) {
+          int index, com.ium.um.domain.ChassisStepProto.TableValueInfo value) {
         if (tableValueInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1947,7 +1947,7 @@ public final class ChassisStepData {
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
       public Builder addTableValueInfo(
-          com.ium.um.domain.ChassisStepData.TableValueInfo.Builder builderForValue) {
+          com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder builderForValue) {
         if (tableValueInfoBuilder_ == null) {
           ensureTableValueInfoIsMutable();
           tableValueInfo_.add(builderForValue.build());
@@ -1965,7 +1965,7 @@ public final class ChassisStepData {
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
       public Builder addTableValueInfo(
-          int index, com.ium.um.domain.ChassisStepData.TableValueInfo.Builder builderForValue) {
+          int index, com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder builderForValue) {
         if (tableValueInfoBuilder_ == null) {
           ensureTableValueInfoIsMutable();
           tableValueInfo_.add(index, builderForValue.build());
@@ -1983,7 +1983,7 @@ public final class ChassisStepData {
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
       public Builder addAllTableValueInfo(
-          java.lang.Iterable<? extends com.ium.um.domain.ChassisStepData.TableValueInfo> values) {
+          java.lang.Iterable<? extends com.ium.um.domain.ChassisStepProto.TableValueInfo> values) {
         if (tableValueInfoBuilder_ == null) {
           ensureTableValueInfoIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2035,7 +2035,7 @@ public final class ChassisStepData {
        *
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
-      public com.ium.um.domain.ChassisStepData.TableValueInfo.Builder getTableValueInfoBuilder(
+      public com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder getTableValueInfoBuilder(
           int index) {
         return getTableValueInfoFieldBuilder().getBuilder(index);
       }
@@ -2046,7 +2046,7 @@ public final class ChassisStepData {
        *
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
-      public com.ium.um.domain.ChassisStepData.TableValueInfoOrBuilder getTableValueInfoOrBuilder(
+      public com.ium.um.domain.ChassisStepProto.TableValueInfoOrBuilder getTableValueInfoOrBuilder(
           int index) {
         if (tableValueInfoBuilder_ == null) {
           return tableValueInfo_.get(index);  } else {
@@ -2060,7 +2060,7 @@ public final class ChassisStepData {
        *
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
-      public java.util.List<? extends com.ium.um.domain.ChassisStepData.TableValueInfoOrBuilder> 
+      public java.util.List<? extends com.ium.um.domain.ChassisStepProto.TableValueInfoOrBuilder> 
            getTableValueInfoOrBuilderList() {
         if (tableValueInfoBuilder_ != null) {
           return tableValueInfoBuilder_.getMessageOrBuilderList();
@@ -2075,9 +2075,9 @@ public final class ChassisStepData {
        *
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
-      public com.ium.um.domain.ChassisStepData.TableValueInfo.Builder addTableValueInfoBuilder() {
+      public com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder addTableValueInfoBuilder() {
         return getTableValueInfoFieldBuilder().addBuilder(
-            com.ium.um.domain.ChassisStepData.TableValueInfo.getDefaultInstance());
+            com.ium.um.domain.ChassisStepProto.TableValueInfo.getDefaultInstance());
       }
       /**
        * <pre>
@@ -2086,10 +2086,10 @@ public final class ChassisStepData {
        *
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
-      public com.ium.um.domain.ChassisStepData.TableValueInfo.Builder addTableValueInfoBuilder(
+      public com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder addTableValueInfoBuilder(
           int index) {
         return getTableValueInfoFieldBuilder().addBuilder(
-            index, com.ium.um.domain.ChassisStepData.TableValueInfo.getDefaultInstance());
+            index, com.ium.um.domain.ChassisStepProto.TableValueInfo.getDefaultInstance());
       }
       /**
        * <pre>
@@ -2098,16 +2098,16 @@ public final class ChassisStepData {
        *
        * <code>repeated .TableValueInfo tableValueInfo = 2;</code>
        */
-      public java.util.List<com.ium.um.domain.ChassisStepData.TableValueInfo.Builder> 
+      public java.util.List<com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder> 
            getTableValueInfoBuilderList() {
         return getTableValueInfoFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.ium.um.domain.ChassisStepData.TableValueInfo, com.ium.um.domain.ChassisStepData.TableValueInfo.Builder, com.ium.um.domain.ChassisStepData.TableValueInfoOrBuilder> 
+          com.ium.um.domain.ChassisStepProto.TableValueInfo, com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder, com.ium.um.domain.ChassisStepProto.TableValueInfoOrBuilder> 
           getTableValueInfoFieldBuilder() {
         if (tableValueInfoBuilder_ == null) {
           tableValueInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.ium.um.domain.ChassisStepData.TableValueInfo, com.ium.um.domain.ChassisStepData.TableValueInfo.Builder, com.ium.um.domain.ChassisStepData.TableValueInfoOrBuilder>(
+              com.ium.um.domain.ChassisStepProto.TableValueInfo, com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder, com.ium.um.domain.ChassisStepProto.TableValueInfoOrBuilder>(
                   tableValueInfo_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
@@ -2117,9 +2117,9 @@ public final class ChassisStepData {
         return tableValueInfoBuilder_;
       }
 
-      private com.ium.um.domain.ChassisStepData.SafeValueInfo safeValueInfo_ = null;
+      private com.ium.um.domain.ChassisStepProto.SafeValueInfo safeValueInfo_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ium.um.domain.ChassisStepData.SafeValueInfo, com.ium.um.domain.ChassisStepData.SafeValueInfo.Builder, com.ium.um.domain.ChassisStepData.SafeValueInfoOrBuilder> safeValueInfoBuilder_;
+          com.ium.um.domain.ChassisStepProto.SafeValueInfo, com.ium.um.domain.ChassisStepProto.SafeValueInfo.Builder, com.ium.um.domain.ChassisStepProto.SafeValueInfoOrBuilder> safeValueInfoBuilder_;
       /**
        * <pre>
        *安全参数
@@ -2137,9 +2137,9 @@ public final class ChassisStepData {
        *
        * <code>.SafeValueInfo safeValueInfo = 3;</code>
        */
-      public com.ium.um.domain.ChassisStepData.SafeValueInfo getSafeValueInfo() {
+      public com.ium.um.domain.ChassisStepProto.SafeValueInfo getSafeValueInfo() {
         if (safeValueInfoBuilder_ == null) {
-          return safeValueInfo_ == null ? com.ium.um.domain.ChassisStepData.SafeValueInfo.getDefaultInstance() : safeValueInfo_;
+          return safeValueInfo_ == null ? com.ium.um.domain.ChassisStepProto.SafeValueInfo.getDefaultInstance() : safeValueInfo_;
         } else {
           return safeValueInfoBuilder_.getMessage();
         }
@@ -2151,7 +2151,7 @@ public final class ChassisStepData {
        *
        * <code>.SafeValueInfo safeValueInfo = 3;</code>
        */
-      public Builder setSafeValueInfo(com.ium.um.domain.ChassisStepData.SafeValueInfo value) {
+      public Builder setSafeValueInfo(com.ium.um.domain.ChassisStepProto.SafeValueInfo value) {
         if (safeValueInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2172,7 +2172,7 @@ public final class ChassisStepData {
        * <code>.SafeValueInfo safeValueInfo = 3;</code>
        */
       public Builder setSafeValueInfo(
-          com.ium.um.domain.ChassisStepData.SafeValueInfo.Builder builderForValue) {
+          com.ium.um.domain.ChassisStepProto.SafeValueInfo.Builder builderForValue) {
         if (safeValueInfoBuilder_ == null) {
           safeValueInfo_ = builderForValue.build();
           onChanged();
@@ -2189,11 +2189,11 @@ public final class ChassisStepData {
        *
        * <code>.SafeValueInfo safeValueInfo = 3;</code>
        */
-      public Builder mergeSafeValueInfo(com.ium.um.domain.ChassisStepData.SafeValueInfo value) {
+      public Builder mergeSafeValueInfo(com.ium.um.domain.ChassisStepProto.SafeValueInfo value) {
         if (safeValueInfoBuilder_ == null) {
           if (safeValueInfo_ != null) {
             safeValueInfo_ =
-              com.ium.um.domain.ChassisStepData.SafeValueInfo.newBuilder(safeValueInfo_).mergeFrom(value).buildPartial();
+              com.ium.um.domain.ChassisStepProto.SafeValueInfo.newBuilder(safeValueInfo_).mergeFrom(value).buildPartial();
           } else {
             safeValueInfo_ = value;
           }
@@ -2229,7 +2229,7 @@ public final class ChassisStepData {
        *
        * <code>.SafeValueInfo safeValueInfo = 3;</code>
        */
-      public com.ium.um.domain.ChassisStepData.SafeValueInfo.Builder getSafeValueInfoBuilder() {
+      public com.ium.um.domain.ChassisStepProto.SafeValueInfo.Builder getSafeValueInfoBuilder() {
         
         onChanged();
         return getSafeValueInfoFieldBuilder().getBuilder();
@@ -2241,12 +2241,12 @@ public final class ChassisStepData {
        *
        * <code>.SafeValueInfo safeValueInfo = 3;</code>
        */
-      public com.ium.um.domain.ChassisStepData.SafeValueInfoOrBuilder getSafeValueInfoOrBuilder() {
+      public com.ium.um.domain.ChassisStepProto.SafeValueInfoOrBuilder getSafeValueInfoOrBuilder() {
         if (safeValueInfoBuilder_ != null) {
           return safeValueInfoBuilder_.getMessageOrBuilder();
         } else {
           return safeValueInfo_ == null ?
-              com.ium.um.domain.ChassisStepData.SafeValueInfo.getDefaultInstance() : safeValueInfo_;
+              com.ium.um.domain.ChassisStepProto.SafeValueInfo.getDefaultInstance() : safeValueInfo_;
         }
       }
       /**
@@ -2257,11 +2257,11 @@ public final class ChassisStepData {
        * <code>.SafeValueInfo safeValueInfo = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ium.um.domain.ChassisStepData.SafeValueInfo, com.ium.um.domain.ChassisStepData.SafeValueInfo.Builder, com.ium.um.domain.ChassisStepData.SafeValueInfoOrBuilder> 
+          com.ium.um.domain.ChassisStepProto.SafeValueInfo, com.ium.um.domain.ChassisStepProto.SafeValueInfo.Builder, com.ium.um.domain.ChassisStepProto.SafeValueInfoOrBuilder> 
           getSafeValueInfoFieldBuilder() {
         if (safeValueInfoBuilder_ == null) {
           safeValueInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ium.um.domain.ChassisStepData.SafeValueInfo, com.ium.um.domain.ChassisStepData.SafeValueInfo.Builder, com.ium.um.domain.ChassisStepData.SafeValueInfoOrBuilder>(
+              com.ium.um.domain.ChassisStepProto.SafeValueInfo, com.ium.um.domain.ChassisStepProto.SafeValueInfo.Builder, com.ium.um.domain.ChassisStepProto.SafeValueInfoOrBuilder>(
                   getSafeValueInfo(),
                   getParentForChildren(),
                   isClean());
@@ -2270,9 +2270,9 @@ public final class ChassisStepData {
         return safeValueInfoBuilder_;
       }
 
-      private com.ium.um.domain.ChassisStepData.GradValueInfo gradValueInfo_ = null;
+      private com.ium.um.domain.ChassisStepProto.GradValueInfo gradValueInfo_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ium.um.domain.ChassisStepData.GradValueInfo, com.ium.um.domain.ChassisStepData.GradValueInfo.Builder, com.ium.um.domain.ChassisStepData.GradValueInfoOrBuilder> gradValueInfoBuilder_;
+          com.ium.um.domain.ChassisStepProto.GradValueInfo, com.ium.um.domain.ChassisStepProto.GradValueInfo.Builder, com.ium.um.domain.ChassisStepProto.GradValueInfoOrBuilder> gradValueInfoBuilder_;
       /**
        * <pre>
        *分选条件
@@ -2290,9 +2290,9 @@ public final class ChassisStepData {
        *
        * <code>.GradValueInfo gradValueInfo = 4;</code>
        */
-      public com.ium.um.domain.ChassisStepData.GradValueInfo getGradValueInfo() {
+      public com.ium.um.domain.ChassisStepProto.GradValueInfo getGradValueInfo() {
         if (gradValueInfoBuilder_ == null) {
-          return gradValueInfo_ == null ? com.ium.um.domain.ChassisStepData.GradValueInfo.getDefaultInstance() : gradValueInfo_;
+          return gradValueInfo_ == null ? com.ium.um.domain.ChassisStepProto.GradValueInfo.getDefaultInstance() : gradValueInfo_;
         } else {
           return gradValueInfoBuilder_.getMessage();
         }
@@ -2304,7 +2304,7 @@ public final class ChassisStepData {
        *
        * <code>.GradValueInfo gradValueInfo = 4;</code>
        */
-      public Builder setGradValueInfo(com.ium.um.domain.ChassisStepData.GradValueInfo value) {
+      public Builder setGradValueInfo(com.ium.um.domain.ChassisStepProto.GradValueInfo value) {
         if (gradValueInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2325,7 +2325,7 @@ public final class ChassisStepData {
        * <code>.GradValueInfo gradValueInfo = 4;</code>
        */
       public Builder setGradValueInfo(
-          com.ium.um.domain.ChassisStepData.GradValueInfo.Builder builderForValue) {
+          com.ium.um.domain.ChassisStepProto.GradValueInfo.Builder builderForValue) {
         if (gradValueInfoBuilder_ == null) {
           gradValueInfo_ = builderForValue.build();
           onChanged();
@@ -2342,11 +2342,11 @@ public final class ChassisStepData {
        *
        * <code>.GradValueInfo gradValueInfo = 4;</code>
        */
-      public Builder mergeGradValueInfo(com.ium.um.domain.ChassisStepData.GradValueInfo value) {
+      public Builder mergeGradValueInfo(com.ium.um.domain.ChassisStepProto.GradValueInfo value) {
         if (gradValueInfoBuilder_ == null) {
           if (gradValueInfo_ != null) {
             gradValueInfo_ =
-              com.ium.um.domain.ChassisStepData.GradValueInfo.newBuilder(gradValueInfo_).mergeFrom(value).buildPartial();
+              com.ium.um.domain.ChassisStepProto.GradValueInfo.newBuilder(gradValueInfo_).mergeFrom(value).buildPartial();
           } else {
             gradValueInfo_ = value;
           }
@@ -2382,7 +2382,7 @@ public final class ChassisStepData {
        *
        * <code>.GradValueInfo gradValueInfo = 4;</code>
        */
-      public com.ium.um.domain.ChassisStepData.GradValueInfo.Builder getGradValueInfoBuilder() {
+      public com.ium.um.domain.ChassisStepProto.GradValueInfo.Builder getGradValueInfoBuilder() {
         
         onChanged();
         return getGradValueInfoFieldBuilder().getBuilder();
@@ -2394,12 +2394,12 @@ public final class ChassisStepData {
        *
        * <code>.GradValueInfo gradValueInfo = 4;</code>
        */
-      public com.ium.um.domain.ChassisStepData.GradValueInfoOrBuilder getGradValueInfoOrBuilder() {
+      public com.ium.um.domain.ChassisStepProto.GradValueInfoOrBuilder getGradValueInfoOrBuilder() {
         if (gradValueInfoBuilder_ != null) {
           return gradValueInfoBuilder_.getMessageOrBuilder();
         } else {
           return gradValueInfo_ == null ?
-              com.ium.um.domain.ChassisStepData.GradValueInfo.getDefaultInstance() : gradValueInfo_;
+              com.ium.um.domain.ChassisStepProto.GradValueInfo.getDefaultInstance() : gradValueInfo_;
         }
       }
       /**
@@ -2410,11 +2410,11 @@ public final class ChassisStepData {
        * <code>.GradValueInfo gradValueInfo = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ium.um.domain.ChassisStepData.GradValueInfo, com.ium.um.domain.ChassisStepData.GradValueInfo.Builder, com.ium.um.domain.ChassisStepData.GradValueInfoOrBuilder> 
+          com.ium.um.domain.ChassisStepProto.GradValueInfo, com.ium.um.domain.ChassisStepProto.GradValueInfo.Builder, com.ium.um.domain.ChassisStepProto.GradValueInfoOrBuilder> 
           getGradValueInfoFieldBuilder() {
         if (gradValueInfoBuilder_ == null) {
           gradValueInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ium.um.domain.ChassisStepData.GradValueInfo, com.ium.um.domain.ChassisStepData.GradValueInfo.Builder, com.ium.um.domain.ChassisStepData.GradValueInfoOrBuilder>(
+              com.ium.um.domain.ChassisStepProto.GradValueInfo, com.ium.um.domain.ChassisStepProto.GradValueInfo.Builder, com.ium.um.domain.ChassisStepProto.GradValueInfoOrBuilder>(
                   getGradValueInfo(),
                   getParentForChildren(),
                   isClean());
@@ -2423,9 +2423,9 @@ public final class ChassisStepData {
         return gradValueInfoBuilder_;
       }
 
-      private com.ium.um.domain.ChassisStepData.StepFromToInfo stepFromTo_ = null;
+      private com.ium.um.domain.ChassisStepProto.StepFromToInfo stepFromTo_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ium.um.domain.ChassisStepData.StepFromToInfo, com.ium.um.domain.ChassisStepData.StepFromToInfo.Builder, com.ium.um.domain.ChassisStepData.StepFromToInfoOrBuilder> stepFromToBuilder_;
+          com.ium.um.domain.ChassisStepProto.StepFromToInfo, com.ium.um.domain.ChassisStepProto.StepFromToInfo.Builder, com.ium.um.domain.ChassisStepProto.StepFromToInfoOrBuilder> stepFromToBuilder_;
       /**
        * <pre>
        *工步起始序号
@@ -2443,9 +2443,9 @@ public final class ChassisStepData {
        *
        * <code>.StepFromToInfo stepFromTo = 5;</code>
        */
-      public com.ium.um.domain.ChassisStepData.StepFromToInfo getStepFromTo() {
+      public com.ium.um.domain.ChassisStepProto.StepFromToInfo getStepFromTo() {
         if (stepFromToBuilder_ == null) {
-          return stepFromTo_ == null ? com.ium.um.domain.ChassisStepData.StepFromToInfo.getDefaultInstance() : stepFromTo_;
+          return stepFromTo_ == null ? com.ium.um.domain.ChassisStepProto.StepFromToInfo.getDefaultInstance() : stepFromTo_;
         } else {
           return stepFromToBuilder_.getMessage();
         }
@@ -2457,7 +2457,7 @@ public final class ChassisStepData {
        *
        * <code>.StepFromToInfo stepFromTo = 5;</code>
        */
-      public Builder setStepFromTo(com.ium.um.domain.ChassisStepData.StepFromToInfo value) {
+      public Builder setStepFromTo(com.ium.um.domain.ChassisStepProto.StepFromToInfo value) {
         if (stepFromToBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2478,7 +2478,7 @@ public final class ChassisStepData {
        * <code>.StepFromToInfo stepFromTo = 5;</code>
        */
       public Builder setStepFromTo(
-          com.ium.um.domain.ChassisStepData.StepFromToInfo.Builder builderForValue) {
+          com.ium.um.domain.ChassisStepProto.StepFromToInfo.Builder builderForValue) {
         if (stepFromToBuilder_ == null) {
           stepFromTo_ = builderForValue.build();
           onChanged();
@@ -2495,11 +2495,11 @@ public final class ChassisStepData {
        *
        * <code>.StepFromToInfo stepFromTo = 5;</code>
        */
-      public Builder mergeStepFromTo(com.ium.um.domain.ChassisStepData.StepFromToInfo value) {
+      public Builder mergeStepFromTo(com.ium.um.domain.ChassisStepProto.StepFromToInfo value) {
         if (stepFromToBuilder_ == null) {
           if (stepFromTo_ != null) {
             stepFromTo_ =
-              com.ium.um.domain.ChassisStepData.StepFromToInfo.newBuilder(stepFromTo_).mergeFrom(value).buildPartial();
+              com.ium.um.domain.ChassisStepProto.StepFromToInfo.newBuilder(stepFromTo_).mergeFrom(value).buildPartial();
           } else {
             stepFromTo_ = value;
           }
@@ -2535,7 +2535,7 @@ public final class ChassisStepData {
        *
        * <code>.StepFromToInfo stepFromTo = 5;</code>
        */
-      public com.ium.um.domain.ChassisStepData.StepFromToInfo.Builder getStepFromToBuilder() {
+      public com.ium.um.domain.ChassisStepProto.StepFromToInfo.Builder getStepFromToBuilder() {
         
         onChanged();
         return getStepFromToFieldBuilder().getBuilder();
@@ -2547,12 +2547,12 @@ public final class ChassisStepData {
        *
        * <code>.StepFromToInfo stepFromTo = 5;</code>
        */
-      public com.ium.um.domain.ChassisStepData.StepFromToInfoOrBuilder getStepFromToOrBuilder() {
+      public com.ium.um.domain.ChassisStepProto.StepFromToInfoOrBuilder getStepFromToOrBuilder() {
         if (stepFromToBuilder_ != null) {
           return stepFromToBuilder_.getMessageOrBuilder();
         } else {
           return stepFromTo_ == null ?
-              com.ium.um.domain.ChassisStepData.StepFromToInfo.getDefaultInstance() : stepFromTo_;
+              com.ium.um.domain.ChassisStepProto.StepFromToInfo.getDefaultInstance() : stepFromTo_;
         }
       }
       /**
@@ -2563,11 +2563,11 @@ public final class ChassisStepData {
        * <code>.StepFromToInfo stepFromTo = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ium.um.domain.ChassisStepData.StepFromToInfo, com.ium.um.domain.ChassisStepData.StepFromToInfo.Builder, com.ium.um.domain.ChassisStepData.StepFromToInfoOrBuilder> 
+          com.ium.um.domain.ChassisStepProto.StepFromToInfo, com.ium.um.domain.ChassisStepProto.StepFromToInfo.Builder, com.ium.um.domain.ChassisStepProto.StepFromToInfoOrBuilder> 
           getStepFromToFieldBuilder() {
         if (stepFromToBuilder_ == null) {
           stepFromToBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ium.um.domain.ChassisStepData.StepFromToInfo, com.ium.um.domain.ChassisStepData.StepFromToInfo.Builder, com.ium.um.domain.ChassisStepData.StepFromToInfoOrBuilder>(
+              com.ium.um.domain.ChassisStepProto.StepFromToInfo, com.ium.um.domain.ChassisStepProto.StepFromToInfo.Builder, com.ium.um.domain.ChassisStepProto.StepFromToInfoOrBuilder>(
                   getStepFromTo(),
                   getParentForChildren(),
                   isClean());
@@ -2690,12 +2690,12 @@ public final class ChassisStepData {
     }
 
     // @@protoc_insertion_point(class_scope:StepInfoData)
-    private static final com.ium.um.domain.ChassisStepData.StepInfoData DEFAULT_INSTANCE;
+    private static final com.ium.um.domain.ChassisStepProto.StepInfoData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepData.StepInfoData();
+      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepProto.StepInfoData();
     }
 
-    public static com.ium.um.domain.ChassisStepData.StepInfoData getDefaultInstance() {
+    public static com.ium.um.domain.ChassisStepProto.StepInfoData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2718,7 +2718,7 @@ public final class ChassisStepData {
       return PARSER;
     }
 
-    public com.ium.um.domain.ChassisStepData.StepInfoData getDefaultInstanceForType() {
+    public com.ium.um.domain.ChassisStepProto.StepInfoData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2929,14 +2929,14 @@ public final class ChassisStepData {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ium.um.domain.ChassisStepData.internal_static_TableValueInfo_descriptor;
+      return com.ium.um.domain.ChassisStepProto.internal_static_TableValueInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ium.um.domain.ChassisStepData.internal_static_TableValueInfo_fieldAccessorTable
+      return com.ium.um.domain.ChassisStepProto.internal_static_TableValueInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ium.um.domain.ChassisStepData.TableValueInfo.class, com.ium.um.domain.ChassisStepData.TableValueInfo.Builder.class);
+              com.ium.um.domain.ChassisStepProto.TableValueInfo.class, com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder.class);
     }
 
     public static final int NO_FIELD_NUMBER = 1;
@@ -3176,10 +3176,10 @@ public final class ChassisStepData {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ium.um.domain.ChassisStepData.TableValueInfo)) {
+      if (!(obj instanceof com.ium.um.domain.ChassisStepProto.TableValueInfo)) {
         return super.equals(obj);
       }
-      com.ium.um.domain.ChassisStepData.TableValueInfo other = (com.ium.um.domain.ChassisStepData.TableValueInfo) obj;
+      com.ium.um.domain.ChassisStepProto.TableValueInfo other = (com.ium.um.domain.ChassisStepProto.TableValueInfo) obj;
 
       boolean result = true;
       result = result && (getNo()
@@ -3233,58 +3233,58 @@ public final class ChassisStepData {
       return hash;
     }
 
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo parseFrom(byte[] data)
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo parseFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo parseDelimitedFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo parseDelimitedFrom(
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3296,7 +3296,7 @@ public final class ChassisStepData {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ium.um.domain.ChassisStepData.TableValueInfo prototype) {
+    public static Builder newBuilder(com.ium.um.domain.ChassisStepProto.TableValueInfo prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -3320,20 +3320,20 @@ public final class ChassisStepData {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:TableValueInfo)
-        com.ium.um.domain.ChassisStepData.TableValueInfoOrBuilder {
+        com.ium.um.domain.ChassisStepProto.TableValueInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ium.um.domain.ChassisStepData.internal_static_TableValueInfo_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_TableValueInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ium.um.domain.ChassisStepData.internal_static_TableValueInfo_fieldAccessorTable
+        return com.ium.um.domain.ChassisStepProto.internal_static_TableValueInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ium.um.domain.ChassisStepData.TableValueInfo.class, com.ium.um.domain.ChassisStepData.TableValueInfo.Builder.class);
+                com.ium.um.domain.ChassisStepProto.TableValueInfo.class, com.ium.um.domain.ChassisStepProto.TableValueInfo.Builder.class);
       }
 
-      // Construct using com.ium.um.domain.ChassisStepData.TableValueInfo.newBuilder()
+      // Construct using com.ium.um.domain.ChassisStepProto.TableValueInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3373,23 +3373,23 @@ public final class ChassisStepData {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ium.um.domain.ChassisStepData.internal_static_TableValueInfo_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_TableValueInfo_descriptor;
       }
 
-      public com.ium.um.domain.ChassisStepData.TableValueInfo getDefaultInstanceForType() {
-        return com.ium.um.domain.ChassisStepData.TableValueInfo.getDefaultInstance();
+      public com.ium.um.domain.ChassisStepProto.TableValueInfo getDefaultInstanceForType() {
+        return com.ium.um.domain.ChassisStepProto.TableValueInfo.getDefaultInstance();
       }
 
-      public com.ium.um.domain.ChassisStepData.TableValueInfo build() {
-        com.ium.um.domain.ChassisStepData.TableValueInfo result = buildPartial();
+      public com.ium.um.domain.ChassisStepProto.TableValueInfo build() {
+        com.ium.um.domain.ChassisStepProto.TableValueInfo result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.ium.um.domain.ChassisStepData.TableValueInfo buildPartial() {
-        com.ium.um.domain.ChassisStepData.TableValueInfo result = new com.ium.um.domain.ChassisStepData.TableValueInfo(this);
+      public com.ium.um.domain.ChassisStepProto.TableValueInfo buildPartial() {
+        com.ium.um.domain.ChassisStepProto.TableValueInfo result = new com.ium.um.domain.ChassisStepProto.TableValueInfo(this);
         result.no_ = no_;
         result.name_ = name_;
         result.time_ = time_;
@@ -3430,16 +3430,16 @@ public final class ChassisStepData {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ium.um.domain.ChassisStepData.TableValueInfo) {
-          return mergeFrom((com.ium.um.domain.ChassisStepData.TableValueInfo)other);
+        if (other instanceof com.ium.um.domain.ChassisStepProto.TableValueInfo) {
+          return mergeFrom((com.ium.um.domain.ChassisStepProto.TableValueInfo)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ium.um.domain.ChassisStepData.TableValueInfo other) {
-        if (other == com.ium.um.domain.ChassisStepData.TableValueInfo.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.ium.um.domain.ChassisStepProto.TableValueInfo other) {
+        if (other == com.ium.um.domain.ChassisStepProto.TableValueInfo.getDefaultInstance()) return this;
         if (other.getNo() != 0) {
           setNo(other.getNo());
         }
@@ -3480,11 +3480,11 @@ public final class ChassisStepData {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ium.um.domain.ChassisStepData.TableValueInfo parsedMessage = null;
+        com.ium.um.domain.ChassisStepProto.TableValueInfo parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ium.um.domain.ChassisStepData.TableValueInfo) e.getUnfinishedMessage();
+          parsedMessage = (com.ium.um.domain.ChassisStepProto.TableValueInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3901,12 +3901,12 @@ public final class ChassisStepData {
     }
 
     // @@protoc_insertion_point(class_scope:TableValueInfo)
-    private static final com.ium.um.domain.ChassisStepData.TableValueInfo DEFAULT_INSTANCE;
+    private static final com.ium.um.domain.ChassisStepProto.TableValueInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepData.TableValueInfo();
+      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepProto.TableValueInfo();
     }
 
-    public static com.ium.um.domain.ChassisStepData.TableValueInfo getDefaultInstance() {
+    public static com.ium.um.domain.ChassisStepProto.TableValueInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3929,7 +3929,7 @@ public final class ChassisStepData {
       return PARSER;
     }
 
-    public com.ium.um.domain.ChassisStepData.TableValueInfo getDefaultInstanceForType() {
+    public com.ium.um.domain.ChassisStepProto.TableValueInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4025,14 +4025,14 @@ public final class ChassisStepData {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ium.um.domain.ChassisStepData.internal_static_SafeValueInfo_descriptor;
+      return com.ium.um.domain.ChassisStepProto.internal_static_SafeValueInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ium.um.domain.ChassisStepData.internal_static_SafeValueInfo_fieldAccessorTable
+      return com.ium.um.domain.ChassisStepProto.internal_static_SafeValueInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ium.um.domain.ChassisStepData.SafeValueInfo.class, com.ium.um.domain.ChassisStepData.SafeValueInfo.Builder.class);
+              com.ium.um.domain.ChassisStepProto.SafeValueInfo.class, com.ium.um.domain.ChassisStepProto.SafeValueInfo.Builder.class);
     }
 
     public static final int LOOPCOUNT_FIELD_NUMBER = 1;
@@ -4104,10 +4104,10 @@ public final class ChassisStepData {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ium.um.domain.ChassisStepData.SafeValueInfo)) {
+      if (!(obj instanceof com.ium.um.domain.ChassisStepProto.SafeValueInfo)) {
         return super.equals(obj);
       }
-      com.ium.um.domain.ChassisStepData.SafeValueInfo other = (com.ium.um.domain.ChassisStepData.SafeValueInfo) obj;
+      com.ium.um.domain.ChassisStepProto.SafeValueInfo other = (com.ium.um.domain.ChassisStepProto.SafeValueInfo) obj;
 
       boolean result = true;
       result = result && (getLoopCount()
@@ -4133,58 +4133,58 @@ public final class ChassisStepData {
       return hash;
     }
 
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo parseFrom(byte[] data)
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo parseFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo parseDelimitedFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo parseDelimitedFrom(
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4196,7 +4196,7 @@ public final class ChassisStepData {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ium.um.domain.ChassisStepData.SafeValueInfo prototype) {
+    public static Builder newBuilder(com.ium.um.domain.ChassisStepProto.SafeValueInfo prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -4220,20 +4220,20 @@ public final class ChassisStepData {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:SafeValueInfo)
-        com.ium.um.domain.ChassisStepData.SafeValueInfoOrBuilder {
+        com.ium.um.domain.ChassisStepProto.SafeValueInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ium.um.domain.ChassisStepData.internal_static_SafeValueInfo_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_SafeValueInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ium.um.domain.ChassisStepData.internal_static_SafeValueInfo_fieldAccessorTable
+        return com.ium.um.domain.ChassisStepProto.internal_static_SafeValueInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ium.um.domain.ChassisStepData.SafeValueInfo.class, com.ium.um.domain.ChassisStepData.SafeValueInfo.Builder.class);
+                com.ium.um.domain.ChassisStepProto.SafeValueInfo.class, com.ium.um.domain.ChassisStepProto.SafeValueInfo.Builder.class);
       }
 
-      // Construct using com.ium.um.domain.ChassisStepData.SafeValueInfo.newBuilder()
+      // Construct using com.ium.um.domain.ChassisStepProto.SafeValueInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4259,23 +4259,23 @@ public final class ChassisStepData {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ium.um.domain.ChassisStepData.internal_static_SafeValueInfo_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_SafeValueInfo_descriptor;
       }
 
-      public com.ium.um.domain.ChassisStepData.SafeValueInfo getDefaultInstanceForType() {
-        return com.ium.um.domain.ChassisStepData.SafeValueInfo.getDefaultInstance();
+      public com.ium.um.domain.ChassisStepProto.SafeValueInfo getDefaultInstanceForType() {
+        return com.ium.um.domain.ChassisStepProto.SafeValueInfo.getDefaultInstance();
       }
 
-      public com.ium.um.domain.ChassisStepData.SafeValueInfo build() {
-        com.ium.um.domain.ChassisStepData.SafeValueInfo result = buildPartial();
+      public com.ium.um.domain.ChassisStepProto.SafeValueInfo build() {
+        com.ium.um.domain.ChassisStepProto.SafeValueInfo result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.ium.um.domain.ChassisStepData.SafeValueInfo buildPartial() {
-        com.ium.um.domain.ChassisStepData.SafeValueInfo result = new com.ium.um.domain.ChassisStepData.SafeValueInfo(this);
+      public com.ium.um.domain.ChassisStepProto.SafeValueInfo buildPartial() {
+        com.ium.um.domain.ChassisStepProto.SafeValueInfo result = new com.ium.um.domain.ChassisStepProto.SafeValueInfo(this);
         result.loopCount_ = loopCount_;
         result.cThreshold_ = cThreshold_;
         onBuilt();
@@ -4309,16 +4309,16 @@ public final class ChassisStepData {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ium.um.domain.ChassisStepData.SafeValueInfo) {
-          return mergeFrom((com.ium.um.domain.ChassisStepData.SafeValueInfo)other);
+        if (other instanceof com.ium.um.domain.ChassisStepProto.SafeValueInfo) {
+          return mergeFrom((com.ium.um.domain.ChassisStepProto.SafeValueInfo)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ium.um.domain.ChassisStepData.SafeValueInfo other) {
-        if (other == com.ium.um.domain.ChassisStepData.SafeValueInfo.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.ium.um.domain.ChassisStepProto.SafeValueInfo other) {
+        if (other == com.ium.um.domain.ChassisStepProto.SafeValueInfo.getDefaultInstance()) return this;
         if (other.getLoopCount() != 0) {
           setLoopCount(other.getLoopCount());
         }
@@ -4337,11 +4337,11 @@ public final class ChassisStepData {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ium.um.domain.ChassisStepData.SafeValueInfo parsedMessage = null;
+        com.ium.um.domain.ChassisStepProto.SafeValueInfo parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ium.um.domain.ChassisStepData.SafeValueInfo) e.getUnfinishedMessage();
+          parsedMessage = (com.ium.um.domain.ChassisStepProto.SafeValueInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4441,12 +4441,12 @@ public final class ChassisStepData {
     }
 
     // @@protoc_insertion_point(class_scope:SafeValueInfo)
-    private static final com.ium.um.domain.ChassisStepData.SafeValueInfo DEFAULT_INSTANCE;
+    private static final com.ium.um.domain.ChassisStepProto.SafeValueInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepData.SafeValueInfo();
+      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepProto.SafeValueInfo();
     }
 
-    public static com.ium.um.domain.ChassisStepData.SafeValueInfo getDefaultInstance() {
+    public static com.ium.um.domain.ChassisStepProto.SafeValueInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4469,7 +4469,7 @@ public final class ChassisStepData {
       return PARSER;
     }
 
-    public com.ium.um.domain.ChassisStepData.SafeValueInfo getDefaultInstanceForType() {
+    public com.ium.um.domain.ChassisStepProto.SafeValueInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4625,14 +4625,14 @@ public final class ChassisStepData {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ium.um.domain.ChassisStepData.internal_static_GradValueInfo_descriptor;
+      return com.ium.um.domain.ChassisStepProto.internal_static_GradValueInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ium.um.domain.ChassisStepData.internal_static_GradValueInfo_fieldAccessorTable
+      return com.ium.um.domain.ChassisStepProto.internal_static_GradValueInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ium.um.domain.ChassisStepData.GradValueInfo.class, com.ium.um.domain.ChassisStepData.GradValueInfo.Builder.class);
+              com.ium.um.domain.ChassisStepProto.GradValueInfo.class, com.ium.um.domain.ChassisStepProto.GradValueInfo.Builder.class);
     }
 
     public static final int OCVSTEP_FIELD_NUMBER = 1;
@@ -4784,10 +4784,10 @@ public final class ChassisStepData {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ium.um.domain.ChassisStepData.GradValueInfo)) {
+      if (!(obj instanceof com.ium.um.domain.ChassisStepProto.GradValueInfo)) {
         return super.equals(obj);
       }
-      com.ium.um.domain.ChassisStepData.GradValueInfo other = (com.ium.um.domain.ChassisStepData.GradValueInfo) obj;
+      com.ium.um.domain.ChassisStepProto.GradValueInfo other = (com.ium.um.domain.ChassisStepProto.GradValueInfo) obj;
 
       boolean result = true;
       result = result && (getOcvStep()
@@ -4829,58 +4829,58 @@ public final class ChassisStepData {
       return hash;
     }
 
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo parseFrom(byte[] data)
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo parseFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo parseDelimitedFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo parseDelimitedFrom(
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4892,7 +4892,7 @@ public final class ChassisStepData {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ium.um.domain.ChassisStepData.GradValueInfo prototype) {
+    public static Builder newBuilder(com.ium.um.domain.ChassisStepProto.GradValueInfo prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -4916,20 +4916,20 @@ public final class ChassisStepData {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:GradValueInfo)
-        com.ium.um.domain.ChassisStepData.GradValueInfoOrBuilder {
+        com.ium.um.domain.ChassisStepProto.GradValueInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ium.um.domain.ChassisStepData.internal_static_GradValueInfo_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_GradValueInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ium.um.domain.ChassisStepData.internal_static_GradValueInfo_fieldAccessorTable
+        return com.ium.um.domain.ChassisStepProto.internal_static_GradValueInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ium.um.domain.ChassisStepData.GradValueInfo.class, com.ium.um.domain.ChassisStepData.GradValueInfo.Builder.class);
+                com.ium.um.domain.ChassisStepProto.GradValueInfo.class, com.ium.um.domain.ChassisStepProto.GradValueInfo.Builder.class);
       }
 
-      // Construct using com.ium.um.domain.ChassisStepData.GradValueInfo.newBuilder()
+      // Construct using com.ium.um.domain.ChassisStepProto.GradValueInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4963,23 +4963,23 @@ public final class ChassisStepData {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ium.um.domain.ChassisStepData.internal_static_GradValueInfo_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_GradValueInfo_descriptor;
       }
 
-      public com.ium.um.domain.ChassisStepData.GradValueInfo getDefaultInstanceForType() {
-        return com.ium.um.domain.ChassisStepData.GradValueInfo.getDefaultInstance();
+      public com.ium.um.domain.ChassisStepProto.GradValueInfo getDefaultInstanceForType() {
+        return com.ium.um.domain.ChassisStepProto.GradValueInfo.getDefaultInstance();
       }
 
-      public com.ium.um.domain.ChassisStepData.GradValueInfo build() {
-        com.ium.um.domain.ChassisStepData.GradValueInfo result = buildPartial();
+      public com.ium.um.domain.ChassisStepProto.GradValueInfo build() {
+        com.ium.um.domain.ChassisStepProto.GradValueInfo result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.ium.um.domain.ChassisStepData.GradValueInfo buildPartial() {
-        com.ium.um.domain.ChassisStepData.GradValueInfo result = new com.ium.um.domain.ChassisStepData.GradValueInfo(this);
+      public com.ium.um.domain.ChassisStepProto.GradValueInfo buildPartial() {
+        com.ium.um.domain.ChassisStepProto.GradValueInfo result = new com.ium.um.domain.ChassisStepProto.GradValueInfo(this);
         result.ocvStep_ = ocvStep_;
         result.ocvLoop_ = ocvLoop_;
         result.maxCStep_ = maxCStep_;
@@ -5017,16 +5017,16 @@ public final class ChassisStepData {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ium.um.domain.ChassisStepData.GradValueInfo) {
-          return mergeFrom((com.ium.um.domain.ChassisStepData.GradValueInfo)other);
+        if (other instanceof com.ium.um.domain.ChassisStepProto.GradValueInfo) {
+          return mergeFrom((com.ium.um.domain.ChassisStepProto.GradValueInfo)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ium.um.domain.ChassisStepData.GradValueInfo other) {
-        if (other == com.ium.um.domain.ChassisStepData.GradValueInfo.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.ium.um.domain.ChassisStepProto.GradValueInfo other) {
+        if (other == com.ium.um.domain.ChassisStepProto.GradValueInfo.getDefaultInstance()) return this;
         if (other.getOcvStep() != 0) {
           setOcvStep(other.getOcvStep());
         }
@@ -5057,11 +5057,11 @@ public final class ChassisStepData {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ium.um.domain.ChassisStepData.GradValueInfo parsedMessage = null;
+        com.ium.um.domain.ChassisStepProto.GradValueInfo parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ium.um.domain.ChassisStepData.GradValueInfo) e.getUnfinishedMessage();
+          parsedMessage = (com.ium.um.domain.ChassisStepProto.GradValueInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5313,12 +5313,12 @@ public final class ChassisStepData {
     }
 
     // @@protoc_insertion_point(class_scope:GradValueInfo)
-    private static final com.ium.um.domain.ChassisStepData.GradValueInfo DEFAULT_INSTANCE;
+    private static final com.ium.um.domain.ChassisStepProto.GradValueInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepData.GradValueInfo();
+      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepProto.GradValueInfo();
     }
 
-    public static com.ium.um.domain.ChassisStepData.GradValueInfo getDefaultInstance() {
+    public static com.ium.um.domain.ChassisStepProto.GradValueInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5341,7 +5341,7 @@ public final class ChassisStepData {
       return PARSER;
     }
 
-    public com.ium.um.domain.ChassisStepData.GradValueInfo getDefaultInstanceForType() {
+    public com.ium.um.domain.ChassisStepProto.GradValueInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5437,14 +5437,14 @@ public final class ChassisStepData {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ium.um.domain.ChassisStepData.internal_static_StepFromToInfo_descriptor;
+      return com.ium.um.domain.ChassisStepProto.internal_static_StepFromToInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ium.um.domain.ChassisStepData.internal_static_StepFromToInfo_fieldAccessorTable
+      return com.ium.um.domain.ChassisStepProto.internal_static_StepFromToInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ium.um.domain.ChassisStepData.StepFromToInfo.class, com.ium.um.domain.ChassisStepData.StepFromToInfo.Builder.class);
+              com.ium.um.domain.ChassisStepProto.StepFromToInfo.class, com.ium.um.domain.ChassisStepProto.StepFromToInfo.Builder.class);
     }
 
     public static final int FROM_FIELD_NUMBER = 1;
@@ -5516,10 +5516,10 @@ public final class ChassisStepData {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ium.um.domain.ChassisStepData.StepFromToInfo)) {
+      if (!(obj instanceof com.ium.um.domain.ChassisStepProto.StepFromToInfo)) {
         return super.equals(obj);
       }
-      com.ium.um.domain.ChassisStepData.StepFromToInfo other = (com.ium.um.domain.ChassisStepData.StepFromToInfo) obj;
+      com.ium.um.domain.ChassisStepProto.StepFromToInfo other = (com.ium.um.domain.ChassisStepProto.StepFromToInfo) obj;
 
       boolean result = true;
       result = result && (getFrom()
@@ -5545,58 +5545,58 @@ public final class ChassisStepData {
       return hash;
     }
 
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo parseFrom(byte[] data)
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo parseFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo parseDelimitedFrom(java.io.InputStream input)
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo parseDelimitedFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo parseFrom(
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5608,7 +5608,7 @@ public final class ChassisStepData {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ium.um.domain.ChassisStepData.StepFromToInfo prototype) {
+    public static Builder newBuilder(com.ium.um.domain.ChassisStepProto.StepFromToInfo prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -5632,20 +5632,20 @@ public final class ChassisStepData {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:StepFromToInfo)
-        com.ium.um.domain.ChassisStepData.StepFromToInfoOrBuilder {
+        com.ium.um.domain.ChassisStepProto.StepFromToInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ium.um.domain.ChassisStepData.internal_static_StepFromToInfo_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_StepFromToInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ium.um.domain.ChassisStepData.internal_static_StepFromToInfo_fieldAccessorTable
+        return com.ium.um.domain.ChassisStepProto.internal_static_StepFromToInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ium.um.domain.ChassisStepData.StepFromToInfo.class, com.ium.um.domain.ChassisStepData.StepFromToInfo.Builder.class);
+                com.ium.um.domain.ChassisStepProto.StepFromToInfo.class, com.ium.um.domain.ChassisStepProto.StepFromToInfo.Builder.class);
       }
 
-      // Construct using com.ium.um.domain.ChassisStepData.StepFromToInfo.newBuilder()
+      // Construct using com.ium.um.domain.ChassisStepProto.StepFromToInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5671,23 +5671,23 @@ public final class ChassisStepData {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ium.um.domain.ChassisStepData.internal_static_StepFromToInfo_descriptor;
+        return com.ium.um.domain.ChassisStepProto.internal_static_StepFromToInfo_descriptor;
       }
 
-      public com.ium.um.domain.ChassisStepData.StepFromToInfo getDefaultInstanceForType() {
-        return com.ium.um.domain.ChassisStepData.StepFromToInfo.getDefaultInstance();
+      public com.ium.um.domain.ChassisStepProto.StepFromToInfo getDefaultInstanceForType() {
+        return com.ium.um.domain.ChassisStepProto.StepFromToInfo.getDefaultInstance();
       }
 
-      public com.ium.um.domain.ChassisStepData.StepFromToInfo build() {
-        com.ium.um.domain.ChassisStepData.StepFromToInfo result = buildPartial();
+      public com.ium.um.domain.ChassisStepProto.StepFromToInfo build() {
+        com.ium.um.domain.ChassisStepProto.StepFromToInfo result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.ium.um.domain.ChassisStepData.StepFromToInfo buildPartial() {
-        com.ium.um.domain.ChassisStepData.StepFromToInfo result = new com.ium.um.domain.ChassisStepData.StepFromToInfo(this);
+      public com.ium.um.domain.ChassisStepProto.StepFromToInfo buildPartial() {
+        com.ium.um.domain.ChassisStepProto.StepFromToInfo result = new com.ium.um.domain.ChassisStepProto.StepFromToInfo(this);
         result.from_ = from_;
         result.to_ = to_;
         onBuilt();
@@ -5721,16 +5721,16 @@ public final class ChassisStepData {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ium.um.domain.ChassisStepData.StepFromToInfo) {
-          return mergeFrom((com.ium.um.domain.ChassisStepData.StepFromToInfo)other);
+        if (other instanceof com.ium.um.domain.ChassisStepProto.StepFromToInfo) {
+          return mergeFrom((com.ium.um.domain.ChassisStepProto.StepFromToInfo)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ium.um.domain.ChassisStepData.StepFromToInfo other) {
-        if (other == com.ium.um.domain.ChassisStepData.StepFromToInfo.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.ium.um.domain.ChassisStepProto.StepFromToInfo other) {
+        if (other == com.ium.um.domain.ChassisStepProto.StepFromToInfo.getDefaultInstance()) return this;
         if (other.getFrom() != 0) {
           setFrom(other.getFrom());
         }
@@ -5749,11 +5749,11 @@ public final class ChassisStepData {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ium.um.domain.ChassisStepData.StepFromToInfo parsedMessage = null;
+        com.ium.um.domain.ChassisStepProto.StepFromToInfo parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ium.um.domain.ChassisStepData.StepFromToInfo) e.getUnfinishedMessage();
+          parsedMessage = (com.ium.um.domain.ChassisStepProto.StepFromToInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5853,12 +5853,12 @@ public final class ChassisStepData {
     }
 
     // @@protoc_insertion_point(class_scope:StepFromToInfo)
-    private static final com.ium.um.domain.ChassisStepData.StepFromToInfo DEFAULT_INSTANCE;
+    private static final com.ium.um.domain.ChassisStepProto.StepFromToInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepData.StepFromToInfo();
+      DEFAULT_INSTANCE = new com.ium.um.domain.ChassisStepProto.StepFromToInfo();
     }
 
-    public static com.ium.um.domain.ChassisStepData.StepFromToInfo getDefaultInstance() {
+    public static com.ium.um.domain.ChassisStepProto.StepFromToInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5881,7 +5881,7 @@ public final class ChassisStepData {
       return PARSER;
     }
 
-    public com.ium.um.domain.ChassisStepData.StepFromToInfo getDefaultInstanceForType() {
+    public com.ium.um.domain.ChassisStepProto.StepFromToInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5942,9 +5942,9 @@ public final class ChassisStepData {
       "nfo\022\017\n\007ocvStep\030\001 \001(\005\022\017\n\007ocvLoop\030\002 \001(\005\022\020\n" +
       "\010maxCStep\030\003 \001(\005\022\020\n\010maxCLoop\030\004 \001(\005\022\022\n\nfin" +
       "alIStep\030\005 \001(\005\022\022\n\nfinalILoop\030\006 \001(\005\"*\n\016Ste" +
-      "pFromToInfo\022\014\n\004from\030\001 \001(\005\022\n\n\002to\030\002 \001(\005B$\n" +
-      "\021com.ium.um.domainB\017ChassisStepDatab\006pro" +
-      "to3"
+      "pFromToInfo\022\014\n\004from\030\001 \001(\005\022\n\n\002to\030\002 \001(\005B%\n" +
+      "\021com.ium.um.domainB\020ChassisStepProtob\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

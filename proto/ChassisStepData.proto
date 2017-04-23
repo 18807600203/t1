@@ -1,14 +1,13 @@
 syntax = "proto3";
 
 option java_package = "com.ium.um.domain";
-option java_outer_classname = "ChassisStepData";
+option java_outer_classname = "ChassisStepProto";
 
 message ChassisStepInfo { //机框工步信息
 	
   int32 no = 1; //机框号
   StepInfoData stepInfoData = 2; //工步详细信息
 }
-
 
 message StepInfoData { //具体工步详细信息
 
@@ -54,4 +53,5 @@ message StepFromToInfo { //工步起始序号
 	int32 from = 1;//开始工步
 	int32 to = 2; //结束工步
 }
+
 
