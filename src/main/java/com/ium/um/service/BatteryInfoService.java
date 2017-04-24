@@ -1,7 +1,8 @@
 package com.ium.um.service;
 
 import java.util.List;
-import com.ium.um.domain.BatteryInfo;
+
+import com.ium.um.domain.battery.BatteryInfo;
 
 public interface BatteryInfoService {
 		

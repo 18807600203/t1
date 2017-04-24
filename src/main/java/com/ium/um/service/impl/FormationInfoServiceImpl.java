@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.alibaba.fastjson.JSON;
-import com.ium.um.domain.FormationData;
-import com.ium.um.domain.FormationInfo;
+import com.ium.um.domain.formation.FormationData;
+import com.ium.um.domain.formation.FormationInfo;
 import com.ium.um.mapper.FormationInfoMapper;
 import com.ium.um.service.FormationInfoService;
 

@@ -14,8 +14,8 @@ import org.springframework.cache.CacheManager;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ium.um.Application;
-import com.ium.um.domain.FormationData;
-import com.ium.um.domain.FormationInfo;
+import com.ium.um.domain.formation.FormationData;
+import com.ium.um.domain.formation.FormationInfo;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)  

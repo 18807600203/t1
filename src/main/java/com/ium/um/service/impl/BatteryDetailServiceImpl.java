@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ium.um.domain.BatteryDetail;
+import com.ium.um.domain.battery.BatteryDetail;
 import com.ium.um.mapper.BatteryDetailMapper;
 import com.ium.um.service.BatteryDetailService;
 

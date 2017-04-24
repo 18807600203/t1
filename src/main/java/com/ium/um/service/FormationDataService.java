@@ -1,7 +1,8 @@
 package com.ium.um.service;
 
 import java.util.List;
-import com.ium.um.domain.FormationData;
+
+import com.ium.um.domain.formation.FormationData;
 
 public interface FormationDataService {
 	

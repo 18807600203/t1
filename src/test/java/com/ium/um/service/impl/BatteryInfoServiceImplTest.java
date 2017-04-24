@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ium.um.Application;
-import com.ium.um.domain.BatteryInfo;
+import com.ium.um.domain.battery.BatteryInfo;
 
 /**
  * @author huang

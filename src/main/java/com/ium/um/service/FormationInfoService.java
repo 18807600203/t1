@@ -1,8 +1,9 @@
 package com.ium.um.service;
 
 import java.util.List;
-import com.ium.um.domain.FormationData;
-import com.ium.um.domain.FormationInfo;
+
+import com.ium.um.domain.formation.FormationData;
+import com.ium.um.domain.formation.FormationInfo;
 
 public interface FormationInfoService {
 

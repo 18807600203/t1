@@ -2,7 +2,7 @@ package com.ium.um.service;
 
 import java.util.List;
 
-import com.ium.um.domain.BatteryDetail;
+import com.ium.um.domain.battery.BatteryDetail;
 
 public interface BatteryDetailService {
 

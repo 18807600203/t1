@@ -1,7 +1,8 @@
 package com.ium.um.service;
 
 import java.util.List;
-import com.ium.um.domain.BasesfData;
+
+import com.ium.um.domain.sfile.BasesfData;
 
 public interface BasesfDataService {
 

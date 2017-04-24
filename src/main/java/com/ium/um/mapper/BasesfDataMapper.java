@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import com.ium.um.domain.BasesfData;
+import com.ium.um.domain.sfile.BasesfData;
 
 @Mapper
 public interface BasesfDataMapper {

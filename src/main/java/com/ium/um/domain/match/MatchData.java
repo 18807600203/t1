@@ -1,4 +1,4 @@
-package com.ium.um.domain;
+package com.ium.um.domain.match;
 
 import java.io.Serializable;
 import java.util.Vector;

@@ -1,4 +1,4 @@
-package com.ium.um.domain;
+package com.ium.um.domain.battery;
 
 import java.io.Serializable;
 

@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import com.ium.um.domain.ExpertGradingValues;
+import com.ium.um.domain.grading.ExpertGradingValues;
 
 @Mapper
 public interface ExpertGradingValuesMapper {

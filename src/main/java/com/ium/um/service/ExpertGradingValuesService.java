@@ -2,7 +2,7 @@ package com.ium.um.service;
 
 import java.util.List;
 
-import com.ium.um.domain.ExpertGradingValues;
+import com.ium.um.domain.grading.ExpertGradingValues;
 
 public interface ExpertGradingValuesService {
 

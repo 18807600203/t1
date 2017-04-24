@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import com.ium.um.domain.BatteryDetail;
+import com.ium.um.domain.battery.BatteryDetail;
 
 @Mapper
 public interface BatteryDetailMapper {

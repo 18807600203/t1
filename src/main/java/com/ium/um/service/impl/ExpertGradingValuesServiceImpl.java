@@ -5,7 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.ium.um.domain.ExpertGradingValues;
+
+import com.ium.um.domain.grading.ExpertGradingValues;
 import com.ium.um.mapper.ExpertGradingValuesMapper;
 import com.ium.um.service.ExpertGradingValuesService;
 
@@ -18,7 +19,7 @@ public class ExpertGradingValuesServiceImpl implements ExpertGradingValuesServic
 	ExpertGradingValuesMapper egvMapper;
 
 	/**
-	 * {@link com.ium.um.mapper.ExpertGradingValues#findAll(String, String, String, String, String, String)}
+	 * {@link com.ium.um.domain.grading.ExpertGradingValues#findAll(String, String, String, String, String, String)}
 	 */
 	@Override
 	public List<ExpertGradingValues> findAll(String chassises, String ustep, String maxcsteps, String minordifcsteps,

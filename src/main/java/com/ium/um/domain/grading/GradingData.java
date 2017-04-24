@@ -1,4 +1,4 @@
-package com.ium.um.domain;
+package com.ium.um.domain.grading;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

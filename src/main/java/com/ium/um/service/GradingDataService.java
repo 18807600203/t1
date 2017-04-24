@@ -1,7 +1,8 @@
 package com.ium.um.service;
 
 import java.util.List;
-import com.ium.um.domain.GradingData;
+
+import com.ium.um.domain.grading.GradingData;
 
 public interface GradingDataService {
 
