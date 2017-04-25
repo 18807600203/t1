@@ -100,5 +100,42 @@ public class GradValueData {
 				+ maxCLoop + ", finalIStep=" + finalIStep + ", finalILoop=" + finalILoop + "]";
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + finalILoop;
+		result = prime * result + finalIStep;
+		result = prime * result + maxCLoop;
+		result = prime * result + maxCStep;
+		result = prime * result + ocvLoop;
+		result = prime * result + ocvStep;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		GradValueData other = (GradValueData) obj;
+		if (finalILoop != other.finalILoop)
+			return false;
+		if (finalIStep != other.finalIStep)
+			return false;
+		if (maxCLoop != other.maxCLoop)
+			return false;
+		if (maxCStep != other.maxCStep)
+			return false;
+		if (ocvLoop != other.ocvLoop)
+			return false;
+		if (ocvStep != other.ocvStep)
+			return false;
+		return true;
+	}
+
 	
 }

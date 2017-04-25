@@ -15,10 +15,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.ium.um.Application;
 import com.ium.um.domain.sfile.BasesfData;
 
+import ch.qos.logback.classic.Logger;
+
 @RunWith(SpringJUnit4ClassRunner.class)  
 @SpringBootTest(classes=Application.class)// 指定spring-boot的启动类
 public class BasesfDataServiceImplTest {
-
+	
+	
 	@Autowired
 	BasesfDataServiceImpl bdImpl;
 	

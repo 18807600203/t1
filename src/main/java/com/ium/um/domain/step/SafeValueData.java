@@ -42,6 +42,31 @@ public class SafeValueData {
 	public String toString() {
 		return "SafeValueData [loopCount=" + loopCount + ", cThreshold=" + cThreshold + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + cThreshold;
+		result = prime * result + loopCount;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SafeValueData other = (SafeValueData) obj;
+		if (cThreshold != other.cThreshold)
+			return false;
+		if (loopCount != other.loopCount)
+			return false;
+		return true;
+	}
 	
 	
 }

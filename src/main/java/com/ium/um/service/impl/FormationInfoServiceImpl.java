@@ -7,7 +7,7 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.alibaba.fastjson.JSON;
+import com.ium.um.core.beanUtil.JsonUtils;
 import com.ium.um.domain.formation.FormationData;
 import com.ium.um.domain.formation.FormationInfo;
 import com.ium.um.mapper.FormationInfoMapper;
@@ -46,7 +46,8 @@ public class FormationInfoServiceImpl implements FormationInfoService{
 	@CachePut(value = "UI_Cache", key = "#fd.getPosition()")
 	public FormationData add(long baseid, FormationData fd, String instime) {
 		
-		String jsonStr = JSON.toJSONString(fd);
+		//String jsonStr = JSON.toJSONString(fd);
+		String jsonStr = JsonUtils.toJsonString(fd);
 		fiMapper.add(baseid, jsonStr, instime);
 		return fd;
 	}

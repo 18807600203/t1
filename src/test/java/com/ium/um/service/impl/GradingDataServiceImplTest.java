@@ -1,9 +1,7 @@
 package com.ium.um.service.impl;
 
-import static org.junit.Assert.*;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -38,11 +36,12 @@ public class GradingDataServiceImplTest {
 		gdImpl.doGrading("1,3", "1,3");
 	}
 	
-	//@Test
+	@Test
 	public void getGradingDatatest(){
 		
 		List<GradingData> l = gdImpl.getGradingData();
-		logger.debug("count:" + l.size());
+		logger.warn("count:" + l.size());
+		logger.error("count:" + l.size());
 	}
 	
 	//@Test
@@ -58,7 +57,7 @@ public class GradingDataServiceImplTest {
 		logger.debug(a+"");
 	}
 	
-	@Test
+	//@Test
 	public void addAdvGradClassResultTest(){
 		
 		List<Long> idList = new ArrayList<>();

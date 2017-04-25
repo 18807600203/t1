@@ -7,7 +7,7 @@ public class ChassisStepInfo {
 	/**
 	 * 机框编号
 	 */
-	private int no;
+	private String no;
 	
 	/**
 	 * 工步文件路径
@@ -17,7 +17,7 @@ public class ChassisStepInfo {
 	/**
 	 * 工步信息表格
 	 */
-	private List<TableValueData> tableValueDatas;
+	private List<TableValueData> tableValueData;
 	
 	/**
 	 * 安全参数
@@ -43,23 +43,23 @@ public class ChassisStepInfo {
 		
 	}
 
-	public ChassisStepInfo(int no, String filePath, List<TableValueData> tableValueDatas, SafeValueData safeValueData,
+	public ChassisStepInfo(String no, String filePath, List<TableValueData> tableValueData, SafeValueData safeValueData,
 			GradValueData gradValueData, StepFromToData stepFromToData, List<byte[]> stepHexString) {
 		
 		this.no = no;
 		this.filePath = filePath;
-		this.tableValueDatas = tableValueDatas;
+		this.tableValueData = tableValueData;
 		this.safeValueData = safeValueData;
 		this.gradValueData = gradValueData;
 		this.stepFromToData = stepFromToData;
 		this.stepHexString = stepHexString;
 	}
 
-	public int getNo() {
+	public String getNo() {
 		return no;
 	}
 
-	public void setNo(int no) {
+	public void setNo(String no) {
 		this.no = no;
 	}
 
@@ -72,11 +72,11 @@ public class ChassisStepInfo {
 	}
 
 	public List<TableValueData> getTableValueData() {
-		return tableValueDatas;
+		return tableValueData;
 	}
 
 	public void setTableValueData(List<TableValueData> tableValueData) {
-		this.tableValueDatas = tableValueData;
+		this.tableValueData = tableValueData;
 	}
 
 	public SafeValueData getSafeValueData() {
@@ -113,9 +113,70 @@ public class ChassisStepInfo {
 
 	@Override
 	public String toString() {
-		return "ChassisStepInfo [no=" + no + ", filePath=" + filePath + ", tableValueData=" + tableValueDatas
+		return "ChassisStepInfo [no=" + no + ", filePath=" + filePath + ", tableValueData=" + tableValueData
 				+ ", safeValueData=" + safeValueData + ", gradValueData=" + gradValueData + ", stepFromToData="
 				+ stepFromToData + ", stepHexString=" + stepHexString + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((filePath == null) ? 0 : filePath.hashCode());
+		result = prime * result + ((gradValueData == null) ? 0 : gradValueData.hashCode());
+		result = prime * result + ((no == null) ? 0 : no.hashCode());
+		result = prime * result + ((safeValueData == null) ? 0 : safeValueData.hashCode());
+		result = prime * result + ((stepFromToData == null) ? 0 : stepFromToData.hashCode());
+		result = prime * result + ((stepHexString == null) ? 0 : stepHexString.hashCode());
+		result = prime * result + ((tableValueData == null) ? 0 : tableValueData.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ChassisStepInfo other = (ChassisStepInfo) obj;
+		if (filePath == null) {
+			if (other.filePath != null)
+				return false;
+		} else if (!filePath.equals(other.filePath))
+			return false;
+		if (gradValueData == null) {
+			if (other.gradValueData != null)
+				return false;
+		} else if (!gradValueData.equals(other.gradValueData))
+			return false;
+		if (no == null) {
+			if (other.no != null)
+				return false;
+		} else if (!no.equals(other.no))
+			return false;
+		if (safeValueData == null) {
+			if (other.safeValueData != null)
+				return false;
+		} else if (!safeValueData.equals(other.safeValueData))
+			return false;
+		if (stepFromToData == null) {
+			if (other.stepFromToData != null)
+				return false;
+		} else if (!stepFromToData.equals(other.stepFromToData))
+			return false;
+		if (stepHexString == null) {
+			if (other.stepHexString != null)
+				return false;
+		} else if (!stepHexString.equals(other.stepHexString))
+			return false;
+		if (tableValueData == null) {
+			if (other.tableValueData != null)
+				return false;
+		} else if (!tableValueData.equals(other.tableValueData))
+			return false;
+		return true;
 	}
 
 	

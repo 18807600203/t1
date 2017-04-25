@@ -12,15 +12,15 @@ import io.protostuff.ProtostuffIOUtil;
 import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;
 
-
-public class SerializationUtil {
+/**
+ * protostuff序列化工具类
+ */
+public class ProtostuffUtil {
 	
-	//private static Map<Class<?>, Schema<?>> cachedSchema2 = new ConcurrentHashMap<Class<?>, Schema<?>>();
 	private static ConcurrentMap<Class<?>, Schema<?>> cachedSchema = new MapMaker().weakKeys().makeMap();
-
     private static Objenesis objenesis = new ObjenesisStd(true);
 
-    private static <T> Schema<T> getSchema(Class<T> clazz) {
+    protected static <T> Schema<T> getSchema(Class<T> clazz) {
         @SuppressWarnings("unchecked")
         Schema<T> schema = (Schema<T>) cachedSchema.get(clazz);
         if (schema == null) {
@@ -69,4 +69,7 @@ public class SerializationUtil {
             throw new IllegalStateException(e.getMessage(), e);
         }
     }
+    
+   
+    
 }

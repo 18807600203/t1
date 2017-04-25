@@ -142,5 +142,54 @@ public class TableValueData {
 				+ ", maxU=" + maxU + ", detaV=" + detaV + ", finalI=" + finalI + ", fianlC=" + fianlC + "]";
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + detaV;
+		result = prime * result + fianlC;
+		result = prime * result + finalI;
+		result = prime * result + i;
+		result = prime * result + maxU;
+		result = prime * result + minU;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + no;
+		result = prime * result + time;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TableValueData other = (TableValueData) obj;
+		if (detaV != other.detaV)
+			return false;
+		if (fianlC != other.fianlC)
+			return false;
+		if (finalI != other.finalI)
+			return false;
+		if (i != other.i)
+			return false;
+		if (maxU != other.maxU)
+			return false;
+		if (minU != other.minU)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (no != other.no)
+			return false;
+		if (time != other.time)
+			return false;
+		return true;
+	}
+
 	
 }

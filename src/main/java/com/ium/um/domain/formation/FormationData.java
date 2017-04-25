@@ -2,7 +2,7 @@ package com.ium.um.domain.formation;
 
 import java.io.Serializable;
 
-import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class FormationData implements Serializable{
 
@@ -10,18 +10,28 @@ public class FormationData implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	@JsonProperty("postition")
 	private String position;
+	@JsonProperty("u")
 	private String u;
+	@JsonProperty("i")
 	private String i;
+	@JsonProperty("c")
 	private String c;
+	@JsonProperty("t")
 	private String t;
+	@JsonProperty("t2")
 	private String t2;
+	@JsonProperty("r")
 	private String r;
+	@JsonProperty("status")
 	private String status;
+	@JsonProperty("errcode")
 	private String errcode;
+	@JsonProperty("step")
 	private String step;
 	
-	@JSONField(name = "postition")
+
 	public String getPosition() {
 		return position;
 	}
@@ -30,7 +40,6 @@ public class FormationData implements Serializable{
 		this.position = position;
 	}
 	
-	@JSONField(name = "u")
 	public String getU() {
 		return u;
 	}
@@ -39,7 +48,6 @@ public class FormationData implements Serializable{
 		this.u = u;
 	}
 	
-	@JSONField(name = "i")
 	public String getI() {
 		return i;
 	}
@@ -47,8 +55,7 @@ public class FormationData implements Serializable{
 	public void setI(String i) {
 		this.i = i;
 	}
-	
-	@JSONField(name = "c")
+
 	public String getC() {
 		return c;
 	}
@@ -57,7 +64,7 @@ public class FormationData implements Serializable{
 		this.c = c;
 	}
 	
-	@JSONField(name = "t")
+
 	public String getT() {
 		return t;
 	}
@@ -66,7 +73,6 @@ public class FormationData implements Serializable{
 		this.t = t;
 	}
 	
-	@JSONField(name = "t2")
 	public String getT2() {
 		return t2;
 	}
@@ -74,7 +80,7 @@ public class FormationData implements Serializable{
 	public void setT2(String t2) {
 		this.t2 = t2;
 	}
-	@JSONField(name = "r")
+	
 	public String getR() {
 		return r;
 	}
@@ -83,7 +89,7 @@ public class FormationData implements Serializable{
 		this.r = r;
 	}
 	
-	@JSONField(name = "status")
+	
 	public String getStatus() {
 		return status;
 	}
@@ -92,7 +98,7 @@ public class FormationData implements Serializable{
 		this.status = status;
 	}
 	
-	@JSONField(name = "errcode")
+	
 	public String getErrcode() {
 		return errcode;
 	}
@@ -101,7 +107,7 @@ public class FormationData implements Serializable{
 		this.errcode = errcode;
 	}
 	
-	@JSONField(name = "step")
+	
 	public String getStep() {
 		return step;
 	}
