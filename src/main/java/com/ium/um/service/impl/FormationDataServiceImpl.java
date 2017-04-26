@@ -10,11 +10,11 @@ import com.ium.um.domain.formation.FormationData;
 import com.ium.um.mapper.FormationDataMapper;
 import com.ium.um.service.FormationDataService;
 
-@Service
+
 @Transactional
 public class FormationDataServiceImpl implements FormationDataService{
 
-	@Autowired
+	
 	FormationDataMapper fdMapper;
 
 	/**

@@ -1,6 +1,6 @@
 package com.ium.um.service.impl;
 
-
+import static org.assertj.core.api.Assertions.assertThat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,19 +9,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ium.um.Application;
 import com.ium.um.domain.grading.GradingData;
 
-@RunWith(SpringJUnit4ClassRunner.class)  
-@SpringBootTest(classes=Application.class)// 指定spring-boot的启动类
 public class GradingDataServiceImplTest {
 
 	 private final Logger logger = LoggerFactory.getLogger(this.getClass());  
-	@Autowired
+	
 	GradingDataServiceImpl gdImpl;
 	
 	@Before
@@ -44,6 +39,7 @@ public class GradingDataServiceImplTest {
 		logger.error("count:" + l.size());
 		logger.info("count:" + l.size());
 		logger.trace("count:" + l.size());
+		
 	}
 	
 	//@Test

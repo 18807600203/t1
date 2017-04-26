@@ -10,11 +10,11 @@ import com.ium.um.domain.grading.GradingData;
 import com.ium.um.mapper.GradingDataMapper;
 import com.ium.um.service.GradingDataService;
 
-@Service
+
 @Transactional
 public class GradingDataServiceImpl implements GradingDataService{
 
-	@Autowired
+	
 	GradingDataMapper gdMapper;
 		
 	/**

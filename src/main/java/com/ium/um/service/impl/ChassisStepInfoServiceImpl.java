@@ -11,11 +11,11 @@ import com.ium.um.domain.step.ChassisStepInfo;
 import com.ium.um.mapper.ChassisStepInfoMapper;
 import com.ium.um.service.ChassisStepInfoService;
 
-@Service
+
 @Transactional
 public class ChassisStepInfoServiceImpl implements ChassisStepInfoService{
 
-	@Autowired
+	
 	ChassisStepInfoMapper csiMapper;
 	
 	/**

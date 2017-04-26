@@ -1,7 +1,9 @@
 package com.ium.um.core.beanUtil;
 
 import java.io.IOException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.codehaus.jackson.map.ObjectMapper;
+
 
 /**
  * json 工具类

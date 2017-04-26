@@ -1,14 +1,6 @@
 package com.ium.um.config;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Component;
 
-@PropertySource("classpath:appconf.properties")
-@ConfigurationProperties(prefix = "my" )
-@Component
 public class AppConfig {
 
 	private String chassisNum;
@@ -24,8 +16,6 @@ public class AppConfig {
 		this.chassisNum = chassisNum;
 	}
 	
-	@Lazy
-	@Bean(name = "url")
 	public String getUrl() {
 		return url;
 	}
@@ -33,8 +23,7 @@ public class AppConfig {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	@Lazy
-	@Bean(name = "userName")
+
 	public String getUserName() {
 		return userName;
 	}
@@ -42,8 +31,7 @@ public class AppConfig {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	@Lazy
-	@Bean(name = "passWord")
+
 	public String getPassWord() {
 		return passWord;
 	}
@@ -51,7 +39,4 @@ public class AppConfig {
 	public void setPassWord(String passWord) {
 		this.passWord = passWord;
 	}
-	
-	
-
 }

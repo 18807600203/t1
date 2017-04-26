@@ -10,11 +10,11 @@ import com.ium.um.domain.battery.BatteryInfo;
 import com.ium.um.mapper.BatteryInfoMapper;
 import com.ium.um.service.BatteryInfoService;
 
-@Service
+
 @Transactional
 public class BatteryInfoServiceImpl implements BatteryInfoService{
 
-	@Autowired
+	
 	BatteryInfoMapper biMapper;	
 
 	/**

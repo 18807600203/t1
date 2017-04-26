@@ -1,13 +1,11 @@
 package com.ium.um.controller.search;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
-@RequestMapping("serch")
+
+
 public class BatteryInfoSerchController {
 
-//	@Autowired
+//	
 //    private BatteryInfoServiceImpl biServiceImpl;
 		
 //	@GetMapping("/getAll")

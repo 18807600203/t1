@@ -1,29 +1,20 @@
 package com.ium.um.service.impl;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ium.um.Application;
 import com.ium.um.domain.battery.BatteryInfo;
+import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.*;
 
-/**
- * @author huang
- *
- */
-@RunWith(SpringJUnit4ClassRunner.class)  
-@SpringBootTest(classes=Application.class)// 指定spring-boot的启动类
 public class BatteryInfoServiceImplTest {
 
-	@Autowired
+	
 	BatteryInfoServiceImpl biImpl;
 	
 	@Before
@@ -101,6 +92,7 @@ public class BatteryInfoServiceImplTest {
 		
 		BatteryInfo bi = biImpl.findById(3L);
 		assertThat(bi.getNo()).isEqualTo("test3");
+		assertThat(bi.getChassis()).isNullOrEmpty();
 	}
 	
 	//@Test

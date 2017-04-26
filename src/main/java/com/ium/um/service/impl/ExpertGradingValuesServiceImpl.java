@@ -10,12 +10,12 @@ import com.ium.um.domain.grading.ExpertGradingValues;
 import com.ium.um.mapper.ExpertGradingValuesMapper;
 import com.ium.um.service.ExpertGradingValuesService;
 
-@Service
+
 @Transactional
 public class ExpertGradingValuesServiceImpl implements ExpertGradingValuesService{
 
 	
-	@Autowired
+	
 	ExpertGradingValuesMapper egvMapper;
 
 	/**

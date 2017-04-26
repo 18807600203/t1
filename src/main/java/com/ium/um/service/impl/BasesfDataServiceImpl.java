@@ -10,11 +10,11 @@ import com.ium.um.domain.sfile.BasesfData;
 import com.ium.um.mapper.BasesfDataMapper;
 import com.ium.um.service.BasesfDataService;
 
-@Service
-@Transactional
+
+
 public class BasesfDataServiceImpl implements BasesfDataService{
 
-	@Autowired
+	
 	BasesfDataMapper bdMapper;
 	
 	/**
