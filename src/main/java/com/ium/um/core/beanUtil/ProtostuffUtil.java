@@ -1,12 +1,7 @@
 package com.ium.um.core.beanUtil;
 
 import java.util.concurrent.ConcurrentMap;
-
-import org.objenesis.Objenesis;
-import org.objenesis.ObjenesisStd;
-
 import com.google.common.collect.MapMaker;
-
 import io.protostuff.LinkedBuffer;
 import io.protostuff.ProtostuffIOUtil;
 import io.protostuff.Schema;
@@ -18,7 +13,7 @@ import io.protostuff.runtime.RuntimeSchema;
 public class ProtostuffUtil {
 	
 	private static ConcurrentMap<Class<?>, Schema<?>> cachedSchema = new MapMaker().weakKeys().makeMap();
-    private static Objenesis objenesis = new ObjenesisStd(true);
+   // private static Objenesis objenesis = new ObjenesisStd(true);
 
     protected static <T> Schema<T> getSchema(Class<T> clazz) {
         @SuppressWarnings("unchecked")
@@ -61,7 +56,8 @@ public class ProtostuffUtil {
      */
     public static <T> T deserializer(byte[] data, Class<T> clazz) {
         try {
-            T obj = objenesis.newInstance(clazz);
+          //  T obj = objenesis.newInstance(clazz);
+            T obj = clazz.newInstance();
             Schema<T> schema = getSchema(clazz);
             ProtostuffIOUtil.mergeFrom(data, obj, schema);
             return obj;

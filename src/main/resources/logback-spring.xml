@@ -11,6 +11,7 @@
 			<maxHistory>30</maxHistory>
 		</rollingPolicy>
 		<encoder>
+			<charset>UTF-8</charset>  
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} -%msg %n</Pattern>
 		</encoder>
 	</appender>
@@ -22,7 +23,7 @@
 			<level>TRACE</level>
 		</filter>
 	</appender>
-	<logger name="com.ium.um" level="DEBUG" additivity="false">
+	<logger name="com.ium.um" level="INFO" additivity="false">
 		<appender-ref ref="consoleAppender" />
 		<appender-ref ref="dailyRollingFileAppender" />
 	</logger>

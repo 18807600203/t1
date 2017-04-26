@@ -19,23 +19,23 @@ public class MyController extends WebMvcConfigurerAdapter{
 	}
 
 	//demo
-	@GetMapping("/")
+	@GetMapping("")
 	public String showForm(Greeting greeting){
 		
-		return "/1/form";
+		return "1/form";
 	}
 
-	@PostMapping("/")
+	@PostMapping("")
 	public String checkGreeting(@Valid Greeting greeting, BindingResult bindingResult){
 		
 		if(bindingResult.hasErrors()){
-			return "/1/form";
+			return "1/form";
 		}
 		
 		return "redirect:/results";	
 	}
 	
-	@GetMapping("/greeting") //value="id", required=false, defaultValue="2"
+	@GetMapping("greeting") //value="id", required=false, defaultValue="2"
     public String greeting() {
         
         return "greeting";

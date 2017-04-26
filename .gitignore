@@ -22,3 +22,4 @@
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 /bin/
+/log/

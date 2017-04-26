@@ -42,6 +42,8 @@ public class GradingDataServiceImplTest {
 		List<GradingData> l = gdImpl.getGradingData();
 		logger.warn("count:" + l.size());
 		logger.error("count:" + l.size());
+		logger.info("count:" + l.size());
+		logger.trace("count:" + l.size());
 	}
 	
 	//@Test

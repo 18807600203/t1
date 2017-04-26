@@ -5,7 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//implements CommandLineRunner
 public class Application implements CommandLineRunner{
 	
 	
@@ -17,8 +16,7 @@ public class Application implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 			
+		
 	}
-	
-	
 	
 }

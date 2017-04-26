@@ -13,7 +13,7 @@ import com.ium.um.domain.battery.BatteryDetail;
 import com.ium.um.service.impl.BatteryDetailServiceImpl;
 
 @Controller
-@RequestMapping("/serch")
+@RequestMapping("serch")
 public class BatteryDetailSerchController {
 
 	@Autowired

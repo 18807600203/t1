@@ -14,7 +14,7 @@ import com.ium.um.domain.formation.FormationData;
 import com.ium.um.service.impl.FormationInfoServiceImpl;
 
 @Controller
-@RequestMapping("/show")
+@RequestMapping("show")
 public class FormationInfoController {
 
 	@Autowired
