@@ -56,20 +56,20 @@ Vue.component('my-progress', {
     		var ch = '';
     		var door = this.door;
     		var row = this.rowindex;
-    		if ( door == 'A门'){
+    		if ( door == 'A'){
     			ch = '0'+ row
     		}
-    		else if ( door == 'B门'){
+    		else if ( door == 'B'){
     			if(row == 1){
     				ch = '0' + (row + 8)
     			}else{
     				ch = row + 8
     			}
     		}
-    		else if ( door == 'C门'){
+    		else if ( door == 'C'){
     			ch = row + 16
     		}
-    		else if ( door == 'D门' ){
+    		else if ( door == 'D' ){
     			ch = row + 24
     		}
     		return ch
