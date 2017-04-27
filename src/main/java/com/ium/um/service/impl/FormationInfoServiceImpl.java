@@ -2,10 +2,6 @@ package com.ium.um.service.impl;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.ium.um.core.beanUtil.JsonUtils;
 import com.ium.um.domain.formation.FormationData;
@@ -14,7 +10,6 @@ import com.ium.um.mapper.FormationInfoMapper;
 import com.ium.um.service.FormationInfoService;
 
 
-@Transactional
 //@CacheConfig(cacheNames = "UI_Cache")
 public class FormationInfoServiceImpl implements FormationInfoService{
 	
@@ -27,7 +22,8 @@ public class FormationInfoServiceImpl implements FormationInfoService{
 	@Override
 	public List<FormationInfo> findByID(String baseid) {
 		
-		return fiMapper.findByID(baseid);
+		//return fiMapper.findByID(baseid);
+		return null;
 	}
 
 	/**
@@ -36,20 +32,22 @@ public class FormationInfoServiceImpl implements FormationInfoService{
 	@Override
 	public List<FormationInfo> findByIDLimit(String baseid, int limitNum, int offsetNum) {
 		
-		return fiMapper.findByIDLimit(baseid, limitNum, offsetNum);
+		//return fiMapper.findByIDLimit(baseid, limitNum, offsetNum);
+		return null;
 	}
 
 	/**
 	 * {@link com.ium.um.mapper.FormationInfoMapper#add(Long, String, String)}
 	 */
 	@Override
-	@CachePut(value = "UI_Cache", key = "#fd.getPosition()")
+	//@CachePut(value = "UI_Cache", key = "#fd.getPosition()")
 	public FormationData add(long baseid, FormationData fd, String instime) {
 		
 		//String jsonStr = JSON.toJSONString(fd);
-		String jsonStr = JsonUtils.toJsonString(fd);
-		fiMapper.add(baseid, jsonStr, instime);
-		return fd;
+		String jsonStr = JsonUtils.toJson(fd);
+		//fiMapper.add(baseid, jsonStr, instime);
+		return null;
+		//return fd;
 	}
 
 }

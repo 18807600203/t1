@@ -2,9 +2,6 @@ package com.ium.um.service.impl;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.ium.um.domain.sfile.BasesfData;
 import com.ium.um.mapper.BasesfDataMapper;
@@ -23,7 +20,8 @@ public class BasesfDataServiceImpl implements BasesfDataService{
 	@Override
 	public int addBatch(List<Long> idList, String genid) {
 		
-		return bdMapper.addBatch(idList, genid);
+		//return bdMapper.addBatch(idList, genid);
+		return 0;
 	}
 
 	/**
@@ -33,7 +31,8 @@ public class BasesfDataServiceImpl implements BasesfDataService{
 	public BasesfData findById(Long id) {
 		
 		//TODO 如果查询的结果集中大于1行数据库的话, springbooi则报警
-		return bdMapper.findById(id);
+		//return bdMapper.findById(id);
+		return null;
 	}
 
 }

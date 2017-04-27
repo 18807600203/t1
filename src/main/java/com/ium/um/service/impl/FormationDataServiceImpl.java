@@ -2,16 +2,12 @@ package com.ium.um.service.impl;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.ium.um.domain.formation.FormationData;
 import com.ium.um.mapper.FormationDataMapper;
 import com.ium.um.service.FormationDataService;
 
 
-@Transactional
 public class FormationDataServiceImpl implements FormationDataService{
 
 	
@@ -23,7 +19,8 @@ public class FormationDataServiceImpl implements FormationDataService{
 	@Override
 	public List<FormationData> findByID(String id) {
 		
-		return fdMapper.findByID(id);
+		//return fdMapper.findByID(id);
+		return null;
 	}
 
 }

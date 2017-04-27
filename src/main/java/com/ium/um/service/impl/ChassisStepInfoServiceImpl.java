@@ -1,18 +1,13 @@
 package com.ium.um.service.impl;
 
 import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.ium.um.core.beanUtil.JsonUtils;
 import com.ium.um.domain.step.ChassisStepInfo;
 import com.ium.um.mapper.ChassisStepInfoMapper;
 import com.ium.um.service.ChassisStepInfoService;
 
 
-@Transactional
+
 public class ChassisStepInfoServiceImpl implements ChassisStepInfoService{
 
 	
@@ -25,9 +20,10 @@ public class ChassisStepInfoServiceImpl implements ChassisStepInfoService{
 	public Object updateChassisStepInfo(ChassisStepInfo csi, boolean isSetNull, String timeSign, String genId) {
 		
 		String no = csi.getNo();
-		String jsonStr = JsonUtils.toJsonString(csi);
+		String jsonStr = JsonUtils.toJson(csi);
 		
-		return csiMapper.updateChassisStepInfo(no, jsonStr, isSetNull, timeSign, genId);
+		//return csiMapper.updateChassisStepInfo(no, jsonStr, isSetNull, timeSign, genId);
+		return null;
 	}
 
 	
@@ -37,7 +33,8 @@ public class ChassisStepInfoServiceImpl implements ChassisStepInfoService{
 	@Override
 	public String findChassisStepByNo(String no) {
 		
-		return csiMapper.findChassisStepByNo(no);
+		//return csiMapper.findChassisStepByNo(no);
+		return null;
 	}
 
 	
@@ -47,7 +44,8 @@ public class ChassisStepInfoServiceImpl implements ChassisStepInfoService{
 	@Override
 	public List<String> findAllChassisStepWithNotNull() {
 		
-		return csiMapper.findAllChassisStepWithNotNull();
+		//return csiMapper.findAllChassisStepWithNotNull();
+		return null;
 	}
 
 }

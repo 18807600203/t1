@@ -2,16 +2,13 @@ package com.ium.um.service.impl;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
 
 import com.ium.um.domain.battery.BatteryInfo;
 import com.ium.um.mapper.BatteryInfoMapper;
 import com.ium.um.service.BatteryInfoService;
 
 
-@Transactional
 public class BatteryInfoServiceImpl implements BatteryInfoService{
 
 	
@@ -23,7 +20,8 @@ public class BatteryInfoServiceImpl implements BatteryInfoService{
 	@Override
 	public int insertBatch(List<BatteryInfo> biList) {
 		
-		return biMapper.insertBatch(biList);
+		//return biMapper.insertBatch(biList);
+		return 0;
 	}
 
 	/**
@@ -32,7 +30,8 @@ public class BatteryInfoServiceImpl implements BatteryInfoService{
 	@Override
 	public int updateNoBatch(List<BatteryInfo> biList) {
 		
-		return biMapper.updateNoBatch(biList);
+		//return biMapper.updateNoBatch(biList);
+		return 0;
 	}
 
 	/**
@@ -41,7 +40,8 @@ public class BatteryInfoServiceImpl implements BatteryInfoService{
 	@Override
 	public boolean updateNo(Long id, String no) {
 		
-		return biMapper.updateNo(id, no);
+		//return biMapper.updateNo(id, no);
+		return false;
 	}
 
 	/**
@@ -50,7 +50,8 @@ public class BatteryInfoServiceImpl implements BatteryInfoService{
 	@Override
 	public int updateStatusBatch(List<Long> idList) {
 		
-		return biMapper.updateStatusBatch(idList);
+		//return biMapper.updateStatusBatch(idList);
+		return 0;
 	}
 
 	/**
@@ -59,7 +60,8 @@ public class BatteryInfoServiceImpl implements BatteryInfoService{
 	@Override
 	public int updateIsMastopByChassisNo(String chassisno) {
 		
-		return biMapper.updateIsMastopByChassisNo(chassisno);
+		//return biMapper.updateIsMastopByChassisNo(chassisno);
+		return 0;
 	}
 	
 	/**
@@ -68,7 +70,8 @@ public class BatteryInfoServiceImpl implements BatteryInfoService{
 	@Override
 	public BatteryInfo findById(Long id) {
 		
-		return biMapper.findById(id);
+		//return biMapper.findById(id);
+		return null;
 	}
 
 	/**
@@ -77,7 +80,8 @@ public class BatteryInfoServiceImpl implements BatteryInfoService{
 	@Override
 	public List<BatteryInfo> findBatteryInfoInProc() {
 		
-		return biMapper.findBatteryInfoInProc();
+		//return biMapper.findBatteryInfoInProc();
+		return null;
 	}
 
 	/**
@@ -86,7 +90,8 @@ public class BatteryInfoServiceImpl implements BatteryInfoService{
 	@Override
 	public Long getMaxId(){
 		
-		return biMapper.getMaxId();
+		//return biMapper.getMaxId();
+		return 0L;
 	}
 
 	/**
@@ -95,7 +100,8 @@ public class BatteryInfoServiceImpl implements BatteryInfoService{
 	@Override
 	public Long getLastId(String chassisNo) {
 		
-		return biMapper.getLastId(chassisNo);
+		//return biMapper.getLastId(chassisNo);
+		return null;
 	}
 
 }

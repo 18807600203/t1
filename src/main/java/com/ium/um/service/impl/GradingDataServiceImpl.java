@@ -2,16 +2,11 @@ package com.ium.um.service.impl;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.ium.um.domain.grading.GradingData;
 import com.ium.um.mapper.GradingDataMapper;
 import com.ium.um.service.GradingDataService;
 
 
-@Transactional
 public class GradingDataServiceImpl implements GradingDataService{
 
 	
@@ -24,7 +19,7 @@ public class GradingDataServiceImpl implements GradingDataService{
 	@Override
 	public Object doGrading(String chassisNos, String steps) {
 		
-		 gdMapper.doGrading(chassisNos, steps);
+		// gdMapper.doGrading(chassisNos, steps);
 		 return 0;
 	}
 
@@ -35,7 +30,8 @@ public class GradingDataServiceImpl implements GradingDataService{
 	@Override
 	public List<GradingData> getGradingData() {
 		
-		return gdMapper.getGradingData();
+		//return gdMapper.getGradingData();
+		return null;
 	}
 
 	/**
@@ -44,7 +40,8 @@ public class GradingDataServiceImpl implements GradingDataService{
 	@Override
 	public int addNormalGradClassResult(List<Long> idList, String classItem, String timeSign) {
 		
-		return gdMapper.addNormalGradClassResult(idList, classItem, timeSign);
+		//return gdMapper.addNormalGradClassResult(idList, classItem, timeSign);
+		return 0;
 	}
 
 	/**
@@ -53,7 +50,8 @@ public class GradingDataServiceImpl implements GradingDataService{
 	@Override
 	public int addAdvGradClassResult(List<Long> idList, String classItem, String timeSign, String gradCondition) {
 		
-		return gdMapper.addAdvGradClassResult(idList, classItem, timeSign, gradCondition);
+		//return gdMapper.addAdvGradClassResult(idList, classItem, timeSign, gradCondition);
+		return 0;
 	}
 
 	
