@@ -19,9 +19,6 @@
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
-				 <includes>  
-                    <include>asset/css/fonts/**</include>  
-                </includes> 
 			</resource>
 		</resources>
 
